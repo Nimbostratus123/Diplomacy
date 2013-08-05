@@ -514,3 +514,757 @@ ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
 
 
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:14:32 -0500
+Connecting to database specified by database.yml
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (20.5ms)
+Completed 500 Internal Server Error in 47ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3623203899274055603_70162748109260'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:14:34 -0500
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3623203899274055603_70162748109260'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:15:23 -0500
+Connecting to database specified by database.yml
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (22.0ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__230609346190450693_70207173578980'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:15:24 -0500
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__230609346190450693_70207173578980'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:15:25 -0500
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__230609346190450693_70207173578980'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:16:17 -0500
+Connecting to database specified by database.yml
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (21.1ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___608796802404951148_70311799296300'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:16:18 -0500
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___608796802404951148_70311799296300'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:18:45 -0500
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1376573083939687463_70135366123780'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:18:45 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:18:45 -0500
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1376573083939687463_70135366123780'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:18:45 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:18:46 -0500
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1376573083939687463_70135366123780'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:18:46 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:18:46 -0500
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1376573083939687463_70135366123780'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:18:46 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-05 12:18:46 -0500
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    13: 			<li><%= link_to "Home", "/" %></li>
+    14: 			<li><%= link_to "Map", "/map" %></li>
+    15: 			<li><%= link_to "Players", "/players" %></li>
+    16: 			<% if signed_in? %>
+    17: 			
+    18: 			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+    19: 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+  app/models/user.rb:30:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:37:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:19:in `current_user'
+  app/helpers/sessions_helper.rb:27:in `signed_in?'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1376573083939687463_70135366123780'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:18:46 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/join" for 127.0.0.1 at 2013-08-05 12:18:50 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/users_controller.rb:12:in `new'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:18:50 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/join" for 127.0.0.1 at 2013-08-05 12:18:52 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/users_controller.rb:12:in `new'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:18:52 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/join" for 127.0.0.1 at 2013-08-05 12:18:52 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/users_controller.rb:12:in `new'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:18:52 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/join" for 127.0.0.1 at 2013-08-05 12:19:57 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/users_controller.rb:12:in `new'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:19:57 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/join" for 127.0.0.1 at 2013-08-05 12:19:58 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/users_controller.rb:12:in `new'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:19:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/join" for 127.0.0.1 at 2013-08-05 12:19:58 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 0ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/users_controller.rb:12:in `new'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:19:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/join" for 127.0.0.1 at 2013-08-05 12:19:58 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/users_controller.rb:12:in `new'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:19:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/join" for 127.0.0.1 at 2013-08-05 12:19:58 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/users_controller.rb:12:in `new'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-08-05 12:19:59 -0500
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
