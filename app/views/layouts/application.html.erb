@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <%= csrf_meta_tag %>
+  <%= stylesheet_link_tag "/style/master.css" %>
+</head>
+<body class = 'mainbody'>
+	<div class = 'page'>
+	<div class = 'maintitle'>
+		<span><h2><%= @heading %></h2>
+		<ul class = 'mainnav'>
+			<li><%= link_to "Home", "/" %></li>
+			<li><%= link_to "Map", "/map" %></li>
+			<li><%= link_to "Players", "/players" %></li>
+			<% if signed_in? %>
+			
+			<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
+			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+			<% else %>
+			<li><%= link_to "Sign in", signin_path, :method => :delete %></li>
+			<% end %>
+		</ul></span>
+	</div>
+	<div class = 'primary'>
+		
+		<% flash.each do |key, value| %>
+		<div class = "flash_<% key %>">
+			<p><%= value %></p>
+		</div>
+		
+		
+		<% end %>
+		
+		<%= yield %>
+	
+		<!-- <%= debug(params) if Rails.env.development? %> -->
+	
+	</div>
+	<div id="footer">
+		<p>Copywrite 2013, Charles Chamberlain, All Rights Reserved</p>
+	</div>
+	</div>
+</body>
+</html>
