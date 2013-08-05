@@ -7,13 +7,14 @@ gem 'rails', '3.2.6'
 
 gem 'sqlite3'
 
+gem 'webrat'
+
 group :development do
 	gem 'rspec-rails'
 end
 
 group :test do 
 	gem 'rspec'
-	gem 'webrat'
 	gem 'factory_girl_rails', '1.0'
 end
 
