@@ -25,6 +25,10 @@
 </div>
 
 <div>
+	<%= f.select :nation, options_for_select([["England", 'england'], ['France', 'france'], ['Germany', 'germany'], ['Italy', 'italy'], ['Russia', 'russia'], ['Austria', 'austria'], ['Turkey', 'turkey']], @user.nation) %>
+</div>
+
+<div>
 	<%= f.submit "Join"%>
 </div>
 

@@ -1,7 +1,8 @@
 require 'digest'
 class User < ActiveRecord::Base
 	attr_accessor :password
-  attr_accessible :email, :name, :password, :password_confirmation
+  attr_accessible :email, :name, :password, :password_confirmation, :nation
+	
 	
 	email_regex = /\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i
 	
@@ -13,6 +14,8 @@ class User < ActiveRecord::Base
 	validates :password, :presence => true,
 						:confirmation => true,
 						:length => { :within => 6..40 }
+	validates :nation, :presence => true,
+						:uniqueness => true
 						
 	before_save :encrypt_password
 	

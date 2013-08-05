@@ -119,6 +119,16 @@ div.main_form {
 	
 }
 
+.all_users {
+	position: relative;
+	top: 20px;
+	list-style: none;
+}
+
+.all_users li a {
+	vertical-align: top;
+	line-height: 40px;
+}
 
 /* General Settings */
 * {
