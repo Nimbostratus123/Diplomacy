@@ -24,10 +24,10 @@
 	height: 72px;
 	padding-top: 28px;
 	text-align: center;
-	color: #984D99;
+	color: #FAAB00;
 	font-size: 38px;
-	background-color: #82B0C4;
-	text-shadow: 0px 0px 1px #10005a;
+	background-color: frog green;
+	text-shadow: 0px 0px 1px #FFF;
 }
 
 .mainnav {
@@ -270,6 +270,9 @@ div.main_form {
     top: 41px;
 }
 
+#map {
+	width: 100%;
+}
 
 
 
