@@ -120,6 +120,38 @@ div.main_form {
 	
 }
 
+#error_explanation {
+	background-color: #FF8C8C;
+	border: solid 2px #F00;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: none;
+	position: relative;
+	right: 20px;
+	top: -25px;
+	
+}
+
+#error_explanation h2 {
+	text-align: center;
+	font-size: 17px;
+	position: relative;
+
+	right: -1px;
+	margin-right: 10px;
+	margin-left: 10px;
+	border: dashed black 1px;
+	margin-bottom: none;
+}
+
+#error_explanation p {
+	font-size: 14px;
+}
+
+#error_explanation ul {
+	font-size: 14px;
+}
+
 .all_users {
 	position: relative;
 	top: 20px;
@@ -169,6 +201,15 @@ div.main_form {
 	padding-left: 20px;
 }
 
+.flash_ {
+	text-align: center;
+	background-color: #FFFD9E;
+	border: solid 1px #FFC31F;
+	margin-top: 20px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+}
 
 /* Settings for awesome button */
 
