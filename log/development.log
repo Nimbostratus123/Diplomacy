@@ -38879,3 +38879,2151 @@ ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
 
 
   Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2013-08-06 15:39:02 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 22ms (Views: 11.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:39:02 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:39:03 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.3ms)
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:39:03 -0500
+Served asset /all.js - 404 Not Found (36ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2013-08-06 15:39:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "10"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:39:07 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2013-08-06 15:39:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:39:08 -0500
+Served asset /all.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2013-08-06 15:39:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:39:09 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2013-08-06 15:39:10 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:39:10 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-08-06 15:39:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ff2GBMdTLZ/XUSZL2mE8U9XxvW+Zm87A57dHpGqGP1U=", "session"=>{"email"=>"eg@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'eg@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2013-08-06 15:39:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:39:18 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:39:20 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (2.0ms)
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:39:20 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:39:57 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (2.0ms)
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if user8? %><div class = 'greentitle'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/helpers/sessions_helper.rb:15:in `[]'
+  app/helpers/sessions_helper.rb:15:in `user8?'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198381358840'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:41:51 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.5ms)
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 78ms
+
+ActionView::Template::Error (undefined method `user8?' for #<#<Class:0x007fb0ab6924c8>:0x007fb0ab691488>):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if user8? %><div class = 'greentitle'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198383399360'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.2ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:41:52 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (1.8ms)
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (undefined method `user8?' for #<#<Class:0x007fb0ab6924c8>:0x007fb0ac2a0f58>):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if user8? %><div class = 'greentitle'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198383399360'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:41:58 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.1ms)
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if user_8? %><div class = 'greentitle'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/helpers/sessions_helper.rb:15:in `[]'
+  app/helpers/sessions_helper.rb:15:in `user_8?'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198389463900'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:41:59 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (2.7ms)
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if user_8? %><div class = 'greentitle'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/helpers/sessions_helper.rb:15:in `[]'
+  app/helpers/sessions_helper.rb:15:in `user_8?'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198389463900'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:42:15 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.0ms)
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    38: 	
+    39: 	</div>
+    40: 	<div id="footer">
+    41: 		<% user_8? %>
+    42: 		<p>Copywrite 2013, Charles Chamberlain, All Rights Reserved</p>
+    43: 	</div>
+    44: 	</div>
+  app/helpers/sessions_helper.rb:15:in `[]'
+  app/helpers/sessions_helper.rb:15:in `user_8?'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb__1749240250188658913_70198383657060'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:42:16 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.1ms)
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    38: 	
+    39: 	</div>
+    40: 	<div id="footer">
+    41: 		<% user_8? %>
+    42: 		<p>Copywrite 2013, Charles Chamberlain, All Rights Reserved</p>
+    43: 	</div>
+    44: 	</div>
+  app/helpers/sessions_helper.rb:15:in `[]'
+  app/helpers/sessions_helper.rb:15:in `user_8?'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb__1749240250188658913_70198383657060'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:42:30 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.2ms)
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+Completed 200 OK in 20ms (Views: 10.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:42:30 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:42:30 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.1ms)
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:42:30 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-08-06 15:42:35 -0500
+Processing by PagesController#map as HTML
+  Rendered pages/map.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:42:35 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-06 15:42:37 -0500
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:42:37 -0500
+Served asset /all.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:42:38 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.0ms)
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:42:38 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/8/edit" for 127.0.0.1 at 2013-08-06 15:42:38 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:42:38 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/8/edit" for 127.0.0.1 at 2013-08-06 15:43:03 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "8"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:43:03 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/8/edit" for 127.0.0.1 at 2013-08-06 15:43:03 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:43:03 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/8/edit" for 127.0.0.1 at 2013-08-06 15:43:03 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "8"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 44ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:43:04 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/users/8/edit" for 127.0.0.1 at 2013-08-06 15:43:05 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:43:05 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:43:06 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (2.1ms)
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:43:06 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-08-06 15:43:07 -0500
+Processing by PagesController#map as HTML
+  Rendered pages/map.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:43:07 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-06 15:43:07 -0500
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:43:07 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-06 15:43:19 -0500
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:43:19 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-06 15:43:20 -0500
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:43:20 -0500
+Served asset /all.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-06 15:43:40 -0500
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:43:40 -0500
+Served asset /all.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:44:57 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.2ms)
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+Completed 200 OK in 21ms (Views: 11.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:44:57 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:45:07 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.7ms)
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `name=' for nil:NilClass):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if @current_user.name = 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198395062360'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:45:15 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (1.9ms)
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if @current_user.name == 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198381098120'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:45:15 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (3.1ms)
+  Rendered users/index.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if @current_user.name == 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198381098120'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:45:57 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (1.8ms)
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if User.find_by_id(:remember_token[1]).name == 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198390285100'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:45:58 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (2.6ms)
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if User.find_by_id(:remember_token[1]).name == 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198390285100'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (30.2ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (39.7ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:45:58 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (1.9ms)
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if User.find_by_id(:remember_token[1]).name == 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198390285100'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:45:58 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (1.8ms)
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if User.find_by_id(:remember_token[1]).name == 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198390285100'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:46:04 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (2.2ms)
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (Called id for nil, which would mistakenly be 8 -- if you really wanted the id of nil, use object_id):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if User.find_by_id(:remember_token[1]).id == 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198390286660'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:46:05 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (1.9ms)
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (Called id for nil, which would mistakenly be 8 -- if you really wanted the id of nil, use object_id):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if User.find_by_id(:remember_token[1]).id == 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198390286660'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (28.7ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.9ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:46:44 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_user.html.erb (2.1ms)
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if User.find_by_id(:remember_token[:id]).id == 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `[]'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198381559700'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.3ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:47:21 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (1.7ms)
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:47:21 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:47:23 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.9ms)
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:47:23 -0500
+Served asset /all.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2013-08-06 15:47:24 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-06 15:47:24 -0500
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Called id for nil, which would mistakenly be 8 -- if you really wanted the id of nil, use object_id):
+    8: </head>
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 	<% if signed_in? || User.find_by_id(:remember_token[1]).id == 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %>
+    12: 		<span><h2><%= @heading %></h2>
+    13: 		<ul class = 'mainnav'>
+    14: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1749240250188658913_70198394394800'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-06 15:48:23 -0500
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:48:23 -0500
+Served asset /all.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:48:25 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.0ms)
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:48:25 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2013-08-06 15:48:26 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:48:26 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-08-06 15:48:32 -0500
+Processing by PagesController#map as HTML
+  Rendered pages/map.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:48:32 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-06 15:48:33 -0500
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:48:33 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2013-08-06 15:48:34 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:48:34 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-08-06 15:48:42 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ff2GBMdTLZ/XUSZL2mE8U9XxvW+Zm87A57dHpGqGP1U=", "user"=>{"name"=>"Emily", "email"=>"e@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "nation"=>"england"}, "commit"=>"Join"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('e@gmail.com') LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."nation" = 'england' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "nation", "salt", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 06 Aug 2013 20:48:42 UTC +00:00], ["email", "e@gmail.com"], ["encrypted_password", "9bfd701c69d223c50d0706320821f9563c1c835dc8a0a9839de3f35905d775a8"], ["name", "Emily"], ["nation", "england"], ["salt", "cc813f85308e616961d37176290fa9e3b647ffa5b6b57fd0e265cd14f7125b4e"], ["updated_at", Tue, 06 Aug 2013 20:48:42 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2013-08-06 15:48:42 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "12"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Called id for nil, which would mistakenly be 8 -- if you really wanted the id of nil, use object_id):
+    9: <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
+    10: 	<div class = 'page'>
+    11: 		<% if signed_in? %>
+    12: 	<% if User.find_by_id(:remember_token[1]).id == 'Emily' %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %><% else %><div class = 'maintitle'><% end %>
+    13: 		<span><h2><%= @heading %></h2>
+    14: 		<ul class = 'mainnav'>
+    15: 			<li><%= link_to "Home", "/" %></li>
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__1749240250188658913_70198381338700'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2013-08-06 15:49:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "12"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:49:44 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:49:45 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.7ms)
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:49:45 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-08-06 15:49:46 -0500
+Processing by PagesController#map as HTML
+  Rendered pages/map.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:49:46 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2013-08-06 15:49:47 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-06 15:49:47 -0500
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:49:47 -0500
+Served asset /all.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-08-06 15:49:48 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_user.html.erb (2.6ms)
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:49:48 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-08-06 15:49:48 -0500
+Processing by PagesController#map as HTML
+  Rendered pages/map.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:49:48 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-06 15:49:49 -0500
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:49:49 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2013-08-06 15:49:50 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:49:50 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2013-08-06 15:50:09 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:50:09 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2013-08-06 15:50:10 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:50:10 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-08-06 15:50:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ff2GBMdTLZ/XUSZL2mE8U9XxvW+Zm87A57dHpGqGP1U=", "session"=>{"email"=>"e@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'e@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2013-08-06 15:50:14 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "12"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:50:14 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-08-06 15:50:16 -0500
+Processing by PagesController#map as HTML
+  Rendered pages/map.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1[0m
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:50:16 -0500
+Served asset /all.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-06 15:50:17 -0500
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.js" for 127.0.0.1 at 2013-08-06 15:50:17 -0500
+Served asset /all.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charles/.rvm/gems/ruby-2.0.0-p247@rails_3.2.6/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
