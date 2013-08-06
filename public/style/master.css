@@ -7,6 +7,14 @@
 	font-size: 16px;
 }
 
+.map_body {
+	color: #000;
+	background: url(../images/grey.png);
+	background-size: 100%, 100%;
+	font-family: "Arial";
+	font-size: 16px;
+}
+
 .maintitle span {
 	position: relative;
 	top: -75px;
@@ -85,6 +93,11 @@
 	min-width: 500px;
 }
 
+body.map_body .page {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
 
 
 #footer {
