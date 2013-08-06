@@ -18797,3 +18797,14 @@ Processing by UsersController#edit as HTML
   Rendered shared/_error_messages.html.erb (0.0ms)
   Rendered users/edit.html.erb within layouts/application (4.0ms)
 Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2013-08-05 21:01:59 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.4ms)
