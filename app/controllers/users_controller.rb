@@ -14,6 +14,10 @@ class UsersController < ApplicationController
 		@title = 'Join'
   end
 	
+	def destroy
+		User.find(params[:id]).destroy
+	end
+	
 	def show
 		@user = User.find(params[:id])
 		@heading = @user.name

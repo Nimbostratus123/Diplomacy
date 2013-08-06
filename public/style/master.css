@@ -131,10 +131,16 @@ div.main_form {
 	line-height: 40px;
 }
 
-.all_users span {
+.all_users span.bar {
 	color: #000CAD;
 	position: relative;
 	bottom: 12px;
+	left: 2px;
+}
+
+.all_users span.user_name {
+	position:relative;
+	top: 3px;
 	left: 2px;
 }
 
