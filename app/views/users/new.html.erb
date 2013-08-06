@@ -5,26 +5,27 @@
 
 
 <div>
-	<%= f.label :name %><br />
+	<span>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	<%= f.text_field :name %>
 </div>
 
 <div>
-	<%= f.label :email %><br />
-	<%= f.text_field :email %>
+	<span>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	<span class = 'email_field'><%= f.text_field :email %></span>
 </div>
 
 <div>
-	<%= f.label :password %><br />
+	<span>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	<%= f.password_field :password %>
 </div>
 
 <div>
-	<%= f.label :password_confirmation, "Confirmation" %><br />
+	<span>Confirmation:&nbsp;&nbsp;</span>
 	<%= f.password_field :password_confirmation %>
 </div>
 
-<div>
+<div class = 'nation_selector' >
+	<span>Nation: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	<%= f.select :nation, options_for_select([["England", 'england'], ['France', 'france'], ['Germany', 'germany'], ['Italy', 'italy'], ['Russia', 'russia'], ['Austria', 'austria'], ['Turkey', 'turkey']], @user.nation) %>
 </div>
 
