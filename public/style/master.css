@@ -397,11 +397,12 @@ div.image_display img {
 }
 
 .color_swatch a {
-	display: block;
-	height: 40px;
-	width: 40px;
+	
 	font-size: 10px;
 	opacity: 1;
+	color: #FFF;
+	text-align: center;
+	text-shadow: none;
 }
 
 		.cyan_li {
@@ -417,8 +418,8 @@ div.image_display img {
 			border: 2px groove #CCCC00;
 		}
 		.red_li {
-			background-color: #FF0000;
-			border: 2px groove #CC0000;
+			background-color: #8D1919;
+			border: 2px groove #711414;
 		}
 		.green_li {
 			background-color: #297C29;
