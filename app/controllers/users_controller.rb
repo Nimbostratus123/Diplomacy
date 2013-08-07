@@ -40,6 +40,7 @@ class UsersController < ApplicationController
 	
 	def edit
 		@user = User.find(params[:id])
+		@edit_count = 0
 		@title = @heading = "Settings"
 	end
 	
@@ -50,6 +51,7 @@ class UsersController < ApplicationController
 			redirect_to @user
 		else
 			@title = @heading = "Edit User"
+			@edit_count = 1
 			render 'edit'
 		end
 	end

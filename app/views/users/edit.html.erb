@@ -1,5 +1,5 @@
 
-<h4 class = 'edit_title'>User Data</h4>
+<h4 class = 'edit_title'>User Data:</h4>
 <div class = 'main_form'>
 	
 <%= form_for @user do |f| %>
@@ -40,15 +40,19 @@
 
 </div>
 
+
+<% unless @edit_count == 1 %>
 <div class = 'color_swatch'>
-	<h4>Favorite Color</h4>
+	<h4>Favorite Color:</h4>
 	<ul>
-		<li class = 'cyan_li'>cyan</li>
+		<li class = 'red_li'></li>
+		<li class = 'pink_li'></li>
 		<li class = 'orange_li'></li>
 		<li class = 'yellow_li'></li>
-		<li class = 'red_li'></li>
 		<li class = 'green_li'></li>
-		<li class = 'pink_li'></li>
+		<li class = 'cyan_li'></li>
+		<li class = 'indigo_li'></li>
 	</ul>
 	<p>hi</p>
 </div>
+<% end %>

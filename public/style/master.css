@@ -45,7 +45,6 @@
 	text-align: center;
 	color: #DBDBDB;
 	font-size: 38px;
-	background-color: #45B8FF;
 	text-shadow: 0px 1px 1px black;
 }
 
@@ -115,7 +114,7 @@
 	bottom: 9%;
 	top: 1%;
 	border-radius: 0px 0px 10px 10px;
-	min-width: 500px;
+	min-width: 530px;
 }
 
 body.map_body .page {
@@ -165,7 +164,6 @@ div.image_display img {
 .main_form {
 	margin-left: 5%;
 	margin-top: 40px;
-	
 }
 
 .form_naming {
@@ -365,14 +363,17 @@ div.image_display img {
 
 
 .color_swatch {
-	background-color: white;
 	margin-right: 160px;
 	margin-left: 160px;
+	border: 3px ridge #AAA;
+	margin-top: 10px;
 }
 
 .color_swatch h4 {
-	padding-top: 30px;
-	padding-left: 40px;
+	padding-top: 0px;
+	padding-left: 20px;
+	padding-bottom:none;
+	text-decoration: underline;
 }
 
 .color_swatch li {
@@ -380,20 +381,58 @@ div.image_display img {
 	width: 40px;
 	height: 40px;
 	float: left;
-	border: 1px solid black;
 	margin: 5px;
 }
 
 .color_swatch ul {
-	margin-left: 13px;
+	position: relative;
+	left: -24px;
+	top: -18px;
 }
 
 .color_swatch p {
 	opacity:0;
+	font-size: 8px;
 	padding-bottom: 40px;
 }
 
+.color_swatch a {
+	display: block;
+	height: 40px;
+	width: 40px;
+	font-size: 30px;
+	opacity: 1;
+}
 
+		.cyan_li {
+			background-color: #45B8FF;
+			border: 2px groove #3793CC;
+		}
+		.orange_li {
+			background-color: #FF9900;
+			border: 2px groove #CC7A00;
+		}
+		.yellow_li {
+			background-color: #FFFF00;
+			border: 2px groove #CCCC00;
+		}
+		.red_li {
+			background-color: #FF0000;
+			border: 2px groove #CC0000;
+		}
+		.green_li {
+			background-color: #297C29;
+			border: 2px groove #216321;
+		}
+		.pink_li {
+			background-color: #FF3399;
+			border: 2px ridge #FF7DBD;
+		}
+		.indigo_li {
+			background-color: #0000CC;
+			border: 2px ridge #0000A3;
+		}
+		
 
 
 

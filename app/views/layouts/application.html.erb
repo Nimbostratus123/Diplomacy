@@ -5,12 +5,13 @@
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag "/style/master.css" %>
   <%= javascript_include_tag :all %>
+  <style> .maintitle {background-color: #<%= title_color %>;}</style>
 </head>
 <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
 	<div class = 'page'>
-		<% if signed_in? %>
-	<% if current_user.name =~ /Emily/i %><div class = 'green_title'><% else %><div class = 'maintitle'><% end %><% else %><div class = 'maintitle'><% end %>
+	<div class = 'maintitle'>
 		<span><h2><%= @heading %></h2>
+			<% set_color('gray') %>
 		<ul class = 'mainnav'>
 			<li><%= link_to "Home", "/" %></li>
 			<li><%= link_to "Map", "/map" %></li>
