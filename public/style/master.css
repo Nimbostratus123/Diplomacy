@@ -119,19 +119,37 @@
 	overflow-x: hidden;
 }
 
-body.map_body .page {
-	overflow: scroll;
-}
-
-body.map_body #footer {
-	writing-mode:tb-rl;
-		-webkit-transform:rotate(90deg);
-		-moz-transform:rotate(90deg);
-		-o-transform: rotate(90deg);
-		white-space:nowrap;
-		bottom: 200px;
-		right: -180px;
-}
+		.map_body .page {
+			/*overflow: hidden;*/
+		}
+		
+		.map_body #footer {
+			writing-mode:tb-rl;
+				-webkit-transform:rotate(90deg);
+				-moz-transform:rotate(90deg);
+				-o-transform: rotate(90deg);
+				transform: rotate(90deg);
+				white-space:nowrap;
+				bottom: 200px;
+				right: -180px;
+		}
+		
+		.map_body .primary {
+			overflow-x: scroll;
+			overflow-y: scroll;
+		}
+		
+		.map_div {
+			overflow: scroll;
+		}
+			
+		.toptitle {
+			position: fixed;
+			top: 7px;
+			left: 14.8%;
+			width: 70%;
+		}
+		
 
 
 
