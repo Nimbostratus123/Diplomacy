@@ -1,39 +1,54 @@
+
+<h4 class = 'edit_title'>User Data</h4>
 <div class = 'main_form'>
 	
 <%= form_for @user do |f| %>
 <%= render 'shared/error_messages', :object => f.object %> 
 
 
-<div>
-	<span>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-	<%= f.text_field :name %>
-</div>
+	<div>
+		<span>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		</span>
+		<%= f.text_field :name %>
+	</div>
+	
+	<div>
+			<span>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;</span>
+			<span class = 'email_field'><%= f.text_field :email %></span>
+	</div>
+	
+	<div>
+		<span>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<%= f.password_field :password %>
+	</div>
 
-<div>
-	<span>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-	<span class = 'email_field'><%= f.text_field :email %></span>
-</div>
+	<div>
+		<span>Confirmation:&nbsp;&nbsp;</span>
+		<%= f.password_field :password_confirmation %>
+	</div>
 
-<div>
-	<span>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-	<%= f.password_field :password %>
-</div>
+	<div class = 'nation_selector' >
+		<span>Nation: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<%= f.select :nation, options_for_select([["England", 'england'], ['France', 'france'], 		['Germany', 'germany'], ['Italy', 'italy'], ['Russia', 'russia'], ['Austria', 'austria'], 			['Turkey', 'turkey']], @user.nation) %>
+	</div>
 
-<div>
-	<span>Confirmation:&nbsp;&nbsp;</span>
-	<%= f.password_field :password_confirmation %>
-</div>
-
-<div class = 'nation_selector' >
-	<span>Nation: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-	<%= f.select :nation, options_for_select([["England", 'england'], ['France', 'france'], ['Germany', 'germany'], ['Italy', 'italy'], ['Russia', 'russia'], ['Austria', 'austria'], ['Turkey', 'turkey']], @user.nation) %>
-</div>
-
-<div>
-	<span><%= f.submit "Edit"%></span>
-</div>
+	<div>
+		<span><%= f.submit "Edit"%></span>
+	</div>
 
 <% end %>
 
+</div>
 
+<div class = 'color_swatch'>
+	<h4>Favorite Color</h4>
+	<ul>
+		<li class = 'cyan_li'>cyan</li>
+		<li class = 'orange_li'></li>
+		<li class = 'yellow_li'></li>
+		<li class = 'red_li'></li>
+		<li class = 'green_li'></li>
+		<li class = 'pink_li'></li>
+	</ul>
+	<p>hi</p>
 </div>

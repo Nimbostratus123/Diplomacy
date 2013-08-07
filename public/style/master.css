@@ -124,6 +124,17 @@ body.map_body .page {
 	margin-right: 5%;
 }
 
+body.map_body #footer {
+	writing-mode:tb-rl;
+		-webkit-transform:rotate(90deg);
+		-moz-transform:rotate(90deg);
+		-o-transform: rotate(90deg);
+		white-space:nowrap;
+		bottom: 200px;
+		right: -180px;
+}
+
+
 
 #footer {
 	position: fixed;
@@ -147,12 +158,11 @@ div.image_display img {
 	width: 50%;
 }
 
-div.image_display {
+.image_display {
 	text-align: center;
 }
 
-div.main_form {
-	
+.main_form {
 	margin-left: 5%;
 	margin-top: 40px;
 	
@@ -272,6 +282,16 @@ div.main_form {
     background:linear-gradient(to bottom, #007dc1 5%, #33557a 100%);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#33557a',GradientType=0);
     
+	-webkit-transition:-webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+	-webkit-border-radius:5px;
+	-o-transition-property:width,height,-o-transform,background,font-size,opacity;
+	-o-transition-duration:1s,1s,1s,1s,1s,1s;
+	-moz-transition-property:width,height,-o-transform,background,font-size,opacity;
+	-moz-transition-duration:1s,1s,1s,1s,1s,1s;
+	transition-property:width,height,transform,background,font-size,opacity;
+	transition-duration:1s,1s,1s,1s,1s,1s;
+	
+	
     background-color:#007dc1;
     
     -moz-border-radius:6px;
@@ -297,7 +317,15 @@ div.main_form {
 .join_button:hover {
 	color:#ffffff;
 	text-shadow:0px 1px 0px #154682;
+	
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	font-size:30px;
     
+	
+	
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33557a), color-stop(1, #007dc1));
     background:-moz-linear-gradient(top, #33557a 5%, #007dc1 100%);
     background:-webkit-linear-gradient(top, #33557a 5%, #007dc1 100%);
@@ -310,12 +338,71 @@ div.main_form {
 }
 .join_button:active {
     position:relative;
-    top: 41px;
+    top: 42px;
+}
+
+.all_users li {
+	transition: transform 0.5s, left 0.5s;
+	-webkit-transition: -webkit-transform 0.5s, left 0.5s; /* Safari */
+}
+
+.all_users li:hover {
+	transform: skew(-20deg,0deg);
+	-ms-transform: skew(-20deg,0deg); /* IE 9 */
+	-webkit-transform: skew(-20deg,0deg); /* Safari and Chrome */
+	position: relative;
+	left: 52px;
 }
 
 #map {
 	width: 100%;
 }
+
+.edit_title {
+	padding-left: 7%;
+	text-decoration: underline;
+}
+
+
+.color_swatch {
+	background-color: white;
+	margin-right: 160px;
+	margin-left: 160px;
+}
+
+.color_swatch h4 {
+	padding-top: 30px;
+	padding-left: 40px;
+}
+
+.color_swatch li {
+	display: block;
+	width: 40px;
+	height: 40px;
+	float: left;
+	border: 1px solid black;
+	margin: 5px;
+}
+
+.color_swatch ul {
+	margin-left: 13px;
+}
+
+.color_swatch p {
+	opacity:0;
+	padding-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -328,6 +415,5 @@ div {
 	padding: 0;
 	margin: 0;
 }
-
 
 

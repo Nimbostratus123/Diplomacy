@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 	
 	def edit
 		@user = User.find(params[:id])
-		@title = @heading = "Edit User"
+		@title = @heading = "Settings"
 	end
 	
 	def update
