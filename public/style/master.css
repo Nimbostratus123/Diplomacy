@@ -115,12 +115,12 @@
 	top: 1%;
 	border-radius: 0px 0px 10px 10px;
 	min-width: 530px;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 body.map_body .page {
-	width: 90%;
-	margin-left: 5%;
-	margin-right: 5%;
+	overflow: scroll;
 }
 
 body.map_body #footer {
@@ -352,9 +352,6 @@ div.image_display img {
 	left: 52px;
 }
 
-#map {
-	width: 100%;
-}
 
 .edit_title {
 	padding-left: 7%;
@@ -397,7 +394,7 @@ div.image_display img {
 }
 
 .color_swatch a {
-	
+	display: block;
 	font-size: 10px;
 	opacity: 1;
 	color: #FFF;

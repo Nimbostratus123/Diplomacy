@@ -6,6 +6,8 @@
   <%= stylesheet_link_tag "/style/master.css" %>
   <%= javascript_include_tag :all %>
   <style> .maintitle {background-color: #<%= title_color %>;}</style>
+  <% if @title == 'Map' %><style> .page {background-color: #<%= title_color %>;}</style><% end %>
+  
 </head>
 
 <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
