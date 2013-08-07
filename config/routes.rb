@@ -15,6 +15,8 @@ Diplomacy::Application.routes.draw do
   get "pages/winners"
 
   get "pages/about"
+	
+	get "pages/color_change"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -74,7 +76,6 @@ Diplomacy::Application.routes.draw do
 	match '/map', :to => 'pages#map'
 	
 	match '/players', :to => 'users#index'
-	
 	
 	
   root :to => 'pages#home'

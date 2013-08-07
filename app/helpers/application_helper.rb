@@ -10,14 +10,20 @@ module ApplicationHelper
 	end
 	
 	def set_color(color)
-		cookies.permanent[:remember_token] = { value: color, expires: 2.years.from_now.utc }
+		cookies.permanent[:remember_color] = color
+	end
+	
+	def default_color
+		if cookies[:remember_color].empty?
+			cookies.permanent[:remember_color] = '45B8FF'
+		end
 	end
 		
 	def title_color 
-		if :remember_token[1] =~ /e/
+		unless cookies[:remember_color]
 			return '45B8FF'
 		else
-			return :remember_token
+			return cookies[:remember_color]
 		end
 	end 
 	

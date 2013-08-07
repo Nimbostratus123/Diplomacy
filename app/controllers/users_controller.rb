@@ -41,6 +41,9 @@ class UsersController < ApplicationController
 	def edit
 		@user = User.find(params[:id])
 		@edit_count = 0
+		if params[:color]
+			set_color(params[:color])
+		end
 		@title = @heading = "Settings"
 	end
 	

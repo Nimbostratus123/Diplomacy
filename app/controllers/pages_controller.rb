@@ -8,5 +8,12 @@ class PagesController < ApplicationController
 		@title = @heading
   end
 
-
+	
+	def color_change
+	  set_color(params[:my_param])
+		redirect_to join_path
+	end
+	
+	
+	
 end

@@ -7,11 +7,11 @@
   <%= javascript_include_tag :all %>
   <style> .maintitle {background-color: #<%= title_color %>;}</style>
 </head>
+
 <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
 	<div class = 'page'>
 	<div class = 'maintitle'>
 		<span><h2><%= @heading %></h2>
-			<% set_color('gray') %>
 		<ul class = 'mainnav'>
 			<li><%= link_to "Home", "/" %></li>
 			<li><%= link_to "Map", "/map" %></li>
