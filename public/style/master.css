@@ -1,4 +1,12 @@
 
+
+					/* CSS Document for Charles' Diplomacy Ruby on Rails website */
+
+
+
+
+		/* General Settings */
+
 .mainbody {
 	color: #000;
 	background: url(../images/grey.png);
@@ -7,14 +15,7 @@
 	font-size: 16px;
 }
 
-.map_body {
-	color: #000;
-	background: url(../images/grey.png);
-	background-size: 100%, 100%;
-	font-family: "Arial";
-	font-size: 16px;
-	width: ;
-}
+
 
 .maintitle span {
 	position: relative;
@@ -46,6 +47,7 @@
 	color: #DBDBDB;
 	font-size: 38px;
 	text-shadow: 0px 1px 1px black;
+	z-index: 50;
 }
 
 .green_title {
@@ -119,53 +121,6 @@
 	overflow-x: hidden;
 }
 
-		.map_body .page {
-			/*overflow: hidden;*/
-		}
-		
-		.map_body #footer {
-			writing-mode:tb-rl;
-				-webkit-transform:rotate(90deg);
-				-moz-transform:rotate(90deg);
-				-o-transform: rotate(90deg);
-				transform: rotate(90deg);
-				white-space:nowrap;
-				bottom: 200px;
-				right: -180px;
-		}
-		
-		.map_body .primary {
-			overflow-x: scroll;
-			overflow-y: scroll;
-		}
-		
-		.map_div {
-			overflow: scroll;
-		}
-			
-		.toptitle {
-			position: fixed;
-			top: 7px;
-			left: 14.8%;
-			width: 70%;
-		}
-		
-
-
-
-#footer {
-	position: fixed;
-	bottom: 10px;
-	right: 6%;
-}
-
-
-a {
-	text-decoration: none;
-	color: #9E1818;
-}
-
-
 a:hover {
 	color: #be6608;
 	text-shadow: #fbfc24 0 0 2px;
@@ -187,6 +142,92 @@ div.image_display img {
 .form_naming {
 	position: relative;
 	left:5px;
+}
+
+
+#footer {
+	position: fixed;
+	bottom: 10px;
+	right: 6%;
+}
+
+
+a {
+	text-decoration: none;
+	color: #9E1818;
+}
+
+
+
+
+
+
+
+
+
+		
+		/* Map Settings */
+
+.map_body .page {
+	/*overflow: hidden;*/
+}
+	
+.map_body {
+	color: #000;
+	background: url(../images/grey.png);
+	background-size: 100%, 100%;
+	font-family: "Arial";
+	font-size: 16px;
+	width: ;
+}
+	
+.map_body #footer {
+	writing-mode:tb-rl;
+		-webkit-transform:rotate(90deg);
+		-moz-transform:rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg);
+		white-space:nowrap;
+		bottom: 200px;
+		right: -180px;
+}
+		
+.map_body .primary {
+	overflow: scroll;
+}
+
+.map_div {}
+	
+.toptitle {
+	position: fixed;
+	top: 7px;
+	left: 14.8%;
+	width: 70%;
+}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/* Flash */
+
+#error_explanation p {
+	font-size: 14px;
+}
+
+#error_explanation ul {
+	font-size: 14px;
 }
 
 #error_explanation {
@@ -213,13 +254,30 @@ div.image_display img {
 	margin-bottom: none;
 }
 
-#error_explanation p {
-	font-size: 14px;
+
+.flash_ {
+	text-align: center;
+	background-color: #FFFD9E;
+	border: solid 1px #FFC31F;
+	margin-top: 20px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 20px;
 }
 
-#error_explanation ul {
-	font-size: 14px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+		/* User Index Page */
 
 .all_users {
 	position: relative;
@@ -270,18 +328,16 @@ div.image_display img {
 	padding-left: 20px;
 }
 
-.flash_ {
-	text-align: center;
-	background-color: #FFFD9E;
-	border: solid 1px #FFC31F;
-	margin-top: 20px;
-	margin-left: 100px;
-	margin-right: 100px;
-	margin-bottom: 20px;
-}
 
-/* Settings for awesome button */
 
+
+
+
+
+
+
+
+		/* Settings for awesome button */
 
 
 .join_button {
@@ -298,20 +354,21 @@ div.image_display img {
     background:linear-gradient(to bottom, #007dc1 5%, #33557a 100%);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#33557a',GradientType=0);
     
-	-webkit-transition:-webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+	-webkit-transition:-webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s, left 1s;
 	-webkit-border-radius:5px;
-	-o-transition-property:width,height,-o-transform,background,font-size,opacity;
-	-o-transition-duration:1s,1s,1s,1s,1s,1s;
-	-moz-transition-property:width,height,-o-transform,background,font-size,opacity;
-	-moz-transition-duration:1s,1s,1s,1s,1s,1s;
-	transition-property:width,height,transform,background,font-size,opacity;
-	transition-duration:1s,1s,1s,1s,1s,1s;
+	-o-transition-property:width,height,-o-transform,background,font-size,opacity, left;
+	-o-transition-duration:1s,1s,1s,1s,1s,1s,1s;
+	-moz-transition-property:width,height,-o-transform,background,font-size,opacity, left;
+	-moz-transition-duration:1s,1s,1s,1s,1s,1s,1s;
+	transition-property:width,height,transform,background,font-size,opacity, left;
+	transition-duration:1s,1s,1s,1s,1s,1s,1s;
 	
 	
     background-color:#007dc1;
     
     -moz-border-radius:6px;
     -webkit-border-radius:6px;
+	-o-border-radius:6px;
     border-radius:6px;
     
     border:1px solid #124d77;
@@ -333,6 +390,8 @@ div.image_display img {
 .join_button:hover {
 	color:#ffffff;
 	text-shadow:0px 1px 0px #154682;
+	left: 340px;
+	
 	
 	-moz-transform: rotate(360deg);
 	-webkit-transform: rotate(360deg);
@@ -357,24 +416,18 @@ div.image_display img {
     top: 42px;
 }
 
-.all_users li {
-	transition: transform 0.5s, left 0.5s;
-	-webkit-transition: -webkit-transform 0.5s, left 0.5s; /* Safari */
-}
-
-.all_users li:hover {
-	transform: skew(-20deg,0deg);
-	-ms-transform: skew(-20deg,0deg); /* IE 9 */
-	-webkit-transform: skew(-20deg,0deg); /* Safari and Chrome */
-	position: relative;
-	left: 52px;
-}
 
 
-.edit_title {
-	padding-left: 7%;
-	text-decoration: underline;
-}
+
+
+
+
+
+
+
+
+
+		/* For the color setting */
 
 
 .color_swatch {
@@ -382,6 +435,7 @@ div.image_display img {
 	margin-left: 160px;
 	border: 3px ridge #AAA;
 	margin-top: 10px;
+	height: 200px;
 }
 
 .color_swatch h4 {
@@ -392,11 +446,26 @@ div.image_display img {
 }
 
 .color_swatch li {
-	display: block;
+	display: inline;
 	width: 40px;
 	height: 40px;
 	float: left;
 	margin: 5px;
+	border-radius:0px;
+	-moz-border-radius:0px;
+	-o-border-radius:0px;
+	-webkit-border-radius:0px;
+	transition: border-radius 0.7s;
+	-webkit-transition: -webkit-border-radius 0.7s;
+	-o-transition: -o-border-radius 0.7s;
+	-moz-tranition: -moz-border-radius 0.7s;
+}
+
+.color_swatch li:hover {
+	border-radius:40px;
+	-moz-border-radius:40px;
+	-o-border-radius:40px;
+	-webkit-border-radius:40px;
 }
 
 .color_swatch ul {
@@ -405,19 +474,16 @@ div.image_display img {
 	top: -18px;
 }
 
-.color_swatch p {
-	opacity:0;
-	font-size: 8px;
-	padding-bottom: 40px;
-}
 
 .color_swatch a {
 	display: block;
+	height: 40px;
+	width: 40px;
 	font-size: 10px;
-	opacity: 1;
 	color: #FFF;
 	text-align: center;
-	text-shadow: none;
+	text-shadow: 0px 1px 1px black;
+	padding-top:10px;
 }
 
 		.cyan_li {
@@ -449,6 +515,107 @@ div.image_display img {
 			border: 2px ridge #0000A3;
 		}
 		
+		
+		
+		
+		
+	
+	
+	
+		
+		
+
+
+		/* Animates the unit markers */
+
+.unit-1 , .unit-2 {
+	display: block;
+	height: 10px;
+	width: 10px;
+	margin: 20px;
+	border: solid white 2px;
+	background-color: red;
+	opacity: 0.5;
+	position: absolute;
+	top: -27px;
+	left: -8px;
+}
+
+
+.unit {
+	width: 40px;
+	
+	position: relative;
+	
+	animation: rotation 3s 3 alternate ease-in-out;
+	-webkit-animation: rotation 3s 3 alternate ease-in-out;
+	-moz-animation: rotation 3s 3 alternate ease-in-out;
+	-o-animation: rotation 3s 3 alternate ease-in-out;
+}
+
+.unit-1 {
+	transform: skew(30deg, 30deg);
+	-webkit-transform: skew(30deg, 30deg);
+	animation: cssAnimationOne 3s infinite alternate ease-in-out;
+	-webkit-animation: cssAnimationOne 3s infinite alternate ease-in-out;
+	-moz-animation: cssAnimationOne 3s infinite alternate ease-in-out;
+	-o-animation: cssAnimationOne 3s infinite alternate ease-in-out;
+}
+
+.unit-2 {
+	transform: rotate(45deg) skew(30deg, 30deg);
+	-webkit-transform: rotate(90deg) skew(30deg, 30deg);
+	animation: cssAnimationTwo 3s infinite alternate ease-in-out;
+	-webkit-animation: cssAnimationTwo 3s infinite alternate ease-in-out;
+	-moz-animation: cssAnimationTwo 3s infinite alternate ease-in-out;
+	-o-animation: cssAnimationTwo 3s infinite alternate ease-in-out;	
+}
+
+@-webkit-keyframes cssAnimationOne {
+	0% { opacity: .5; height: 20px; width: 20px; }
+	50% { opacity: .2; height: 10px; width: 10px; }
+	100% { opacity: .5; height: 20px; width: 20px; }
+}
+
+@-webkit-keyframes cssAnimationTwo {
+	0% { opacity: .5; height: 20px; width: 20px; }
+	50% { opacity: .2; height: 10px; width: 10px; }
+	100% { opacity: .5; height: 20px; width: 20px; }
+}
+
+@-webkit-keyframes rotation {
+	0% { -webkit-transform: rotate(0deg); }
+	50% { -webkit-transform: rotate(270deg); }
+	100% { -webkit-transform: rotate(0deg); }
+}
+
+
+
+
+
+
+
+		/* Miscellaneous */
+
+
+.all_users li {
+	transition: transform 0.5s, left 0.5s;
+	-webkit-transition: -webkit-transform 0.5s, left 0.5s; /* Safari */
+}
+
+.all_users li:hover {
+	transform: skew(-20deg,0deg);
+	-ms-transform: skew(-20deg,0deg); /* IE 9 */
+	-webkit-transform: skew(-20deg,0deg); /* Safari and Chrome */
+	position: relative;
+	left: 52px;
+}
+
+
+.edit_title {
+	padding-left: 7%;
+	text-decoration: underline;
+}
 
 
 
@@ -459,9 +626,8 @@ div.image_display img {
 
 
 
-
-
-/* General Settings */
+		/* General Settings */
+	
 * {
 	right: 2px;
 }

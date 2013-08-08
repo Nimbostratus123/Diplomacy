@@ -16,11 +16,14 @@ end
 group :development do
 	gem 'rspec-rails'
 	gem 'sqlite3'
+  gem 'guard-rspec', '2.5.0'
 end
 
 group :test do 
 	gem 'rspec'
 	gem 'factory_girl_rails', '1.0'
+  gem 'guard-rspec', '2.5.0'
+	gem 'growl'
 end
 
 
@@ -45,7 +48,7 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+#2 gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'

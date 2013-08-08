@@ -26,7 +26,7 @@
 	</div>
 	<div class = 'primary'>
 		
-		<div class = 'maintitle toptitle'>
+		<% if @title == 'Map' %><div class = 'maintitle toptitle'>
 			<span><h2><%= @heading %></h2>
 			<ul class = 'mainnav'>
 				<li><%= link_to "Home", "/" %></li>
@@ -39,7 +39,7 @@
 				<li><%= link_to "Sign in", signin_path, :method => :delete %></li>
 				<% end %>
 			</ul></span>
-		</div>
+		</div><% end %>
 		
 		<% flash.each do |key, value| %>
 		<div class = "flash_<% key %>">

@@ -17,7 +17,8 @@ describe UsersController do
 					:email => '',
 					:name => '',
 					:password => '',
-					:password_confirmation => ''
+					:password_confirmation => '',
+					:nation => ''
 				}
 			end
 			
@@ -40,7 +41,8 @@ describe UsersController do
 					:name => "New Name",
 					:email => "user@example.com",
 					:password => "barbaz",
-					:password_confirmation => "barbaz"
+					:password_confirmation => "barbaz",
+					:nation => "england"
 				}
 			end
 			
@@ -97,7 +99,9 @@ describe UsersController do
 				@attr = { :name => "",
 						 			:email => "", 
 									:password => "", 
-									:password_confirmation => "" }
+									:password_confirmation => "",
+									:nation => ""
+								}
 			end
 			
 			it "should not create a user" do
@@ -123,7 +127,8 @@ describe UsersController do
 			
 			before(:each) do
 				@attr = { :name => "New User", :email => "user@example.com",
-						 			:password => 'foobar', :password_confirmation => 'foobar' }
+						 			:password => 'foobar', :password_confirmation => 'foobar', 
+									:nation => 'england' }
 			end
 			
 			it "should create a user" do
@@ -153,7 +158,7 @@ describe UsersController do
 			describe 'for signed-in users' do
 				
 				before(:each) do
-					wrong_user = Factory(:user, :email => "user@example.net")
+					wrong_user = Factory(:user, :email => "user@example.net", :nation => "turkey")
 					test_sign_in(wrong_user)
 				end
 				

@@ -1,7 +1,7 @@
 Diplomacy::Application.routes.draw do
 	
 	resources :sessions, :only => [:new, :create, :destroy]
-
+	resources :microposts, :only => [:create, :destroy]
 	resources :users
 	
   get "sessions/new"
@@ -76,6 +76,7 @@ Diplomacy::Application.routes.draw do
 	match '/map', :to => 'pages#map'
 	
 	match '/players', :to => 'users#index'
+	
 	
 	
   root :to => 'pages#home'

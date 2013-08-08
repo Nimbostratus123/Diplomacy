@@ -7,7 +7,8 @@ describe User do
 			:name => "Example User", 
 			:email => "user@example.com", 
 			:password => 'foobar',
-			:password_confirmation => 'foobar'
+			:password_confirmation => 'foobar',
+			:nation => 'england'
 		}
 	end
 	
@@ -35,6 +36,10 @@ describe User do
 		invalid_email = "hello.a@sd"
 		invalid_email_user = User.new(@attr.merge(:email => invalid_email))
 		invalid_email_user.should_not be_valid
+	end
+	
+	it "should email a user" do
+		User.create!(@attr).should be_valid
 	end
 	
 	it "should reject duplicate email addresses" do
