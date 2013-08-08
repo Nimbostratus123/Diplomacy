@@ -358,7 +358,7 @@ a {
 	-webkit-border-radius:5px;
 	-o-transition-property:width,height,-o-transform,background,font-size,opacity, left;
 	-o-transition-duration:1s,1s,1s,1s,1s,1s,1s;
-	-moz-transition-property:width,height,-o-transform,background,font-size,opacity, left;
+	-moz-transition-property:width,height,-moz-transform,background,font-size,opacity, left;
 	-moz-transition-duration:1s,1s,1s,1s,1s,1s,1s;
 	transition-property:width,height,transform,background,font-size,opacity, left;
 	transition-duration:1s,1s,1s,1s,1s,1s,1s;
@@ -390,7 +390,7 @@ a {
 .join_button:hover {
 	color:#ffffff;
 	text-shadow:0px 1px 0px #154682;
-	left: 340px;
+	left: 40%;
 	
 	
 	-moz-transform: rotate(360deg);
@@ -556,19 +556,19 @@ a {
 .unit-1 {
 	transform: skew(30deg, 30deg);
 	-webkit-transform: skew(30deg, 30deg);
-	animation: cssAnimationOne 3s infinite alternate ease-in-out;
-	-webkit-animation: cssAnimationOne 3s infinite alternate ease-in-out;
-	-moz-animation: cssAnimationOne 3s infinite alternate ease-in-out;
-	-o-animation: cssAnimationOne 3s infinite alternate ease-in-out;
+	animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
+	-webkit-animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
+	-moz-animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
+	-o-animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
 }
 
 .unit-2 {
 	transform: rotate(45deg) skew(30deg, 30deg);
 	-webkit-transform: rotate(90deg) skew(30deg, 30deg);
-	animation: cssAnimationTwo 3s infinite alternate ease-in-out;
-	-webkit-animation: cssAnimationTwo 3s infinite alternate ease-in-out;
-	-moz-animation: cssAnimationTwo 3s infinite alternate ease-in-out;
-	-o-animation: cssAnimationTwo 3s infinite alternate ease-in-out;	
+	animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;
+	-webkit-animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;
+	-moz-animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;
+	-o-animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;	
 }
 
 @-webkit-keyframes cssAnimationOne {
