@@ -15,7 +15,7 @@ module ApplicationHelper
 	
 	def default_color
 		if cookies[:remember_color].empty?
-			cookies.permanent[:remember_color] = '45B8FF'
+			cookies.permanent[:remember_color] = '#45B8FF'
 		end
 	end
 		
