@@ -1,5 +1,5 @@
-./spec/models/user_spec.rb:67
-./spec/models/user_spec.rb:73
 ./spec/models/user_spec.rb:57
+./spec/models/user_spec.rb:73
+./spec/models/user_spec.rb:67
 ./spec/controllers/users_controller_spec.rb:71
 ./spec/controllers/users_controller_spec.rb:66

@@ -5,7 +5,7 @@
 
 
 <div class = 'user_bio'>
-<p><%= User.find_by_id(params[:id]).bio %></p>
+<p><%= @bio %></p>
 </div>
 
 <% if right_user? %>
