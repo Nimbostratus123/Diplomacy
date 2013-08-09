@@ -43,7 +43,8 @@
 
 <% unless @edit_count == 1 %>
 <div class = 'color_swatch'>
-	<h4>Favorite Color:</h4>
+	<fieldset>
+	<legend>Favorite Color:</legend>
 	<ul>
 		<li class = 'red_li'><%= link_to "Infra-Red", { :color => '711414'} %></li>
 		<li class = 'pink_li'><%= link_to "Hot Pink", { :color => 'FF3399'} %></li>
@@ -53,5 +54,6 @@
 		<li class = 'cyan_li'><%= link_to "Cyan", { :color => '45B8FF'} %></li>
 		<li class = 'indigo_li'><%= link_to "Indigo", { :color => '0000CC'} %></li>
 	</ul>
+</fieldset>
 </div>
 <% end %>

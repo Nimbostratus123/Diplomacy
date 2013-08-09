@@ -23,6 +23,10 @@ module SessionsHelper
 		user == current_user
 	end
 	
+	def right_user?
+		User.find(params[:id]) == current_user
+	end
+	
 	def signed_in?
 		!current_user.nil?
 	end

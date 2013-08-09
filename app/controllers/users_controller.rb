@@ -8,11 +8,15 @@ class UsersController < ApplicationController
 	end
 	
 	
+	
+	
   def new
 		@user = User.new 
 		@heading = 'Join'
 		@title = 'Join'
   end
+	
+	
 	
 	def destroy
 	    User.find(params[:id]).destroy
@@ -20,10 +24,19 @@ class UsersController < ApplicationController
 	    redirect_to users_url
 	end
 	
+	
+	
 	def show
 		@user = User.find(params[:id])
 		@heading = @user.name
+		if params[:bio]
+			@user.bio = "''#{params[:bio]}'' -- #{@user.name}"
+			@user.save!
+		end
+			
 	end
+	
+	
 	
 	def create
 		@user = User.new(params[:user])
@@ -38,6 +51,8 @@ class UsersController < ApplicationController
 		end
 	end
 	
+	
+	
 	def edit
 		@user = User.find(params[:id])
 		@edit_count = 0
@@ -47,8 +62,11 @@ class UsersController < ApplicationController
 		@title = @heading = "Settings"
 	end
 	
+	
+	
 	def update
 		@user = User.find(params[:id])
+			
 		if @user.update_attributes(params[:user])
 			flash[:success] = "Profile updated!"
 			redirect_to @user
@@ -57,7 +75,9 @@ class UsersController < ApplicationController
 			@edit_count = 1
 			render 'edit'
 		end
+		
 	end
+
 	
 	private
 	
@@ -69,4 +89,5 @@ class UsersController < ApplicationController
 			@user = User.find(params[:id])
 			redirect_to(root_path) unless current_user?(@user)
 		end
+		
 end

@@ -1,9 +1,20 @@
-<%= form_for @user do |f| %>
-<% end %>
 
 
-<% #current_user.bio %>
 
-<% if User.find(params[:id]) == current_user %>
+
+
+
+<div class = 'user_bio'>
+<p><%= User.find_by_id(params[:id]).bio %></p>
+</div>
+
+<% if right_user? %>
+
+<div class = 'main_form'><form>
+	<textarea rows='<% if current_user.bio %>2<% else %>10<% end %>' cols='60' name="bio">Your strategy and personality...</textarea>
+	<input type="submit" value="<% if current_user.bio %>Update<% else %>Create<% end %> Bio">
+</form></div>
+
+</div>
 <p><%= image_tag("../images/flags/large/#{@user.nation}.jpeg") %></p>
 <% end %>

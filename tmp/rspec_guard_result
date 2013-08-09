@@ -1,3 +1,5 @@
 ./spec/controllers/users_controller_spec.rb:66
 ./spec/controllers/users_controller_spec.rb:71
-./spec/requests/users_spec.rb:21
+./spec/models/user_spec.rb:57
+./spec/models/user_spec.rb:67
+./spec/models/user_spec.rb:73
