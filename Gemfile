@@ -7,6 +7,7 @@ gem 'rails', '3.2.6'
 
 
 gem 'webrat'
+gem 'devise', '1.1.rc0 '
 
 group :production do
   gem 'pg', '0.15.1'

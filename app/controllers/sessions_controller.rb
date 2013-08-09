@@ -9,16 +9,16 @@ class SessionsController < ApplicationController
 	
 	def create
 		
-		user = User.authenticate(params[:session][:email], params[:session][:password])
+		@user = User.find_by_email(params[:session][:email])
 		
-		if user.nil?
-			flash.now[:error] = "Invalid email/password combination"
+		if @user.nil? #has_password?(params[:session][:password])
+			flash.now[:error] = "Invalid password"
 			@title = "Sign In"
 			@heading = "Sign In"
 			render 'new'
 		else
-			sign_in user
-			redirect_to user
+			sign_in @user
+			redirect_to @user
 		end
 		
 	end

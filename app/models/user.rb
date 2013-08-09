@@ -1,5 +1,6 @@
 require 'digest'
 class User < ActiveRecord::Base
+
 	attr_accessor :password, :bio
   attr_accessible :email, :name, :password, :password_confirmation, :nation, 
 	#has_many :moves
@@ -10,10 +11,10 @@ class User < ActiveRecord::Base
 	validates :name, :presence => true,
 						:length => { :maximum => 50 }
 	validates :email, :presence => true,
-						:format => { :with => email_regex },
+						:length => { :within => 6..40 },
 						:uniqueness => { :case_sensitive => false }
-	validates :password, :confirmation => true #:presence => true, 
-	#					:length => { :within => 6..40 }
+#	validates :password, :confirmation => true #:presence => true, 
+#						:length => { :within => 6..40 }
 	validates :nation, :presence => true,
 						:uniqueness => true
 						
@@ -38,7 +39,7 @@ class User < ActiveRecord::Base
 	private
 		
 		def encrypt_password
-			self.salt = make_salt if new_record?
+			(self.salt = make_salt) if new_record?
 			self.encrypted_password = encrypt(self.password)
 		end
 		

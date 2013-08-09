@@ -12,19 +12,12 @@
 	</div>
 	
 	<div>
-			<span>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;</span>
-			<span class = 'email_field'><%= f.text_field :email %></span>
+			<span>Password:&nbsp;&nbsp;</span>
+			<span><%= f.text_field :email %></span>
 	</div>
 	
 	<div>
-		<span>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		<%= f.password_field :password %>
-	</div>
-
-	<div>
-		<span>Confirmation:&nbsp;&nbsp;</span>
-		<%= f.password_field :password_confirmation %>
+		<%= f.hidden_field :password %>
 	</div>
 
 	<div class = 'nation_selector' >
