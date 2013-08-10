@@ -3,13 +3,10 @@
 
 
 
-<% if User.find_by_id(params[:id])[:bio] %>
+
 <div class = 'user_bio'>
 	<p><%= User.find_by_id(params[:id])[:bio] %></p>
 </div>
-<% else %>
-	<p>This user has not yet posted a bio.</p>
-<% end %>
 
 <% if right_user? %>
 
