@@ -29,12 +29,10 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@heading = @user.name
-		@bio = @user.bio
 		if params[:bio]
-			@user.bio = "''#{params[:bio]}'' -- #{@user.name}"
+			@user[:bio] = "''#{params[:bio]}'' -- #{@user.name}"
 			@user.save!
 		end
-			
 	end
 	
 	

@@ -2,8 +2,8 @@ require 'digest'
 class User < ActiveRecord::Base
 
 	attr_accessor :password, :bio
-  attr_accessible :email, :name, :password, :password_confirmation, :nation, 
-	#has_many :moves
+  attr_accessible :email, :name, :password, :nation
+	has_many :moves
 	
 	
 	email_regex = /\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i

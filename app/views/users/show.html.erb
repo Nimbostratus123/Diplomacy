@@ -3,18 +3,21 @@
 
 
 
-
+<% if User.find_by_id(params[:id])[:bio] %>
 <div class = 'user_bio'>
-<p><%= User.find_by_id(params[:id]).bio %></p>
+	<p><%= User.find_by_id(params[:id])[:bio] %></p>
 </div>
+<% else %>
+	<p>This user has not yet posted a bio.</p>
+<% end %>
 
 <% if right_user? %>
 
 <div class = 'main_form'><form>
-	<textarea rows='<% if current_user.bio %>2<% else %>10<% end %>' cols='60' name="bio">Your strategy and personality...</textarea>
-	<input type="submit" value="<% if current_user.bio %>Update<% else %>Create<% end %> Bio">
+	<textarea rows='<% if current_user[:bio] %>2<% else %>10<% end %>' cols='60' name="bio">
+		<% if current_user[:bio] %><%= bio_content %><% else %>Your strategy and personality...<% end %></textarea>
+	<input type="submit" value="<% if current_user[:bio] %>Update<% else %>Create<% end %> Bio">
 </form></div>
 
-</div>
-<p><%= image_tag("../images/flags/large/#{@user.nation}.jpeg") %></p>
+<p class = "mainflag"><%= image_tag("../images/flags/large/#{@user.nation}.jpeg") %></p>
 <% end %>

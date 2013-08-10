@@ -645,6 +645,28 @@ a {
 
 
 
+		/* User show page */
+
+.user_bio {
+	border-top: 2px white solid;
+	border-bottom: 2px white solid;
+	margin-top: 20px;
+	text-align:center;
+}
+
+.user_bio p {
+	margin: 5px;
+}
+
+.mainflag {
+	float: left;
+}
+
+
+
+
+
+
 
 
 		/* General Settings */
