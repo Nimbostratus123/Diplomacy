@@ -15,7 +15,7 @@
 
 <div class = 'main_form'><form>
 	<textarea rows='<% if current_user[:bio] %>2<% else %>10<% end %>' cols='60' name="bio">
-		<% if current_user[:bio] %><%= bio_content %><% else %>Your strategy and personality...<% end %></textarea>
+<% if current_user[:bio] %><%= bio_content %><% else %>Your strategy and personality...<% end %></textarea>
 	<input type="submit" value="<% if current_user[:bio] %>Update<% else %>Create<% end %> Bio">
 </form></div>
 
