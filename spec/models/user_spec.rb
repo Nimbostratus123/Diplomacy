@@ -3,6 +3,7 @@ require 'spec_helper'
 describe User do
   
 	before(:each) do
+		pending "The password system is temporary"
 		@attr = { 
 			:name => "Example User", 
 			:email => "user@example.com", 
