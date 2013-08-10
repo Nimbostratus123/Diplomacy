@@ -5,7 +5,7 @@
 		<p>There were problems with the following fields:</p>
 		<ul>
 			<% @user.errors.full_messages.each do |message| %>
-				<li><%= message.gsub(/email/i, 'Password').gsub(/has already been taken/i, 'is a reserved phrase. Please choose another') %></li>
+				<li><%= message.gsub(/email/i, 'Password').gsub(/has already been taken/i, 'is a reserved phrase. Please choose another').gsub(/Nation is a reserved phrase. Please choose another/i, 'Nation has already been taken') %></li>
 			<% end %>
 		</ul>
 	</div>

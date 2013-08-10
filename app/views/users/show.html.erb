@@ -14,11 +14,11 @@
 
 <% if right_user? %>
 
-<div class = 'main_form'><form>
+<div class = 'main_form bio_form'><form>
 	<textarea rows='<% if current_user.bio %>2<% else %>10<% end %>' cols='60' name="bio">
-<% if current_user.bio %><%= current_user.bio %><% else %>Your strategy and personality...<% end %></textarea>
+<% if current_user.bio %><%= current_user.bio %><% else %>Your strategy and personality...<% end %></textarea><br />
 	<input type="submit" value="<% if current_user[:bio] %>Update<% else %>Create<% end %> Bio">
 </form></div>
 
-<p class = "mainflag"><%= image_tag("../images/flags/large/#{@user.nation}.jpeg") %></p>
+<div class = "mainflag"><%= image_tag("../images/flags/large/#{@user.nation}.jpeg") %></div>
 <% end %>

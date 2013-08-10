@@ -658,8 +658,14 @@ a {
 	margin: 5px;
 }
 
-.mainflag {
+.bio_form {
 	float: left;
+}
+
+.mainflag {
+	float: right;
+	padding: 10px;
+	position: relative;
 }
 
 
