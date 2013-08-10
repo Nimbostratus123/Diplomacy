@@ -5,8 +5,8 @@
 
 
 <div class = 'user_bio'>
-	<% if User.find_by_id(params[:id]).bio %>
-	<p><%= "''#{User.find_by_id(params[:id]).bio}'' -- #{User.find_by_id(params[:id]).name}" %></p>
+	<% if User.find_by_id(params[:id])[:bio] %>
+	<p><%= "''#{User.find_by_id(params[:id])[:bio]}'' -- #{User.find_by_id(params[:id]).name}" %></p>
 	<% else %>
 	<p>This user has not yet written their bio.</p>
 	<% end %>
@@ -16,7 +16,7 @@
 
 <div class = 'main_form'><form>
 	<textarea rows='<% if current_user[:bio] %>2<% else %>10<% end %>' cols='60' name="bio">
-<% if current_user[:bio] %><%= current_user.bio %><% else %>Your strategy and personality...<% end %></textarea>
+<% if current_user[:bio] %><%= current_user[:bio] %><% else %>Your strategy and personality...<% end %></textarea>
 	<input type="submit" value="<% if current_user[:bio] %>Update<% else %>Create<% end %> Bio">
 </form></div>
 
