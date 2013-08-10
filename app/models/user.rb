@@ -1,8 +1,8 @@
 require 'digest'
 class User < ActiveRecord::Base
 
-	attr_accessor :password, :bio
-  attr_accessible :email, :name, :password, :password_confirmation, :nation
+	attr_accessor :password
+  attr_accessible :email, :name, :password, :password_confirmation, :nation, :bio
 	has_many :moves
 	
 	

@@ -29,15 +29,9 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@heading = @user.name
-		if Rails.env =~ /production/i
-			if params[:bio]
-				user.update_attribute(:bio, params[:bio])
-			end
-		else
-			if params[:bio]
-				@user[:bio] = "''#{params[:bio]}'' -- #{@user.name}"
-				@user.save!
-			end
+		if params[:bio]
+			@user.bio = params[:bio]
+			@user.save!
 		end
 		render 'show'
 	end
