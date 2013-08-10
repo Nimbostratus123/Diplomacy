@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@heading = @user.name
 		if params[:bio]
-			@user[:bio] = params[:bio]
+			@user.bio = params[:bio]
 			@user.save!
 		end
 		render 'show'
