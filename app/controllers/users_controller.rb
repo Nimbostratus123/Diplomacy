@@ -31,8 +31,7 @@ class UsersController < ApplicationController
 		@heading = @user.name
 		if Rails.env =~ /production/i
 			if params[:bio]
-				@user.bio = "''#{params[:bio]}'' -- #{@user.name}"
-				@user.save!
+				user.update_attribute(:bio, params[:bio])
 			end
 		else
 			if params[:bio]
