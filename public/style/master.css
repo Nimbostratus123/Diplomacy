@@ -425,8 +425,6 @@ a {
 
 
 
-
-
 		/* For the color setting */
 
 
@@ -494,8 +492,8 @@ a {
 			border: 2px groove #CC7A00;
 		}
 		.yellow_li {
-			background-color: #FFFF00;
-			border: 2px groove #CCCC00;
+			background-color: #ffc900;
+			border: 2px groove #CCA100;
 		}
 		.red_li {
 			background-color: #8D1919;
@@ -654,12 +652,19 @@ a {
 	text-align:center;
 }
 
+.user_bio div {
+	display: block;
+	text-align: right;
+	padding-right: 10%;
+}
+
 .user_bio p {
 	margin: 5px;
 }
 
 .bio_form {
 	float: left;
+	text-align: right;
 }
 
 .mainflag {
@@ -667,6 +672,47 @@ a {
 	padding: 10px;
 	position: relative;
 }
+.margining {
+	padding-top: 10%;
+}
+
+
+
+
+
+
+
+		/* Home Page */
+
+.movement {
+	padding: 20px;
+}
+
+.movement h3 {
+	font-size: ;
+	font-weight: normal;
+}
+
+.movement .main_form div {
+	float: left;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.movement .main_form div.origin {
+	padding-left: 0px;
+}
+
+.movement .actions {
+	padding-top: 20px;
+}
+
+.button {
+	border-radius: 15px;
+	color: #DBDBDB;
+	text-shadow: 0px 1px 1px black;
+}
+
+
 
 
 

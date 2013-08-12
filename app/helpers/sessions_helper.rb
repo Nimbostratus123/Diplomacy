@@ -31,6 +31,12 @@ module SessionsHelper
 		!current_user.nil?
 	end
 	
+  def signed_in_user
+     unless signed_in?
+       redirect_to signin_url, notice: "Please sign in."
+     end
+   end
+	
 	
 	def deny_access
 		redirect_to signin_path, :notice => "Please sign in to access this page."

@@ -1,8 +1,41 @@
-<% unless signed_in? %>
-<a href="/join" class="join_button">Join!</a>
-<% end %>
+<% if signed_in? %>
 
+<section class = 'movement'>
+	<fieldset>
+		<legend>
+	<h3>Make a move:&nbsp;</h3>
+		</legend>
+	<div class = 'main_form'>
+		<%= form_for(@move) do |f| %>
+			<%= render 'shared/error_messages', :object => f.object  %>
+			
+			<div class = 'origin'>
+				<%= f.label :origin, "Origin: " %>
+				<%= f.select :origin, options_for_select( selectify( regions ) ) %>
+			</div>
+			
+			<div> => </div>
+			
+			<div class = 'destination'>
+				<%= f.label :destination, "Destination: " %>
+				<%= f.select :destination, options_for_select( selectify( regions ) ) %>
+			</div>
+			
+			<div class = 'actions'>
+				<%= f.submit "Submit", :class => 'button', :style => "background-color: #{cookies[:remember_color]};"  %>
+			</div>
+			
+		<% end %>	
+
+	</fieldset>	
+	</div>
+</section>
+
+<% else %>
+
+<a href="/join" class="join_button">Join!</a>
 
 <h2 class = 'home_h2'>About the Game:</h2>
 <p class = 'home_p'>Diplomacy is a devilishly fun (or so I'm assuming) world-conquest game in which players struggle over territory in 20th century Europe.</p>
 
+<% end %>

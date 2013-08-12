@@ -1,12 +1,12 @@
 require 'digest'
 class User < ActiveRecord::Base
-
+	
 	attr_accessor :password
   attr_accessible :email, :name, :password, :password_confirmation, :nation, :bio
-	has_many :moves
+	has_many :moves, dependent: :destroy
 	
 	
-	email_regex = /\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i
+	#email_regex = /\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i
 	
 	validates :name, :presence => true,
 						:length => { :maximum => 50 }
