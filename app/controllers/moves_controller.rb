@@ -6,7 +6,7 @@ class MovesController < ApplicationController
 	end
 	
 	def create
-		@move = User.first.moves.create(params[:move])
+		@move = current_user.moves.create(params[:move])
 		if @move #&& @move.legal?
 			flash[:success] = "Your unit has been moved."
 			redirect_to root_url
