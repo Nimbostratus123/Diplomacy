@@ -29,6 +29,7 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@heading = @user.name
+		@units = @user.units
 		if params[:bio]
 			@user.bio = params[:bio]
 			@user.save!

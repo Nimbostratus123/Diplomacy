@@ -121,9 +121,7 @@
 	overflow-x: hidden;
 }
 
-a:hover {
-	color: #be6608;
-}
+
 
 div.image_display img {
 	width: 50%;
@@ -148,16 +146,6 @@ div.image_display img {
 	position: fixed;
 	bottom: 10px;
 	right: 6%;
-}
-
-
-a {
-	text-decoration: none;
-	color: #9E1818;
-}
-
-a.no_format {
-	color: #bbb;
 }
 
 
@@ -524,7 +512,7 @@ a.no_format {
 		
 
 
-		/* Animates the unit markers */
+		/* Animates the Unit markers */
 
 .unit-1 , .unit-2 {
 	display: block;
@@ -556,10 +544,10 @@ a.no_format {
 	-webkit-transform: skew(30deg, 30deg);
 	-moz-transform: skew(30deg, 30deg);
 	-o-transform: skew(30deg, 30deg);
-	animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
-	-webkit-animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
-	-moz-animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
-	-o-animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
+	animation: cssAnimationOne 1.5s infinite alternate ease-in-out;
+	-webkit-animation: cssAnimationOne 1.5s infinite alternate ease-in-out;
+	-moz-animation: cssAnimationOne 1.5s infinite alternate ease-in-out;
+	-o-animation: cssAnimationOne 1.5s infinite alternate ease-in-out;
 }
 
 .unit-2 {
@@ -567,22 +555,22 @@ a.no_format {
 	-webkit-transform: rotate(90deg) skew(30deg, 30deg);
 	-moz-transform: skew(30deg, 30deg);
 	-o-transform: skew(30deg, 30deg);
-	animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;
-	-webkit-animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;
-	-moz-animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;
-	-o-animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;	
+	animation: cssAnimationTwo 1.5s infinite alternate ease-in-out;
+	-webkit-animation: cssAnimationTwo 1.5s infinite alternate ease-in-out;
+	-moz-animation: cssAnimationTwo 1.5s infinite alternate ease-in-out;
+	-o-animation: cssAnimationTwo 1.5s infinite alternate ease-in-out;	
 }
 
 @-webkit-keyframes cssAnimationOne {
-	0% { opacity: .5; height: 20px; width: 20px; }
+	0% { opacity: .5; height: 18px; width: 18px; }
 	50% { opacity: .2; height: 10px; width: 10px; }
-	100% { opacity: .5; height: 20px; width: 20px; }
+	100% { opacity: .5; height: 18px; width: 18px; }
 }
 
 @-webkit-keyframes cssAnimationTwo {
-	0% { opacity: .5; height: 20px; width: 20px; }
+	0% { opacity: .5; height: 18px; width: 18px; }
 	50% { opacity: .2; height: 10px; width: 10px; }
-	100% { opacity: .5; height: 20px; width: 20px; }
+	100% { opacity: .5; height: 18px; width: 18px; }
 }
 
 @-webkit-keyframes rotation {
@@ -607,6 +595,13 @@ a.no_format {
 	50% { -webkit-transform: rotate(270deg); }
 	100% { -webkit-transform: rotate(0deg); }
 }
+
+
+
+
+
+
+
 
 
 
@@ -648,6 +643,18 @@ a.no_format {
 	left: -20%;
 }
 
+a.no_format {
+	color: #bbb;
+}
+
+a.no_format:hover {
+	color: #bbb;
+}
+
+
+
+
+
 
 
 
@@ -686,6 +693,8 @@ a.no_format {
 .margining {
 	padding-top: 10%;
 }
+
+
 
 
 
@@ -736,6 +745,7 @@ a.no_format {
 
 .unit_list {
 	list-style: none;
+	
 }
 
 .unit_list h1 {
@@ -751,6 +761,19 @@ a.no_format {
 
 .unit_list .non_image_div {
 	padding-left: 100px;
+	cursor: text;
+}
+
+.unit_list li:hover {
+	position: relative;
+	left: -5px;
+	top: -5px;
+	box-shadow: 10px 10px 5px #888;
+}
+
+.unit_list li:active {
+	left: -5px;
+	top: 2px;
 }
 
 .unit_list li {
@@ -764,6 +787,8 @@ a.no_format {
 	display: block;
 	border: 3px double #bbb;
 	
+	transition: top 0.2s, left 0.2s, box-shadow 0.2s;
+	
 	
 	background-image: linear-gradient(top, #bbb 0%, #3D52A8 25%);
 	background-image: -o-linear-gradient(top, #bbb 0%, #3D52A8 25%);
@@ -774,6 +799,21 @@ a.no_format {
 	
 }
 
+.index_of_units {
+	list-style: none
+}
+
+.index_of_units h1 {
+	color: black;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+.index_of_units p {
+	position: relative;
+	top: -35px;
+	left: -20px;
+}
 
 
 
@@ -801,4 +841,12 @@ div {
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+	color: #9E1818;
+}
+
+a:hover {
+	color: #be6608;
+}
 

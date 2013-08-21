@@ -26,4 +26,10 @@
 
 <div class = "mainflag"><%= image_tag("../images/flags/large/#{@user.nation}.jpeg") %></div>
 </div>
+<% else %>
+
+<ul class = 'index_of_units'>
+<%= render @units %> 
+</ul>
+
 <% end %>

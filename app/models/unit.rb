@@ -5,5 +5,8 @@ class Unit < ActiveRecord::Base
 	
 	validates :user_id, :presence => true
 	
+	def support?
+		false
+	end
 	
 end

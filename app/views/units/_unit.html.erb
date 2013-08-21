@@ -1,11 +1,34 @@
-<li>
-	<%= link_to({:controller => 'units', :action => 'edit', :id => unit.id}, :class => 'no_format') do %>
-	<div class = 'image_div'>
-	<%= image_tag("#{unit.kind}.png") %>
+
+	<% if params[:controller] == 'pages' && params[:action] == 'home' %>
+	<li>
+		<%= link_to({:controller => 'units', :action => 'edit', :id => unit.id}, :class => 'no_format') do %>
+		
+			<div class = 'image_div'>
+				<%= image_tag("#{unit.kind}.png") %>
+			</div>
+			
+			<div class = 'non_image_div'>
+				<h1><%= unit.location.capitalize %></h1>
+				<p>This unit is a(n) <%= unit.kind %>.<p>
+			</div>
+			
+		<% end %>
+	</li>
+	<% elsif params[:controller] == 'pages' && params[:action] == 'map' %>
+	
+		<div class = "unit" style = "<%= coordinates(unit.location) %> <%= delays(unit) %> " >
+			
+			<div class = 'unit-1' style = "<%= unit_styles(unit) %>"></div>
+			<div class = 'unit-2' style = "<%= unit_styles(unit) %>"></div>
+			
+		</div>
+	
+	<% else %>
+	</li>
+	<div>
+		<hr />
+		<h1><%= unit.location.capitalize %> -</h1>
+		<p><%= @user.name %> has 1 <%= unit.kind %> in <%= unit.location.capitalize %>.<p>
 	</div>
-	<div class = 'non_image_div'>
-	<h1><%= unit.location.capitalize %></h1>
-	<p>This unit is a(n) <%= unit.kind %>.<p>
-	</div>
+	</li>
 	<% end %>
-</li>

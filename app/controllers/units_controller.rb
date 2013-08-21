@@ -13,7 +13,8 @@ class UnitsController < ApplicationController
 	
 	def create
 		@unit = current_user.units.create(params[:unit])
-		@unit.delay = (rand + rand)
+		@unit.delay = rand
+		@unit.delay *= -1.5
 		@unit.save!
 		if @unit #&& @unit.legal?
 			flash[:success] = "Your unit has been created."
@@ -32,6 +33,9 @@ class UnitsController < ApplicationController
 	
 	def edit
 		@unit = Unit.find(params[:id])
+		@unit.delay = rand
+		@unit.delay *= -1.5
+		@unit.save!
 		@title = @heading = "Move Unit"
 	end
 	

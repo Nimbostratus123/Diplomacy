@@ -6,7 +6,7 @@
 
 <div>
 	<%= f.label :location, 'Location:' %>
-	<%= f.select :location, options_for_select( selectify( regions ) ) %>
+	<%= f.select :location, options_for_select( selectify( regions.keys ) ) %>
 </div>
 <br />
 <div>
