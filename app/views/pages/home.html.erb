@@ -1,5 +1,14 @@
 <% if signed_in? %>
 
+<% if current_user.units.any? %>
+<ul class = 'unit_list'>
+<%= render @units %>
+</ul>
+<% else %>
+<h2>You have lost :(</h2>
+<% end %>
+
+<!--
 <section class = 'movement'>
 	<fieldset>
 		<legend>
@@ -30,6 +39,7 @@
 	</fieldset>	
 	</div>
 </section>
+-->
 
 <% else %>
 

@@ -636,6 +636,16 @@ a {
 	text-decoration: underline;
 }
 
+.move_title {
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	text-decoration: underline;
+	padding-top: 20px;
+	position: relative;
+	top: 20px;
+	left: -20%;
+}
 
 
 
@@ -711,6 +721,70 @@ a {
 	color: #DBDBDB;
 	text-shadow: 0px 1px 1px black;
 }
+
+
+
+
+
+
+
+
+
+
+		/* Settings for Unit Display */
+
+.unit_list {
+	list-style: none;
+}
+
+.unit_list h1 {
+	font-size: 30px;
+	padding-left: 30px;
+	text-shadow: 0px 2px 2px black, 0px -1px 1px white, 1px 0px 1px black, -1px 0px 1px black
+}
+
+.unit_list .image_div {
+	float:left;
+}
+
+.unit_list .non_image_div {
+	padding-left: 100px;
+}
+
+.unit_list li {
+	width: 75%;
+	padding: 5px;
+	margin: 20px;
+	margin-left: 5%;
+	color: #bbb;
+	text-shadow: 0px 2px 2px black;
+	border-radius: 15px;
+	display: block;
+	border: 3px double #bbb;
+	
+	
+	
+	
+	
+	
+	
+	background-image: linear-gradient(top, #bbb 0%, #3D52A8 25%);
+	background-image: -o-linear-gradient(top, #bbb 0%, #3D52A8 25%);
+	background-image: -moz-linear-gradient(top, #bbb 0%, #3D52A8 25%);
+	background-image: -webkit-linear-gradient(top, #bbb 0%, #3D52A8 25%);
+	background-image: -ms-linear-gradient(top, #bbb 0%, #3D52A8 25%);
+	background-image: -webkit-gradient( radius, left top, left bottom, color-stop(0, #bbb), color-stop(0.25, #3D52A8));
+	
+	
+	
+}
+
+
+
+
+
+
+
 
 
 

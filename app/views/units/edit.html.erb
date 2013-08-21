@@ -1,0 +1,21 @@
+
+<h1 class = 'move_title'><%= @unit.location.capitalize %> — <%= @unit.kind.capitalize %></h1>
+
+
+<div class = 'main_form'>
+	
+<%= form_for @unit do |f| %>
+<%= render 'shared/error_messages', :object => f.object %> 
+
+
+	<div>
+		<%= f.label :destination, "Destination:" %>
+		<%= f.select :destination, options_for_select( selectify( regions ) ) %>
+	</div>
+	<div>
+		<span><%= f.submit "Move"%></span>
+	</div> 
+
+<% end %>
+
+</div>

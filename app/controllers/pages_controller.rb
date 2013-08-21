@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   def home
 		@heading = 'Diplomacy'
 		@move = current_user.moves.build if signed_in?
+		@units = current_user.units.all if signed_in?
   end
 
   def map

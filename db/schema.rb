@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130808223256) do
+ActiveRecord::Schema.define(:version => 20130820221355) do
 
   create_table "moves", :force => true do |t|
     t.string   "origin"
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(:version => 20130808223256) do
   end
 
   add_index "moves", ["user_id", "created_at"], :name => "index_moves_on_user_id_and_created_at"
+
+  create_table "units", :force => true do |t|
+    t.string   "kind"
+    t.string   "location"
+    t.float    "delay"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "destination"
+  end
+
+  add_index "units", ["user_id", "created_at"], :name => "index_units_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "name"

@@ -1,8 +1,8 @@
 Diplomacy::Application.routes.draw do
-	
-	resources :sessions, :only => [:new, :create, :destroy]
 	resources :users
+	resources :sessions, :only => [:new, :create, :destroy]
 	resources :moves, :only => [:create, :destroy]
+	resources :units
 	
   get "sessions/new"
 	
