@@ -1,4 +1,5 @@
 <li>
+	<%= link_to({:controller => 'units', :action => 'edit', :id => unit.id}, :class => 'no_format') do %>
 	<div class = 'image_div'>
 	<%= image_tag("#{unit.kind}.png") %>
 	</div>
@@ -6,4 +7,5 @@
 	<h1><%= unit.location.capitalize %></h1>
 	<p>This unit is a(n) <%= unit.kind %>.<p>
 	</div>
+	<% end %>
 </li>

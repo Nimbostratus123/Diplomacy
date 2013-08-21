@@ -1,13 +1,804 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+
+
+					/* CSS Document for Charles' Diplomacy Ruby on Rails website */
+
+
+
+
+		/* General Settings */
+
+.mainbody {
+	color: #000;
+	background: url(../images/grey.png);
+	background-size: 100%, 100%;
+	font-family: "Arial";
+	font-size: 16px;
+}
+
+
+
+.maintitle span {
+	position: relative;
+	top: -75px;
+}
+
+.green_title span {
+	position: relative;
+	top: -75px;
+}
+
+.maintitle ul  {
+	top: -44px;
+	text-shadow: none;
+}
+
+.green_title ul {
+	top: -44px;
+	text-shadow: none;
+}
+
+.maintitle {
+	font-family: "Times", "Times New Roman";
+	display: block;
+	margin: 0px 0px;
+	height: 72px;
+	padding-top: 28px;
+	text-align: center;
+	color: #DBDBDB;
+	font-size: 38px;
+	text-shadow: 0px 1px 1px black;
+	z-index: 50;
+}
+
+.green_title {
+	font-family: "Times", "Times New Roman";
+	display: block;
+	margin: 0px 0px;
+	height: 72px;
+	padding-top: 28px;
+	text-align: center;
+	color: #DBDBDB;
+	font-size: 38px;
+	background-color: #9B3232;
+	text-shadow: 0px 1px 1px black;
+}
+
+
+.mainnav {
+	list-style: none;
+	text-align: center;
+	font-family: Arial;
+	border-top-style: ridge;
+	border-top-color: #DBDBDB;
+	top: -47px;
+	padding-top: 7px;
+	position: relative;
+	font-size: 14px;
+	left: 2px;
+}
+
+.mainnav li a {
+	text-decoration: none;
+	color: #000;
+	margin: 0px 0px;
+}
+
+.mainnav li {
+	display: inline;
+	position: relative;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0px 0px;
+	left: -25px;
+}
+
+.primary p {
+	position: relative;
+	padding-left: 15%;
+	padding-right: 15%;
+	text-indent: 30px;
+	line-height: 1.25;
+}
+
+.mainnav a:hover {
+	color: #ff5100;
+	text-decoration: none;
+	text-shadow: 0px 0px 3px #FFF;
+}
+
+.page {
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+	height: 90%;
+	background-color: #E3E3E3;
+	position: absolute;
+	bottom: 9%;
+	top: 1%;
+	border-radius: 0px 0px 10px 10px;
+	min-width: 530px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+a:hover {
+	color: #be6608;
+}
+
+div.image_display img {
+	width: 50%;
+}
+
+.image_display {
+	text-align: center;
+}
+
+.main_form {
+	margin-left: 5%;
+	margin-top: 40px;
+}
+
+.form_naming {
+	position: relative;
+	left:5px;
+}
+
+
+#footer {
+	position: fixed;
+	bottom: 10px;
+	right: 6%;
+}
+
+
+a {
+	text-decoration: none;
+	color: #9E1818;
+}
+
+a.no_format {
+	color: #bbb;
+}
+
+
+
+
+
+
+
+		
+		/* Map Settings */
+
+.map_body .page {
+	/*overflow: hidden;*/
+}
+	
+.map_body {
+	color: #000;
+	background: url(../images/grey.png);
+	background-size: 100%, 100%;
+	font-family: "Arial";
+	font-size: 16px;
+	width: ;
+}
+	
+.map_body #footer {
+	writing-mode:tb-rl;
+		-webkit-transform:rotate(90deg);
+		-moz-transform:rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg);
+		white-space:nowrap;
+		bottom: 200px;
+		right: -180px;
+}
+		
+.map_body .primary {
+	overflow: scroll;
+}
+
+.map_div {}
+	
+.toptitle {
+	position: fixed;
+	top: 7px;
+	left: 14.8%;
+	width: 70%;
+}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/* Flash */
+
+#error_explanation p {
+	font-size: 14px;
+}
+
+#error_explanation ul {
+	font-size: 14px;
+}
+
+#error_explanation {
+	background-color: #FF8C8C;
+	border: solid 2px #F00;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: none;
+	position: relative;
+	right: 20px;
+	top: -25px;
+	
+}
+
+#error_explanation h2 {
+	text-align: center;
+	font-size: 17px;
+	position: relative;
+
+	right: -1px;
+	margin-right: 10px;
+	margin-left: 10px;
+	border: dashed black 1px;
+	margin-bottom: none;
+}
+
+
+.flash_ {
+	text-align: center;
+	background-color: #FFFD9E;
+	border: solid 1px #FFC31F;
+	margin-top: 20px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/* User Index Page */
+
+.all_users {
+	position: relative;
+	top: 20px;
+	list-style: none;
+}
+
+.all_users li a {
+	vertical-align: top;
+	line-height: 40px;
+}
+
+.all_users span.bar {
+	color: #000CAD;
+	position: relative;
+	bottom: 12px;
+	left: 2px;
+}
+
+.all_users span.user_name {
+	position:relative;
+	top: 3px;
+	left: 2px;
+}
+
+.home_h2 {
+	position: relative;
+	left: 120px;
+	top: 40px;
+}
+
+.home_p {
+	position: relative;
+	top: 40px;
+}
+
+.email_field {
+	position: relative;
+	right: 22px;
+}
+
+.nation_selector {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.main_form span {
+	padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+		/* Settings for awesome button */
+
+
+.join_button {
+    
+    -moz-box-shadow:inset 0px 0px 0px -2px #54a3f7;
+    -webkit-box-shadow:inset 0px 0px 0px -2px #54a3f7;
+    box-shadow:inset 0px 0px 0px -2px #54a3f7;
+    
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #33557a));
+    background:-moz-linear-gradient(top, #007dc1 5%, #33557a 100%);
+    background:-webkit-linear-gradient(top, #007dc1 5%, #33557a 100%);
+    background:-o-linear-gradient(top, #007dc1 5%, #33557a 100%);
+    background:-ms-linear-gradient(top, #007dc1 5%, #33557a 100%);
+    background:linear-gradient(to bottom, #007dc1 5%, #33557a 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#33557a',GradientType=0);
+    
+	-webkit-transition:-webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s, left 1s;
+	-webkit-border-radius:5px;
+	-o-transition-property:width,height,-o-transform,background,font-size,opacity, left;
+	-o-transition-duration:1s,1s,1s,1s,1s,1s,1s;
+	-moz-transition-property:width,height,-moz-transform,background,font-size,opacity, left;
+	-moz-transition-duration:1s,1s,1s,1s,1s,1s,1s;
+	transition-property:width,height,transform,background,font-size,opacity, left;
+	transition-duration:1s,1s,1s,1s,1s,1s,1s;
+	
+	
+    background-color:#007dc1;
+    
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+	-o-border-radius:6px;
+    border-radius:6px;
+    
+    border:1px solid #124d77;
+    
+    display:inline-block;
+    color:#ffffff;
+    font-family:arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 34px;
+    text-decoration:none;
+	
+	position: relative;
+	top: 40px;
+	left: 42%;
+	text-shadow:0px 1px 0px #154682;
+    
+}
+.join_button:hover {
+	color:#ffffff;
+	text-shadow:0px 1px 0px #154682;
+	left: 40%;
+	
+	
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	font-size:30px;
+    
+	
+	
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33557a), color-stop(1, #007dc1));
+    background:-moz-linear-gradient(top, #33557a 5%, #007dc1 100%);
+    background:-webkit-linear-gradient(top, #33557a 5%, #007dc1 100%);
+    background:-o-linear-gradient(top, #33557a 5%, #007dc1 100%);
+    background:-ms-linear-gradient(top, #33557a 5%, #007dc1 100%);
+    background:linear-gradient(to bottom, #33557a 5%, #007dc1 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33557a', endColorstr='#007dc1',GradientType=0);
+    
+    background-color:#33557a;
+}
+.join_button:active {
+    position:relative;
+    top: 42px;
+}
+
+
+
+
+
+
+
+
+
+
+		/* For the color setting */
+
+
+.color_swatch {
+	margin-right: 160px;
+	margin-left: 160px;
+	margin-top: 10px;
+	height: 200px;
+}
+
+.color_swatch h4 {
+	padding-top: 0px;
+	padding-left: 20px;
+	padding-bottom:none;
+	text-decoration: underline;
+}
+
+.color_swatch li {
+	display: inline;
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin: 5px;
+	border-radius:0px;
+	-moz-border-radius:0px;
+	-o-border-radius:0px;
+	-webkit-border-radius:0px;
+	transition: border-radius 0.7s;
+	-webkit-transition: -webkit-border-radius 0.7s;
+	-o-transition: -o-border-radius 0.7s;
+	-moz-tranition: -moz-border-radius 0.7s;
+}
+
+.color_swatch li:hover {
+	border-radius:40px;
+	-moz-border-radius:40px;
+	-o-border-radius:40px;
+	-webkit-border-radius:40px;
+}
+
+.color_swatch ul {
+	position: relative;
+	left: -24px;
+	top: -18px;
+}
+
+
+.color_swatch a {
+	display: block;
+	height: 40px;
+	width: 40px;
+	font-size: 10px;
+	color: #FFF;
+	text-align: center;
+	text-shadow: 0px 1px 1px black;
+	padding-top:10px;
+}
+
+		.cyan_li {
+			background-color: #45B8FF;
+			border: 2px groove #3793CC;
+		}
+		.orange_li {
+			background-color: #FF9900;
+			border: 2px groove #CC7A00;
+		}
+		.yellow_li {
+			background-color: #ffc900;
+			border: 2px groove #CCA100;
+		}
+		.red_li {
+			background-color: #8D1919;
+			border: 2px groove #711414;
+		}
+		.green_li {
+			background-color: #297C29;
+			border: 2px groove #216321;
+		}
+		.pink_li {
+			background-color: #FF3399;
+			border: 2px ridge #FF7DBD;
+		}
+		.indigo_li {
+			background-color: #0000CC;
+			border: 2px ridge #0000A3;
+		}
+		
+		
+		
+		
+		
+	
+	
+	
+		
+		
+
+
+		/* Animates the unit markers */
+
+.unit-1 , .unit-2 {
+	display: block;
+	height: 10px;
+	width: 10px;
+	margin: 20px;
+	border: solid white 2px;
+	background-color: red;
+	opacity: 0.5;
+	position: absolute;
+	top: -27px;
+	left: -8px;
+}
+
+
+.unit {
+	width: 40px;
+	
+	position: relative;
+	
+	animation: rotation 3s 3 alternate ease-in-out;
+	-webkit-animation: rotation 3s 3 alternate ease-in-out;
+	-moz-animation: rotation 3s 3 alternate ease-in-out;
+	-o-animation: rotation 3s 3 alternate ease-in-out;
+}
+
+.unit-1 {
+	transform: skew(30deg, 30deg);
+	-webkit-transform: skew(30deg, 30deg);
+	-moz-transform: skew(30deg, 30deg);
+	-o-transform: skew(30deg, 30deg);
+	animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
+	-webkit-animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
+	-moz-animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
+	-o-animation: cssAnimationOne 1.5s 90 alternate ease-in-out;
+}
+
+.unit-2 {
+	transform: rotate(45deg) skew(30deg, 30deg);
+	-webkit-transform: rotate(90deg) skew(30deg, 30deg);
+	-moz-transform: skew(30deg, 30deg);
+	-o-transform: skew(30deg, 30deg);
+	animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;
+	-webkit-animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;
+	-moz-animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;
+	-o-animation: cssAnimationTwo 1.5s 90 alternate ease-in-out;	
+}
+
+@-webkit-keyframes cssAnimationOne {
+	0% { opacity: .5; height: 20px; width: 20px; }
+	50% { opacity: .2; height: 10px; width: 10px; }
+	100% { opacity: .5; height: 20px; width: 20px; }
+}
+
+@-webkit-keyframes cssAnimationTwo {
+	0% { opacity: .5; height: 20px; width: 20px; }
+	50% { opacity: .2; height: 10px; width: 10px; }
+	100% { opacity: .5; height: 20px; width: 20px; }
+}
+
+@-webkit-keyframes rotation {
+	0% { -webkit-transform: rotate(0deg); }
+	50% { -webkit-transform: rotate(270deg); }
+	100% { -webkit-transform: rotate(0deg); }
+}
+@keyframes cssAnimationOne {
+	0% { opacity: .5; height: 20px; width: 20px; }
+	50% { opacity: .2; height: 10px; width: 10px; }
+	100% { opacity: .5; height: 20px; width: 20px; }
+}
+
+@keyframes cssAnimationTwo {
+	0% { opacity: .5; height: 20px; width: 20px; }
+	50% { opacity: .2; height: 10px; width: 10px; }
+	100% { opacity: .5; height: 20px; width: 20px; }
+}
+
+@keyframes rotation {
+	0% { -webkit-transform: rotate(0deg); }
+	50% { -webkit-transform: rotate(270deg); }
+	100% { -webkit-transform: rotate(0deg); }
+}
+
+
+
+
+
+
+
+
+		/* Miscellaneous */
+
+
+.all_users li {
+	transition: transform 0.5s, left 0.5s;
+	-webkit-transition: -webkit-transform 0.5s, left 0.5s; /* Safari */
+}
+
+.all_users li:hover {
+	transform: skew(-20deg,0deg);
+	-ms-transform: skew(-20deg,0deg); /* IE 9 */
+	-webkit-transform: skew(-20deg,0deg); /* Safari and Chrome */
+	position: relative;
+	left: 52px;
+}
+
+
+.edit_title {
+	padding-left: 7%;
+	text-decoration: underline;
+}
+
+.move_title {
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	text-decoration: underline;
+	padding-top: 20px;
+	position: relative;
+	top: 20px;
+	left: -20%;
+}
+
+
+
+
+
+
+
+		/* User show page */
+
+.user_bio {
+	border-top: 2px white solid;
+	border-bottom: 2px white solid;
+	margin-top: 20px;
+	text-align:center;
+}
+
+.user_bio div {
+	display: block;
+	text-align: right;
+	padding-right: 10%;
+}
+
+.user_bio p {
+	margin: 5px;
+}
+
+.bio_form {
+	float: left;
+	text-align: right;
+}
+
+.mainflag {
+	float: right;
+	padding: 10px;
+	position: relative;
+}
+.margining {
+	padding-top: 10%;
+}
+
+
+
+
+
+
+
+		/* Home Page */
+
+.movement {
+	padding: 20px;
+}
+
+.movement h3 {
+	font-size: ;
+	font-weight: normal;
+}
+
+.movement .main_form div {
+	float: left;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.movement .main_form div.origin {
+	padding-left: 0px;
+}
+
+.movement .actions {
+	padding-top: 20px;
+}
+
+.button {
+	border-radius: 15px;
+	color: #DBDBDB;
+	text-shadow: 0px 1px 1px black;
+}
+
+
+
+
+
+
+
+
+
+
+		/* Settings for Unit Display */
+
+.unit_list {
+	list-style: none;
+}
+
+.unit_list h1 {
+	font-size: 30px;
+	padding-left: 30px;
+	text-shadow: 0px 2px 2px black, 0px -1px 1px white, 1px 0px 1px black, -1px 0px 1px black
+}
+
+.unit_list .image_div {
+	float:left;
+	padding-top: 10px;
+}
+
+.unit_list .non_image_div {
+	padding-left: 100px;
+}
+
+.unit_list li {
+	width: 75%;
+	padding: 5px;
+	margin: 20px;
+	margin-left: 5%;
+	color: #bbb;
+	text-shadow: 0px 2px 2px black;
+	border-radius: 15px;
+	display: block;
+	border: 3px double #bbb;
+	
+	
+	background-image: linear-gradient(top, #bbb 0%, #3D52A8 25%);
+	background-image: -o-linear-gradient(top, #bbb 0%, #3D52A8 25%);
+	background-image: -moz-linear-gradient(top, #bbb 0%, #3D52A8 25%);
+	background-image: -webkit-linear-gradient(top, #bbb 0%, #3D52A8 25%);
+	background-image: -ms-linear-gradient(top, #bbb 0%, #3D52A8 25%);
+	background-image: -webkit-gradient( radius, left top, left bottom, color-stop(0, #bbb), color-stop(0.25, #3D52A8));
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/* General Settings */
+	
+* {
+	right: 2px;
+}
+
+div {
+	padding: 0;
+	margin: 0;
+}
+
+
