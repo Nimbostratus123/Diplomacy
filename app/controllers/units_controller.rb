@@ -12,16 +12,27 @@ class UnitsController < ApplicationController
 	
 	
 	def create
-		@unit = current_user.units.create(params[:unit])
-		@unit.delay = rand
-		@unit.delay *= -1.5
-		@unit.save!
-		if @unit #&& @unit.legal?
-			flash[:success] = "Your unit has been created."
-			@heading = @title = 'New Unit'
-			redirect_to root_url
+		@user = User.find_by_name(params[:unit][:user_name])
+		unless @user.nil?
+			
+			params[:unit].delete :user_name
+			@unit = @user.units.create(params[:unit])
+			@unit.delay = rand
+			@unit.delay *= -1.5
+			@unit.save!
+			
+			if @unit 
+				flash[:success] = "Your unit has been created."
+				@heading = @title = 'New Unit'
+				redirect_to root_url
+			else
+				render 'units/new'
+			end
+			
 		else
+			
 			render 'units/new'
+			
 		end
 	end
 	

@@ -13,6 +13,11 @@
 	<%= f.label :kind, 'Kind:' %>
 	<%= f.select :kind, options_for_select( selectify( ['fleet', 'army'] ) ) %>
 </div>
+<br />
+<div>
+	<%= f.label :user_name, 'User:' %>
+	<%= f.text_field :user_name %>
+</div>
 
 <br />
 <div>
