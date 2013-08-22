@@ -42,7 +42,7 @@ module ApplicationHelper
 		if unit.fleet?
 			return "border-color: white;"
 		else 
-			return "border-color: black"
+			return "border:none;"
 		end
 	end
 	
