@@ -142,10 +142,16 @@ div.image_display img {
 }
 
 
-#footer {
+#footer, #map_note {
 	position: fixed;
 	bottom: 10px;
 	right: 6%;
+}
+
+#map_note {
+	color: white;
+	left:2%;
+	bottom: 5px;
 }
 
 
