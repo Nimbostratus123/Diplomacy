@@ -35,7 +35,7 @@ module ApplicationHelper
 	end
 	
 	def unit_styles(unit)
-		return nil #"background-color:# #{nation_colors[unit.user.nation]}; #{delays(unit)} #{borders(unit)}"
+		return "background-color:# #{nation_colors[unit.user.nation]}; #{delays(unit)} #{borders(unit)}"
 	end
 	
 	def borders(unit)
