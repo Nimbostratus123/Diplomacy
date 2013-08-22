@@ -1268,3 +1268,17 @@ ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   /Users/charles/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
 
 
+Compiled application.js  (1ms)  (pid 29306)
+Compiled application.css  (0ms)  (pid 29306)
+Compiled application.js  (1ms)  (pid 29355)
+Compiled application.css  (0ms)  (pid 29355)
+Compiled application.js  (0ms)  (pid 29421)
+Compiled application.js  (0ms)  (pid 29446)
+Compiled application.js  (0ms)  (pid 29471)
+Compiled application.js  (0ms)  (pid 29483)
+Compiled application.js  (0ms)  (pid 29526)
+Compiled application.css  (0ms)  (pid 29526)
+Compiled application.js  (0ms)  (pid 29562)
+Compiled application.css  (0ms)  (pid 29562)
+Compiled application.js  (0ms)  (pid 29583)
+Compiled application.css  (0ms)  (pid 29583)

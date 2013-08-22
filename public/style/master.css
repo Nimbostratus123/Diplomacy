@@ -661,6 +661,7 @@ a.no_format:hover {
 
 
 
+
 		/* User show page */
 
 .user_bio {
@@ -790,10 +791,10 @@ a.no_format:hover {
 	display: block;
 	border: 3px double #bbb;
 	
-	transition: top 0.2s, left 0.2s, box-shadow 0.2s;
-	-o-transition: top 0.2s, left 0.2s, -o-box-shadow 0.2s;
-	-moz-transition: top 0.2s, left 0.2s, -moz-box-shadow 0.2s;
-	-webkit-transition: top 0.2s, left 0.2s, -webkit-box-shadow 0.2s;
+	transition: top 0.4s, left 0.4s, box-shadow 0.4s;
+	-o-transition: top 0.4s, left 0.4s, -o-box-shadow 0.4s;
+	-moz-transition: top 0.4s, left 0.4s, -moz-box-shadow 0.4s;
+	-webkit-transition: top 0.4s, left 0.4s, -webkit-box-shadow 0.4s;
 	
 	
 	background-image: linear-gradient(top, #bbb 0%, #3D52A8 25%);

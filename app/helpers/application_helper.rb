@@ -44,6 +44,15 @@ module ApplicationHelper
 		end
 	end
 	
+	def winning?(user)
+		User.all.each do |other|
+			if other.units.count >= user.units.count && other.id != user.id
+				return false
+			end
+		end
+		true
+	end
+	
 	def delays(unit)
 		return "animation-delay: #{unit.delay}s; -webkit-animation-delay: #{unit.delay}s;"
 	end

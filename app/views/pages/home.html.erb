@@ -1,18 +1,29 @@
 <% if signed_in? %>
 
+
 	<% if current_user.units.any? %>
 		<ul class = 'unit_list'>
 			<%= render @units %>
 		</ul>
+		<% if winning?(current_user) %>
+			<div id = 'dialog' title = 'You are winning!' >
+				<p>You the most units, and therefore you are <em>winning</em>!<p>
+			</div>
+		<% end %>
+		
 	<% else %>
-		<h2>You have no units. You have lost :(</h2>
+		<div id = 'dialog' title = 'You have lost!' >
+			<p>You have no units, and therefore you have <em>lost</em>.<p>
+		</div>
 	<% end %>
+	
 
 <% else %>
 
 	<a href="/join" class="join_button">Join!</a>
 
-	<h2 class = 'home_h2'>About the Game:</h2>
+	<h2 id = 'zoomer' class = 'home_h2'>About the Game:</h2>
 	<p class = 'home_p'>Diplomacy is a devilishly fun (or so I'm assuming) world-conquest game in which players 	struggle over territory in 20th century Europe.</p>
+
 
 <% end %>

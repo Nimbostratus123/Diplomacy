@@ -4,8 +4,17 @@
   <title><%= title %></title>
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag "/style/master.css" %>
+  <link rel="stylesheet" href="/style/vader/jquery-ui-1.10.3.custom.css" />
   <style> .maintitle {background-color: <%= title_color %>;}</style>
-  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src='./assets/application.js'></script
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script>
+   $(function() {
+     $( "#dialog" ).dialog();
+   });
+  </script>
 </head>
 
 <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
@@ -24,7 +33,7 @@
 			<% end %>
 		</ul></span>
 	</div>
-	<div class = 'primary'>
+	<div class = 'primary' >
 		
 		<% if @title == 'Map' %><div class = 'maintitle toptitle'>
 			<span><h2><%= @heading %></h2>
@@ -51,9 +60,10 @@
 		
 		<%= yield %>
 		
-		<%= debug(params) if Rails.env.development? %>
-		<%= params if Rails.env.development? %>
+		<%# debug(params) if Rails.env.development? %>
+		<%# params if Rails.env.development? %>
 	</div>
+	
 	<div id="footer">
 		<p>Copywrite 2013, Charles Chamberlain, All Rights Reserved</p>
 	</div>
