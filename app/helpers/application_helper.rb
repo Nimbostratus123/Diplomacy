@@ -40,7 +40,7 @@ module ApplicationHelper
 	
 	def borders(unit)
 		if unit.fleet?
-			return "border: solid white 2px"
+			return "border: solid white 2px;"
 		end
 	end
 	
