@@ -44,7 +44,7 @@ module ApplicationHelper
 	
 	def nation_colors
 		nation_colors = {
-			'austria' => 'orange',
+			'austria' => '#FF26D4',
 			'turkey' => 'red',
 			'germany' => 'black',
 			'england' => 'blue',
