@@ -17,7 +17,7 @@
 	<% elsif params[:controller] == 'pages' && params[:action] == 'map' %>
 	
 		
-		<div class = "unit" style = "<%= coordinates(unit.location) %> <%= delays(unit) %> " >
+		<div class = "unit" title = "<%= tooltip(unit) %>" style = "<%= coordinates(unit.location) %> <%= delays(unit) %> " >
 			
 			<div class = 'unit-1' style = "<%= unit_styles(unit) %>"></div>
 			<div class = 'unit-2' style = "<%= unit_styles(unit) %>"></div>

@@ -657,6 +657,10 @@ a.no_format:hover {
 	color: #bbb;
 }
 
+.ui-tooltip {
+	width: 130px;
+}
+
 
 
 

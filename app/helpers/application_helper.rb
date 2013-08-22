@@ -53,6 +53,11 @@ module ApplicationHelper
 		true
 	end
 	
+	def tooltip(unit)
+		"#{adjectival_form_of_nations[unit.user.nation].capitalize} #{unit.kind}"
+	end
+	
+
 	def delays(unit)
 		return "animation-delay: #{unit.delay}s; -webkit-animation-delay: #{unit.delay}s;"
 	end
@@ -66,7 +71,17 @@ module ApplicationHelper
 			'france' => 'purple',
 			'italy' => 'green'
 		}
-		
+	end
+	
+	def adjectival_form_of_nations
+		adjectival_form_of_nations = {
+			'austria' => 'austrian',
+			'turkey' => 'turkish',
+			'germany' => 'german',
+			'england' => 'english',
+			'france' => 'french',
+			'italy' => 'italian',
+		}
 		
 	end
 	
