@@ -35,12 +35,12 @@ module ApplicationHelper
 	end
 	
 	def unit_styles(unit)
-		return "background-color:# #{nation_colors[unit.user.nation]}; #{delays(unit)} #{borders(unit)}"
+		return "background-color: #{nation_colors[unit.user.nation]}; #{delays(unit)} #{borders(unit)}"
 	end
 	
 	def borders(unit)
 		if unit.fleet?
-			return "border: solid white 2px;"
+			return "border: 1px solid white;"
 		end
 	end
 	
