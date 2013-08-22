@@ -10,4 +10,21 @@ class Unit < ActiveRecord::Base
 		false
 	end
 	
+	def fleet?
+		if self.kind == 'fleet'
+			return true
+		else
+			return false
+		end
+	end
+	
+	def army?
+		if self.kind == 'army'
+			return true
+		else
+			return false
+		end
+	end
+	
+	
 end
