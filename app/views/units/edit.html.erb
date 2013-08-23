@@ -10,7 +10,7 @@
 
 	<div>
 		<%= f.label :destination, "Destination:" %>
-		<%= f.select :destination, options_for_select( selectify( regions.keys ) ) %>
+		<%= f.select(:destination, options_for_select( selectify( regions.keys ) ) ) %>
 	</div>
 	<div>
 		<%= f.label "Check if intended as support:" %>

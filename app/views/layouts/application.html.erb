@@ -10,11 +10,17 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="./jquery-ui/js/jquery-1.9.1.js"></script>
   <script src="./jquery-ui/js/jquery-ui-1.10.3.custom.js"></script>
+  <link rel="stylesheet" href="/smallipop/css/jquery.smallipop.css" type="text/css" media="all" title="Screen"/>
+  <script type="text/javascript" src="/smallipop/lib/jquery.smallipop.min.js"></script>
+  <script type="text/javascript" src="/smallipop/lib/main.js"></script>
+  <script type="text/javascript" src="/smallipop/lib/modern.js"></script>
+  <script type="text/javascript" src="/smallipop/lib/jquery.smallipop.js"></script>
   <script>
    $(function() {
-	 $( document ).tooltip();
+	 $(".unit").tooltip();
      $( "#dialog" ).dialog();
 	 $( ".unit" ).draggable();
+	 $(".pop").smallipop();
    });
   </script>
 </head>

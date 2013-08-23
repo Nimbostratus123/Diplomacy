@@ -154,8 +154,9 @@ div.image_display img {
 	bottom: 5px;
 }
 
-
-
+.ui-tooltip {
+	width: 120px;
+}
 
 
 
@@ -173,7 +174,6 @@ div.image_display img {
 	background-size: 100%, 100%;
 	font-family: "Arial";
 	font-size: 16px;
-	width: ;
 }
 	
 .map_body #footer {
@@ -479,6 +479,10 @@ div.image_display img {
 	padding-top:10px;
 }
 
+.color_swatch a:hover {
+	color:#fff;
+}
+
 		.cyan_li {
 			background-color: #45B8FF;
 			border: 2px groove #3793CC;
@@ -656,11 +660,6 @@ a.no_format {
 a.no_format:hover {
 	color: #bbb;
 }
-
-.ui-tooltip {
-	width: 130px;
-}
-
 
 
 
