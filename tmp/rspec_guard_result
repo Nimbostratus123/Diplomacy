@@ -1,3 +1,5 @@
+./spec/controllers/pages_controller_spec.rb:6
+./spec/controllers/pages_controller_spec.rb:13
 ./spec/controllers/users_controller_spec.rb:25
 ./spec/controllers/users_controller_spec.rb:30
 ./spec/controllers/users_controller_spec.rb:49
@@ -9,3 +11,5 @@
 ./spec/controllers/users_controller_spec.rb:134
 ./spec/controllers/users_controller_spec.rb:140
 ./spec/controllers/users_controller_spec.rb:145
+./spec/requests/users_spec.rb:9
+./spec/requests/users_spec.rb:21
