@@ -14,7 +14,7 @@ class UnitsController < ApplicationController
 	def create
 		@user = User.find_by_name(params[:unit][:user_name])
 		unless @user.nil?
-			
+
 			params[:unit].delete :user_name
 			@unit = @user.units.create(params[:unit])
 			@unit.delay = rand
@@ -55,13 +55,14 @@ class UnitsController < ApplicationController
 	def update
 		@unit = Unit.find(params[:id])
 		@unit.destination = (params[:unit][:destination])
-		if @unit.save
+		if @unit.timed? 
+			@unit.save
 			flash[:success] = "Unit moved!"
 			redirect_to root_url
 		else
 			@title = @heading = "#{@unit.location.capitalize}"
-			flash[:error] = "Unit not moved"
-			render 'edit'
+			flash[:error] = "You've already moved that unit today!"
+			redirect_to root_url
 		end
 		
 	end
