@@ -10,9 +10,11 @@ jQuery ->
   color = $('.maintitle').css('background-color')
  
   $('#headinger').click ->
+    $('.primary').animate({opacity: '0'})
+    $('#dialog').parent().css 'display', 'none'
     $('#devil').css 'display', 'block'
-    $('#devil').css 'text-align', 'center'
-    $('.primary').css 'visibility', 'hidden'
+    $('.primary').animate({visibility: 'hidden'})
+    $('#devil').css 'visibility', 'hidden'
     $('.page').animate({backgroundColor: 'black'})
     if tell
       $('#headinger').animate({fontSize: '100px'})
@@ -23,8 +25,9 @@ jQuery ->
     else
       $('#headinger').animate({color: '#ddd'})
       $('#headinger').animate({fontSize: '57px'})
+      $('#devil').css 'visibility', 'visible'
+      $('#devil').animate({opacity: "0"})
+      $('.primary').animate({opacity: '1'})
       $('.page').animate({backgroundColor: '#ddd'})
       $('.maintitle').animate({backgroundColor: "#{color}"})
-      $('.primary').css 'visibility', 'visible'
-      $('#devil').animate({opacity: "0"})
       tell = true
