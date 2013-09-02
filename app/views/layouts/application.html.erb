@@ -14,9 +14,9 @@
   <script type="text/javascript" src="/smallipop/lib/main.js"></script>
   <script type="text/javascript" src="/smallipop/lib/modern.js"></script>
   <script type="text/javascript" src="/smallipop/lib/jquery.smallipop.js"></script>
+  <%= javascript_include_tag :pages %>
   <script>
    $(function() {
-	 $(".unit").tooltip();
      $( "#dialog" ).dialog();
 	 $( ".unit" ).draggable();
 	 $(".pop").smallipop();
@@ -28,7 +28,7 @@
 	
 	<div class = 'page'>
 	<div class = 'maintitle'>
-		<span><h2><%= @heading %></h2>
+		<span><h2 id = 'headinger'><%= @heading %></h2>
 		<ul class = 'mainnav'>
 			<li><%= link_to "Home", "/" %></li>
 			<li><%= link_to "Map", "/map" %></li>
@@ -44,7 +44,7 @@
 	<div class = 'primary' >
 		
 		<% if @title == 'Map' %><div class = 'maintitle toptitle'>
-			<span><h2><%= @heading %></h2>
+			<span><h2 id = 'headinger'><%= @heading %></h2>
 			<ul class = 'mainnav'>
 				<li><%= link_to "Home", "/" %></li>
 				<li><%= link_to "Map", "/map" %></li>
@@ -75,6 +75,15 @@
 	<div id="footer">
 		<p>Copywrite 2013, Charles Chamberlain, All Rights Reserved</p>
 	</div>
+    
+    
+    
+     
+    
+    
+    
+    
+    
 	</div>
 </body>
 </html>
