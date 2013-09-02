@@ -6,15 +6,17 @@ tell = true
   
 jQuery ->
   
-  
   color = $('.maintitle').css('background-color')
   
   #$('#secret').burn()
+  
+  $('html').click ->
+    $('#dialog').parent().css 'display', 'none'
  
   $('#headinger').click ->
     $('.primary').animate({opacity: '0'})
-    $('#dialog').parent().css 'display', 'none'
     $('#devil').css 'display', 'block'
+    $('#dialog').parent().css 'display', 'none'
     $('.primary').animate({visibility: 'hidden'})
     $('#devil').css 'visibility', 'hidden'
     $('.page').animate({backgroundColor: 'black'})

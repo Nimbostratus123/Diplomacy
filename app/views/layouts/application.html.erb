@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../../../jquery-ui/css/sparkle/jquery-ui-1.10.3.custom.css" />
   <style> .maintitle {background-color: <%= title_color %>;}</style>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="../../../jquery-ui/js/jquery-1.9.1.js"></script>
   <script src="../../../jquery-ui/js/jquery-ui-1.10.3.custom.js"></script>
   <link rel="stylesheet" href="../../../smallipop/css/jquery.smallipop.css" type="text/css" media="all" title="Screen"/>
   <script type="text/javascript" src="../../../smallipop/lib/jquery.smallipop.min.js"></script>
@@ -46,6 +47,7 @@
 		</ul></span>
 	</div>
 	<div class = 'primary' >
+        
 		
 		<% if @title == 'Map' %><div class = 'maintitle toptitle'>
 			<span><h2 id = 'headinger'><%= @heading %></h2>
@@ -76,7 +78,7 @@
 		<%# params if Rails.env.development? %>
         
     
-        <% if params[:evil] #=~ /true|themostsecretive|evil/i %>
+        <% if params[:evil] =~ /true|themostsecretive|evil/i %>
         <button id = 'secret' style = 'margin:50px;background:black;color:red;font-size:40px;border-radius:20px;-webkit-border-radius:20px;' type = 'button' \>The Secret</button>
         <% end %>
         
