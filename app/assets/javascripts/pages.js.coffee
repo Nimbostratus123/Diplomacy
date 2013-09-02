@@ -10,12 +10,15 @@ jQuery ->
   color = $('.maintitle').css('background-color')
  
   $('#headinger').click ->
+    $('#devil').css 'display', 'block'
+    $('#devil').css 'text-align', 'center'
     $('.primary').css 'visibility', 'hidden'
     $('.page').animate({backgroundColor: 'black'})
     if tell
       $('#headinger').animate({fontSize: '100px'})
       $('#headinger').animate({color: 'red'})
       $('.maintitle').animate({backgroundColor: "black"})
+      $('#devil').animate({opacity: "1"})
       tell = false
     else
       $('#headinger').animate({color: '#ddd'})
@@ -23,4 +26,5 @@ jQuery ->
       $('.page').animate({backgroundColor: '#ddd'})
       $('.maintitle').animate({backgroundColor: "#{color}"})
       $('.primary').css 'visibility', 'visible'
+      $('#devil').animate({opacity: "0"})
       tell = true
