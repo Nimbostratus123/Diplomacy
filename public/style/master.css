@@ -850,6 +850,11 @@ a.no_format:hover {
 	
 * {
 	right: 2px;
+  z-index: 2;
+}
+
+#devil {
+  z-index: 1;
 }
 
 div {
