@@ -18,8 +18,8 @@ jQuery ->
     $('.page').animate({backgroundColor: 'black'})
     if tell
       $('#headinger').animate({fontSize: '100px'})
-      $('#headinger').animate({color: 'red'})
       $('.maintitle').animate({backgroundColor: "black"})
+      $('#headinger').burn()
       $('#devil').animate({opacity: "1"})
       tell = false
     else
@@ -31,3 +31,4 @@ jQuery ->
       $('.page').animate({backgroundColor: '#ddd'})
       $('.maintitle').animate({backgroundColor: "#{color}"})
       tell = true
+      $('#headinger').burn(false)
