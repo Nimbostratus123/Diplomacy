@@ -180,6 +180,7 @@ module ApplicationHelper
 			'skagerrak' => [520, 350], 
 			'tyrrhenian sea' => [475, 810],
 			'switzerland' => [440, 640],
+			'snake island' => [900, 700],
 			'middle of nowhere' => [-50, -50]
 		}
 	end
@@ -385,6 +386,8 @@ module ApplicationHelper
 			["black sea", "stevastopol"],
 			["black sea", "armenia"],
 			["black sea", "ankara"],
+			["snake island", "switzerland"],
+			["snake island", "middle of nowhere"],
 			["middle of nowhere", "switzerland"]
 		]
 	end		

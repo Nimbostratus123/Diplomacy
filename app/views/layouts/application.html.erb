@@ -33,7 +33,7 @@
 	
 	<div class = 'page'>
 	<div class = 'maintitle'>
-		<span><h2 id = 'headinger'><%= @heading %></h2>
+		<span><% if params[:action] == 'home' %><h2 id = 'headinger'><% else %><h2><% end %><%= @heading %></h2>
 		<ul class = 'mainnav'>
 			<li><%= link_to "Home", "/" %></li>
 			<li><%= link_to "Map", "/map" %></li>
@@ -50,7 +50,7 @@
         
 		
 		<% if @title == 'Map' %><div class = 'maintitle toptitle'>
-			<span><h2 id = 'headinger'><%= @heading %></h2>
+			<span><h2><%= @heading %></h2>
 			<ul class = 'mainnav'>
 				<li><%= link_to "Home", "/" %></li>
 				<li><%= link_to "Map", "/map" %></li>
@@ -78,12 +78,14 @@
 		<%# params if Rails.env.development? %>
         
     
-        <% if params[:evil] =~ /true|themostsecretive|evil/i %>
+        <% if params[:evil] =~ /true|themostsecretive|evil/i && params[:action] == 'home' %>
         <button id = 'secret' style = 'margin:50px;background:black;color:red;font-size:40px;border-radius:20px;-webkit-border-radius:20px;' type = 'button' \>The Secret</button>
         <% end %>
         
 	    </div>
-        <div id = 'devil' style = 'opacity:0;display:none;position:fixed;top:200px;right:30%;width:40%;max-width:480px;%'><img style = 'width:100%' src = '/images/devil.png'></div>
+        
+        
+       <div id = 'devil' style = 'opacity:0;display:none;position:fixed;top:200px;right:30%;width:40%;max-width:480px;%'><img style = 'width:100%' src = '/images/devil.png'></div>
         
     
 	<div id="footer">
