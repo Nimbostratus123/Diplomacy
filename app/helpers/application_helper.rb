@@ -105,7 +105,7 @@ module ApplicationHelper
 	def regions
 		regions = {
 			'bohemia' => [560, 570], 
-			'budapest' => [670, 625], 
+			'budapest' => [670, 625],
 			'galicia' => [740, 600],
  		 	'trieste' => [600, 710],
 			'tyrolia' => [500, 640], 
@@ -180,6 +180,7 @@ module ApplicationHelper
 			'skagerrak' => [520, 350], 
 			'tyrrhenian sea' => [475, 810],
 			'switzerland' => [440, 640],
+			'snake island' => [900, 680],
 			'middle of nowhere' => [-50, -50]
 		}
 	end
@@ -385,6 +386,8 @@ module ApplicationHelper
 			["black sea", "stevastopol"],
 			["black sea", "armenia"],
 			["black sea", "ankara"],
+			["snake island", "switzerland"],
+			["middle of nowhere", "snake island"],
 			["middle of nowhere", "switzerland"]
 		]
 	end		
