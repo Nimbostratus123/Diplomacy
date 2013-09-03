@@ -180,7 +180,7 @@ module ApplicationHelper
 			'skagerrak' => [520, 350], 
 			'tyrrhenian sea' => [475, 810],
 			'switzerland' => [440, 640],
-			'snake island' => [900, 680],
+			'snake island' => [860, 680],
 			'middle of nowhere' => [-50, -50]
 		}
 	end
