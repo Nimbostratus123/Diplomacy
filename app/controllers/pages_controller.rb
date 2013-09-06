@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
 		@heading = 'Diplomacy'
-		movement
+		movement() if timed?()
 		@move = current_user.moves.build if signed_in?
 		@units = current_user.units.all if signed_in?
   end

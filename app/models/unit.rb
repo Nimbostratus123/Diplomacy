@@ -29,9 +29,6 @@ class Unit < ActiveRecord::Base
 		end
 	end
 	
-	def timed?
-		true
-	end
 	
 	def adjacent?(place)
 		one = relations().select { |pair| pair[0] == self.location && pair[1] == place }

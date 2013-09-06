@@ -4,7 +4,7 @@ class AddDestinationToUnits < ActiveRecord::Migration
   end
 	
 	def down
-		remove_column :units, destination
+		remove_column :units, :destination
 	end
 	
 end

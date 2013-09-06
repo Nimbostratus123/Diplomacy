@@ -53,12 +53,15 @@ module ApplicationHelper
 		true
 	end
 	
-	def timed?(user)
-		@heading = "#{user.moves.last.created_at}"
-		if user.moves.last.created_at
-			true
+	def timed?
+		Unit.all.each do |unit|
+			
+		end
+		
+		if true
+			
 		else
-			false
+			
 		end
 	end
 	

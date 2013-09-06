@@ -3,6 +3,10 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 	
 tell = true
+
+square = (object) -> 
+  
+
   
 jQuery ->
   
@@ -36,6 +40,11 @@ jQuery ->
       $('.maintitle').animate({backgroundColor: "#{color}"})
       tell = true
       $('#headinger').burn(false)
+      
+      
+      
+      
+      
 
   $('#secret').click ->
     $('.primary').animate({opacity: '0'})

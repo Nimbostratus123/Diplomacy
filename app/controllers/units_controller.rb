@@ -47,6 +47,7 @@ class UnitsController < ApplicationController
 		@unit.delay = rand
 		@unit.delay *= -1.5
 		@unit.save!
+		movement() if timed?()
 		@title = @heading = "Move Unit"
 	end
 	
