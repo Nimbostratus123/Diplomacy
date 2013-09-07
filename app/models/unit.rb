@@ -1,5 +1,5 @@
 class Unit < ActiveRecord::Base
-  attr_accessible :delay, :location, :kind, :destination, :updated_at
+  attr_accessible :delay, :location, :kind, :destination
 	attr_accessor  :user_name
 	validates :user_id, :presence => true
 	belongs_to :user
@@ -7,10 +7,14 @@ class Unit < ActiveRecord::Base
 	validates :user_id, :presence => true
 	
 	include ApplicationHelper
-	
+	include UnitsHelper
 	
 	def support?
 		false
+	end
+	
+	def legal?
+		true
 	end
 	
 	def fleet?
@@ -20,15 +24,14 @@ class Unit < ActiveRecord::Base
 			return false
 		end
 	end
-	
-	def army?
-		if self.kind == 'army'
+	                                             
+	def army?                                    
+		if self.kind == 'army'                   
 			return true
 		else
 			return false
 		end
 	end
-	
 	
 	def adjacent?(place)
 		one = relations().select { |pair| pair[0] == self.location && pair[1] == place }
@@ -41,17 +44,19 @@ class Unit < ActiveRecord::Base
 	end
 	
 	def surroundings
-		outlist = []
-		relations().each do |relation|
-			if self.adjacent?(relation[0])
-				outlist << relation[0] unless outlist.include?(relation[0])
-			elsif self.adjacent?(relation[1])
-				outlist << relation[1] unless outlist.include?(relation[1])
+		if kind != 'fleet'
+			surroundings = regions().keys.select do |region| 
+				self.adjacent?(region) && land?(region) 
 			end
-		end
-		outlist
+			surroundings.unshift location					   
+		else
+			surroundings = regions().keys.select do |region|       	# Works!
+				self.adjacent?(region) && water_adjacent?(region)  	# Holy crap I should really
+			end 												   	# be using tests.
+			surroundings.unshift location	
+		end                                                           
+		surroundings                                                  	
 	end
-	
 	
 end
 

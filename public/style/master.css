@@ -753,7 +753,7 @@ a.no_format:hover {
 
 		/* Settings for Unit Display */
 
-.unit_list {
+.unit_list li {
 	list-style: none;
 	
 }
@@ -774,15 +774,18 @@ a.no_format:hover {
 	cursor: text;
 }
 
-.unit_list li:hover {
+ul.unit_list li:hover {
 	position: relative;
 	left: -5px;
 	top: -5px;
-	box-shadow: 10px 10px 5px #888;
-	-o-box-shadow: 10px 10px 5px #888;
-	-moz-box-shadow: 10px 10px 5px #888;
+	box-shadow:         10px 10px 5px #888;
+	-o-box-shadow:      10px 10px 5px #888;
+	-moz-box-shadow:    10px 10px 5px #888;
 	-webkit-box-shadow: 10px 10px 5px #888;
 }
+
+
+
 
 .unit_list li:active {
 	left: -5px;

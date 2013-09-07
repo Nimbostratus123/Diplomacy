@@ -22,7 +22,7 @@
 
 	<div class = 'nation_selector' >
 		<span>Nation: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		<%= f.select :nation, options_for_select([["England", 'england'], ['France', 'france'], 		['Germany', 'germany'], ['Italy', 'italy'], ['Russia', 'russia'], ['Austria', 'austria'], 			['Turkey', 'turkey']], @user.nation) %>
+		<%= f.select :nation, options_for_select( selectify(nations), @user.nation) %>
 	</div>
 
 	<div>

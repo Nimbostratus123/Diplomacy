@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   def map
 		@heading = 'Map'
 		@title = @heading
+		movement() if timed?()
 		@units = Unit.all
   end
 	

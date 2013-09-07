@@ -1,9 +1,9 @@
 class UnitsController < ApplicationController
 	before_filter :signed_in_user   #    , :only => [:create, :destroy]
 	
-	def index
+  def index
 		
-	end
+  end
 	
   def new
 		@unit = current_user.units.build if signed_in?
@@ -20,7 +20,6 @@ class UnitsController < ApplicationController
 			@unit.delay = rand
 			@unit.delay *= -1.5
 			@unit.save!
-			
 			if @unit 
 				flash[:success] = "Your unit has been created."
 				@heading = @title = 'New Unit'
@@ -56,13 +55,12 @@ class UnitsController < ApplicationController
 	def update
 		@unit = Unit.find(params[:id])
 		@unit.destination = (params[:unit][:destination])
-		if @unit.timed? 
-			@unit.save
-			flash[:success] = "Unit moved!"
+		if @unit.save
+			flash[:success] = "Destination changed! Movement occurs at 0:00"
 			redirect_to root_url
 		else
 			@title = @heading = "#{@unit.location.capitalize}"
-			flash[:error] = "You've already moved that unit today!"
+			flash[:error] = "Movement did not happen."
 			redirect_to root_url
 		end
 		

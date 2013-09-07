@@ -1,6 +1,6 @@
 
 	<% if params[:controller] == 'pages' && params[:action] == 'home' %>
-	<li>
+	<li class = 'unit_list_item'>
 		<%= link_to({:controller => 'units', :action => 'edit', :id => unit.id}, :class => 'no_format') do %>
 		
 			<div class = 'image_div'>

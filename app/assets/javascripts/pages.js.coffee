@@ -3,16 +3,10 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 	
 tell = true
-
-square = (object) -> 
-  
-
   
 jQuery ->
-  
+
   color = $('.maintitle').css('background-color')
-  
-  #$('#secret').burn()
   
   $('html').click ->
     $('#dialog').parent().css 'display', 'none'
