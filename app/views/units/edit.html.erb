@@ -1,7 +1,7 @@
 
 <h1 class = 'move_title'><%= @unit.location.capitalize %> — <%= @unit.kind.capitalize %></h1>
 
-
+<h3 class = 'move_sub'>Movement</h3>
 <div class = 'main_form'>
 	
 <%= form_for @unit do |f| %>
@@ -13,14 +13,24 @@
 		<%= f.select(:destination, options_for_select( selectify( @unit.surroundings ),
                 destify(@unit) ) ) %>
 	</div>
-	<div>
-		<%= f.label "Check if intended as support:" %>
-		<%= f.check_box :support? %>
-	</div>
-	<div>
+	<div
 		<span><%= f.submit "Move"%></span>
 	</div> 
 
 <% end %>
 
+</div>
+<br />
+<hr />
+
+<h3 class = 'move_sub'>Support</h3>
+
+
+<div class = 'support_form main_form'>
+<form>
+Unit:
+<%= select_tag(:unit_support, options_for_select( selectify( unit_locations_for_select ) )) %>
+<br />
+<input type="submit" value="Submit">
+</form>
 </div>

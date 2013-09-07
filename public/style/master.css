@@ -272,6 +272,51 @@ div.image_display img {
 
 
 
+		/* Unit Edit Page */
+    
+.move_sub {
+  display: block;
+  width:100px;
+  text-align: center;
+  font-weight:normal;
+  position:relative;
+  top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 50px;
+  border-bottom: 3px dotted darkred;
+}
+
+
+.move_title {
+	font-style: oblique;
+  font-weight: normal;
+  font-family: times, serif;
+  text-decoration:underline;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 20px;
+	position: relative;
+  right: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		/* User Index Page */
 
 .all_users {
@@ -642,16 +687,6 @@ div.image_display img {
 	text-decoration: underline;
 }
 
-.move_title {
-	font-weight: bold;
-	font-size: 20px;
-	text-align: center;
-	text-decoration: underline;
-	padding-top: 20px;
-	position: relative;
-	top: 20px;
-	left: -20%;
-}
 
 a.no_format {
 	color: #bbb;

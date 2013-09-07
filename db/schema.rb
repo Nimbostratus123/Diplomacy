@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130906010538) do
+ActiveRecord::Schema.define(:version => 20130907193613) do
 
   create_table "moves", :force => true do |t|
     t.string   "origin"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(:version => 20130906010538) do
     t.datetime "updated_at",  :null => false
     t.string   "destination"
     t.string   "latest"
+    t.integer  "support"
+    t.string   "supporting"
   end
 
   add_index "units", ["user_id", "created_at"], :name => "index_units_on_user_id_and_created_at"

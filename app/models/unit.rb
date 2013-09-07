@@ -1,5 +1,5 @@
 class Unit < ActiveRecord::Base
-  attr_accessible :delay, :location, :kind, :destination
+  attr_accessible :delay, :location, :kind, :destination, :support
 	attr_accessor  :user_name
 	validates :user_id, :presence => true
 	belongs_to :user
@@ -15,6 +15,14 @@ class Unit < ActiveRecord::Base
 	
 	def legal?
 		true
+	end
+	
+	def supporting?
+		if self.supporting != 'false' && self.supporting
+			return true
+		else
+			return false
+		end
 	end
 	
 	def fleet?

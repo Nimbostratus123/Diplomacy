@@ -48,6 +48,38 @@ class UnitsController < ApplicationController
 		@unit.save!
 		movement() if timed?()
 		@title = @heading = "Move Unit"
+		if params[:unit_support]
+			unless params[:unit_support] == 'no support'
+				@unit.destination = @unit.location
+				if @unit.supporting?
+					@u = Unit.find_by_location(@unit.supporting)
+					@u.support -= 1
+					@u.save!
+				end
+				@unit.supporting = params[:unit_support]
+				@unit.save!
+				@other_unit = Unit.find_by_location(params[:unit_support])
+				if @other_unit.nil?
+					flash[:error] = "Something went wrong – There is no unit by that name."
+					redirect_to root_url
+				else
+					@other_unit.support += 1
+					@other_unit.save!
+					flash[:success] = "Unit is now supporting"
+					redirect_to root_url
+				end
+			else
+				if @unit.supporting?
+					@u = Unit.find_by_location(@unit.supporting) 
+					@u.support -= 1
+					@u.save!
+				end
+				@unit.supporting = 'false'
+				@unit.save!
+				flash[:success] = "Unit is no longer supporting"
+				redirect_to root_url
+			end
+		end
 	end
 	
 	
@@ -55,11 +87,13 @@ class UnitsController < ApplicationController
 	def update
 		@unit = Unit.find(params[:id])
 		@unit.destination = (params[:unit][:destination])
-		if @unit.save
+		if @unit.supporting?
+			flash[:error] = "That unit supporting and cannot be moved this turn."
+			redirect_to root_url
+		elsif @unit.save
 			flash[:success] = "Destination changed! Movement occurs at 0:00"
 			redirect_to root_url
 		else
-			@title = @heading = "#{@unit.location.capitalize}"
 			flash[:error] = "Movement did not happen."
 			redirect_to root_url
 		end
