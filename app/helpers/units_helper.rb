@@ -259,6 +259,7 @@ module UnitsHelper
 			["kiel", "berlin"],
 			["kiel", "denmark"],
 			["denmark", "sweden"],
+			["tyrolia", "vienna"],
 			["tyrolia", "venezia"],
 			["trieste", "venezia"],
 			["piemonte", "venezia"],
