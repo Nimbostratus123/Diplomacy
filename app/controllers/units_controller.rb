@@ -49,12 +49,19 @@ class UnitsController < ApplicationController
 		movement() if timed?()
 		@title = @heading = "Move Unit"
 		if params[:unit_support]
-			unless params[:unit_support] == 'no support'
+			@telltalesign = true
+			intent = Unit.find_by_location(params[:unit_support])
+			
+			unless @unit.close_enough?(intent) # NOT WORKING
+				@telltalesign = false
+			end
+			
+			if params[:unit_support] != 'no support' && @telltalesign
 				@unit.destination = @unit.location
 				if @unit.supporting?
-					@u = Unit.find_by_location(@unit.supporting)
-					@u.support -= 1
-					@u.save!
+					u = Unit.find_by_location(@unit.supporting)
+					u.support -= 1
+					u.save!
 				end
 				@unit.supporting = params[:unit_support]
 				@unit.save!
@@ -70,13 +77,13 @@ class UnitsController < ApplicationController
 				end
 			else
 				if @unit.supporting?
-					@u = Unit.find_by_location(@unit.supporting) 
-					@u.support -= 1
-					@u.save!
+					u = Unit.find_by_location(@unit.supporting) 
+					u.support -= 1
+					u.save!
 				end
 				@unit.supporting = 'false'
 				@unit.save!
-				flash[:success] = "Unit is no longer supporting"
+				flash[:success] = "Unit is no longer supporting or is unable to."
 				redirect_to root_url
 			end
 		end

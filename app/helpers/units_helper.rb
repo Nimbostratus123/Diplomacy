@@ -27,57 +27,7 @@ module UnitsHelper
 	end
 	
 	def set_unmovable # This should work
-		unmovable = {}
-		Unit.all.each do |unit|
-			if unmovable[unit.destination].count >= 1
-				unmovable[unit.destination] << unit.id
-			else
-				unmovable[unit.destination] = unit.id.to_ary
-			end
-		end
-		
-		
-		
-		
-		unmovable.each do |key, value|                              # NOT TESTED
-			if value.count == 1                                     # NOT TESTED
-				unmovable.delete(key)                               # NOT TESTED
-			elsif value.count == 2                                  # NOT TESTED
-				value.each do |id|                                  # NOT TESTED
-					unit = Unit.find(id)                            # NOT TESTED
-					unit.destination = unit.location                # NOT TESTED
-				end                                                 # NOT TESTED
-			elsif value.count >= 3                                  # NOT TESTED
-				check = []                                          # NOT TESTED
-				max = [0, 0]                                        # NOT TESTED
-				value.each do |id|                                  # NOT TESTED
-					into = [unit.id, unit.support]                  # NOT TESTED
-					check << into                                   # NOT TESTED
-				end                                                 # NOT TESTED
-				check.each do |pair|                                # NOT TESTED
-					if max[1] < pair[1]                             # NOT TESTED
-						max = pair                                  # NOT TESTED
-					elsif max[1] == pair[1]                         # NOT TESTED
-						max = [0, pair[1]]                          # NOT TESTED
-					end                                             # NOT TESTED
-				end                                                 # NOT TESTED
-				if max[0] == 0                                      # NOT TESTED
-					check.each do |pair|                            # NOT TESTED
-						unit = Unit.find(pair[0])                   # NOT TESTED
-						unit.destination = unit.location            # NOT TESTED
-						unit.save!                                  # NOT TESTED
-					end                                             # NOT TESTED
-				else                                                # NOT TESTED
-					check.each do |pair|                            # NOT TESTED
-						unless max[0] = pair[0]                     # NOT TESTED
-							unit.destination = unit.location        # NOT TESTED
-						end                                         # NOT TESTED
-					end
-				end
-			else
-				flash[:error] = "Error: Nature => Unknown :: Units Helper; 47"
-			end
-		end
+		collected = {}
 	end
 	
 	

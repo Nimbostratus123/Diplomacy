@@ -66,5 +66,17 @@ class Unit < ActiveRecord::Base
 		surroundings                                                  	
 	end
 	
+	
+	def close_enough?(other)
+		tell = false
+		self.surroundings.each do |surrounding|
+			if other.surroundings.include?(surrounding)
+				tell = true
+			end
+		end
+		tell
+	end
+	
+	
 end
 
