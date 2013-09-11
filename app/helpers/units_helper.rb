@@ -168,7 +168,7 @@ module UnitsHelper
 			'livonia' => [740, 380],
 			'moscow' => [820, 430], 
 			'stevastopol' => [900, 590], 
-			'st. petersburg' => [820, 290], 
+			'saint petersburg' => [820, 290], 
 			'ukraine' => [800, 590], 
 			'warsaw' => [690, 510], 
 			'ankara' => [900, 800], 

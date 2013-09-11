@@ -12,10 +12,10 @@ namespace :units do
 			when 'russia'
 				user.units.create!(:location => 'moscow', :kind => 'army')
 				user.units.create!(:location => 'warsaw', :kind => 'army')
-				user.units.create!(:location => 'st petersburg', :kind => 'fleet')
+				user.units.create!(:location => 'saint petersburg', :kind => 'fleet')
 				user.units.create!(:location => 'stevastopol', :kind => 'fleet')
 			when 'france'
-				user.units.create!(:location => 'paris', :kind => 'army')
+				user.units.create!(:location => 'paris', :kind =r> 'army')
 				user.units.create!(:location => 'marseilles', :kind => 'army')
 				user.units.create!(:location => 'brest', :kind => 'fleet')
 			when 'england'

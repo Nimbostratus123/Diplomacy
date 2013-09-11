@@ -71,7 +71,8 @@ module ApplicationHelper
 			'germany' => 'black',
 			'england' => 'blue',
 			'france' => 'purple',
-			'italy' => 'green'
+			'italy' => 'green',
+			'russia' => 'white'
 		}
 	end
 	
