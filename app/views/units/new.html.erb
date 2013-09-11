@@ -1,3 +1,8 @@
+
+
+
+<% if params[:master] %>
+
 <div class = 'main_form'>
 	
 <%= form_for @unit do |f| %>
@@ -27,3 +32,9 @@
 <% end %>
 
 </div>
+
+<% else %>
+
+<h1 style='color:red;font-size:100px;background:black;height:500px;padding:100px'>CLASSIFIED<h1>
+
+<% end %>
