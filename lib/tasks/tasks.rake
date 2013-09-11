@@ -8,7 +8,7 @@ namespace :units do
 			when 'italy'
 				user.units.create!(:location => 'roma', :kind => 'army')
 				user.units.create!(:location => 'venezia', :kind => 'army')
-				user.units.create!(:location => 'naples', :kind => 'fleet')
+				user.units.create!(:location => 'napoli', :kind => 'fleet')
 			when 'russia'
 				user.units.create!(:location => 'moscow', :kind => 'army')
 				user.units.create!(:location => 'warsaw', :kind => 'army')
