@@ -83,6 +83,7 @@ module ApplicationHelper
 			'england' => 'english',
 			'france' => 'french',
 			'italy' => 'italian',
+			'russia' => 'russian'
 		}
 		
 	end
@@ -95,6 +96,7 @@ module ApplicationHelper
 			'england',
 			'france',
 			'italy',
+			'russia',
 		]
 		
 	end
