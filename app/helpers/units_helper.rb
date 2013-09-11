@@ -26,8 +26,38 @@ module UnitsHelper
 		end
 	end
 	
-	def set_unmovable # This should work
-		collected = {}
+	
+	
+	def set_unmovable
+		regions.keys.each do |region|
+			
+			@specifics = Unit.all.select { |unit| unit.destination == region }
+
+			
+			@max_support = 0
+			@top_units = []
+                                                              # IT WORKS!!
+			@specifics.each do |unit|                         # IT WORKS!!
+				if unit.support > @max_support                # IT WORKS!!
+					@max_support = unit.support               # IT WORKS!!
+				end                                           # IT WORKS!!
+			end                                               # IT WORKS!!
+                                                              # IT WORKS!!
+			@specifics.each do |unit|                         # IT WORKS!!
+				if unit.support == @max_support               # IT WORKS!!
+					@top_units << unit                        # IT WORKS!!
+				else                                          # IT WORKS!!
+					unit.dont_move                            # IT WORKS!!
+				end                                           # IT WORKS!!
+			end                                               # IT WORKS!!
+                                                              # IT WORKS!!
+			if @top_units.count > 1                           # IT WORKS!!
+				@top_units.each do |unit|                     # IT WORKS!!
+					unit.dont_move                            # IT WORKS!!
+				end 
+			end
+		end
+		
 	end
 	
 	
@@ -323,9 +353,9 @@ module UnitsHelper
 			["baltic sea", "kiel"],
 			["baltic sea", "prussia"],
 			["baltic sea", "livonia"],
-			["heigoland bight", "denmark"],
-			["heigoland bight", "kiel"],
-			["heigoland bight", "holland"],
+			["helgoland bight", "denmark"],
+			["helgoland bight", "kiel"],
+			["helgoland bight", "holland"],
 			["gulf of bothnia", "finland"],
 			["gulf of bothnia", "saint petersburg"],
 			["gulf of bothnia", "livonia"],
@@ -383,6 +413,8 @@ module UnitsHelper
 			["east mediterranean", "aegean sea"],
 			["aegean sea", "smyrna"],
 			["aegean sea", "greece"],
+			["baltic sea", "denmark"],
+			["helgoland bight", "denmark"],
 			["aegean sea", "bulgaria"],
 			["aegean sea", "constantinople"],
 			["black sea", "constantinople"],
@@ -425,10 +457,11 @@ module UnitsHelper
 		["baltic sea", "berlin"],
 		["baltic sea", "kiel"],
 		["baltic sea", "prussia"],
+		["baltic sea", "denmark"],
 		["baltic sea", "livonia"],
-		["heigoland bight", "denmark"],
-		["heigoland bight", "kiel"],
-		["heigoland bight", "holland"],
+		["helgoland bight", "denmark"],
+		["helgoland bight", "kiel"],
+		["helgoland bight", "holland"],
 		["gulf of bothnia", "finland"],
 		["gulf of bothnia", "saint petersburg"],
 		["gulf of bothnia", "livonia"],
@@ -508,7 +541,7 @@ module UnitsHelper
 		"north sea",
 		"skagerrak",
 		"baltic sea",
-		"heigoland bight",
+		"helgoland bight",
 		"gulf of bothnia",
 		"north atlantic",
 		"irish sea",

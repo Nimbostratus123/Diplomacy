@@ -16,6 +16,11 @@ class Unit < ActiveRecord::Base
 	def legal?
 		true
 	end
+	                                                                     
+	def dont_move
+		self.destination = self.location
+		self.save!
+	end                                                                  
 	
 	def supporting?
 		if self.supporting != 'false' && self.supporting

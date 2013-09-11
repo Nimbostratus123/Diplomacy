@@ -52,7 +52,7 @@ class UnitsController < ApplicationController
 			@telltalesign = true
 			intent = Unit.find_by_location(params[:unit_support])
 			
-			unless @unit.close_enough?(intent) # NOT WORKING
+			unless @unit.close_enough?(intent) # Working!
 				@telltalesign = false
 			end
 			
