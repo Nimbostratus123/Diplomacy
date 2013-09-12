@@ -26,6 +26,14 @@ module UnitsHelper
 		end
 	end
 	
+	def randomize_delays
+		Unit.all.each do |unit|
+			unit.delay = rand
+			unit.delay *= -1.5
+			unit.save!
+		end
+	end
+	
 	
 	
 	def set_unmovable

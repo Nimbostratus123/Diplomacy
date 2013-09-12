@@ -43,9 +43,9 @@ class UnitsController < ApplicationController
 	
 	def edit
 		@unit = Unit.find(params[:id])
-		@unit.delay = rand
-		@unit.delay *= -1.5
-		@unit.save!
+		# @unit.delay = rand
+		# @unit.delay *= -1.5
+		# @unit.save!
 		movement() if timed?()
 		@title = @heading = "Move Unit"
 		if params[:unit_support]
