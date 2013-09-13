@@ -1,4 +1,4 @@
-require "~/desktop/developer/rails/diplomacy/app/helpers/application_helper.rb"
+require "~/app/helpers/application_helper.rb"
 include ApplicationHelper
 
 namespace :units do
