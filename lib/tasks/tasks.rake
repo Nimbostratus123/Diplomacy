@@ -1,3 +1,5 @@
+require "~/desktop/developer/rails/diplomacy/app/helpers/application_helper.rb"
+include ApplicationHelper
 
 namespace :units do
 	desc "Reset Units"
@@ -53,4 +55,31 @@ namespace :units do
 		Unit.all.each { |unit| unit.delete }
 	end
 	
+end
+
+namespace :nations do
+
+
+
+	desc 'Randomize User Nations' 
+	task :shuffle => :environment do
+		shuffled = nations.shuffle
+		User.all.each_with_index do |user, index|
+			user.update_attribute(:nation, shuffled[index])
+		end
+	end
+
+
+
+
+
+
+
+
+	                                                              
+end
+
+desc 'Reset the Game'
+task :restart => ["nations:shuffle", "units:reset"] do
+	puts 'There is now a new game.'
 end
