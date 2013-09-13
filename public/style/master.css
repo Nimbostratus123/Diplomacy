@@ -855,19 +855,19 @@ ul.unit_list li:hover {
 }
 
 .index_of_units {
-	list-style: none
+	list-style: none;
 }
 
 .index_of_units h1 {
 	color: black;
-	font-weight: normal;
-	font-size: 20px;
+  display: inline;
+	font-size: 16px;
+  padding-left: 30px;
 }
 
 .index_of_units p {
-	position: relative;
-	top: -35px;
-	left: -20px;
+  display: inline;
+  white-space: nowrap;
 }
 
 
