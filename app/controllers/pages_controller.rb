@@ -16,7 +16,7 @@ class PagesController < ApplicationController
 	
 	
 	def color_change
-	  set_color(params[:my_param])
+		set_color(params[:my_param])
 		redirect_to join_path
 	end
 	

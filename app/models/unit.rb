@@ -75,7 +75,9 @@ class Unit < ActiveRecord::Base
 	def close_enough?(other)
 		tell = false
 		self.surroundings.each do |surrounding|
-			if other.surroundings.include?(surrounding)
+			if other.nil?
+				tell = false
+			elsif other.surroundings.include?(surrounding)
 				tell = true
 			end
 		end

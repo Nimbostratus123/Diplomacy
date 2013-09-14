@@ -15,6 +15,7 @@ module UnitsHelper
 				
 			end
 		end
+		Year.first.advance()
 		reset_support()
 	end
 	

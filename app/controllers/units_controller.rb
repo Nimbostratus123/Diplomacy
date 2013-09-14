@@ -83,7 +83,7 @@ class UnitsController < ApplicationController
 				end
 				@unit.supporting = 'false'
 				@unit.save!
-				flash[:success] = "Unit is no longer supporting or is unable to."
+				flash[:error] = "Unit is too far away to support, or support has ended."
 				redirect_to root_url
 			end
 		end
