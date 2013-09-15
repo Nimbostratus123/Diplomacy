@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 		@heading = 'Map'
 		@title = @heading
 		randomize_delays()
-		movement() if timed?()
+		movement()# if timed?()
 		@units = Unit.all
   end
 	

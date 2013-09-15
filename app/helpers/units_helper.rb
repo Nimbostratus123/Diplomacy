@@ -1,22 +1,36 @@
 module UnitsHelper
 	
+	                                                                     
+	def movement                                             
+		set_unmovable()                                                  
+		Unit.all.each do |unit|                                          
+			if unit.destination                                          
+				unless unit.location == unit.destination                 
+					unit.latest = unit.location                          
+				end                                                      
+				                                                         
+				unit.location = unit.destination                         
+				                                                         
+				unit.save!                                               
+				                                                         
+			end                                                          
+		end                                                              
+		set_centers()                                                    
+		Year.first.advance()                                             
+		reset_support()                                                  
+	end
 	
-	def movement # Works!
-		set_unmovable()
-		Unit.all.each do |unit|
-			if unit.destination
-				unless unit.location == unit.destination
-					unit.latest = unit.location
-				end
-				
-				unit.location = unit.destination 
-				
-				unit.save!
-				
+	def set_centers
+		
+		Center.all.each do |center|
+
+			if unit = Unit.find_by_location(center.location)
+				center.nation = unit.user.nation
+				center.save!
 			end
+				
 		end
-		Year.first.advance()
-		reset_support()
+			
 	end
 	
 	def reset_support
@@ -286,6 +300,7 @@ module UnitsHelper
 			["bohemia", "munich"],
 			["silesia", "munich"],
 			["tyrolia", "munich"],
+			["munich", "burgundy"],
 			["munich", "ruhr"],
 			["munich", "kiel"],
 			["munich", "berlin"],
