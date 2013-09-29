@@ -271,8 +271,6 @@ div.image_display img {
 
 
 
-
-
 		/* Unit Edit Page */
     
 .move_sub {
@@ -698,10 +696,10 @@ a.no_format:hover {
 }
 
 .date {
-  position: fixed;
+  position: absolute;
   color: #E68A2E;
-  top: 30px;
-  right: 200px;
+  top: 10px;
+  right: 10px;
   background: #ddd;
   border-radius:20px;
   box-shadow: 0px 0px 80px 10px #fff;
@@ -806,6 +804,65 @@ a.no_format:hover {
 	text-shadow: 0px 1px 1px black;
 }
 
+.new_units {
+  position: absolute;
+  top:0px;
+  left:20px;
+  width:20px;
+}
+
+.new_units h1 {
+  display:block;
+  position:relative;
+  top:9px;
+  text-align:center;
+  padding-top:2px;
+  width: 25px;
+	color:black;
+  background:orange;
+  border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  z-index:55;
+}
+
+.new_units h2 {
+  margin:0;
+  padding:0;
+  font-size:16px;
+  font-weight: normal;
+  position:relative;
+  top: -53px;
+  left:12px;
+  background:#2F6;
+  display:block;
+	color:black;
+  width: 10px;
+  z-index:50;
+	transition:top 0.5s;
+}
+
+.new_units div {
+	width: 0; 
+	height: 0; 
+	border-bottom: 0px solid transparent;  /* left arrow slant */
+	border-top: 5px solid transparent; /* right arrow slant */
+	border-left: 10px solid #2F6; /* bottom, add background color here */
+	font-size: 0;
+	line-height: 0;
+	position:relative;
+	z-index:60;
+	left:12px;
+	top:-76px;
+	transition:top 0.5s;
+}
+
+.new_units:hover div {
+	top:-90px;
+}
+.new_units:hover h2 {
+	top:-67px;
+	color:black;
+}
 
 
 
@@ -851,8 +908,11 @@ ul.unit_list li:hover {
 	-webkit-box-shadow: 10px 10px 5px #888;
 }
 
-
-
+.unit_list input {
+	position:relative;
+	top:-5px;
+	left:395px;
+}
 
 .unit_list li:active {
 	left: -5px;

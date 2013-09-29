@@ -37,7 +37,9 @@ class UnitsController < ApplicationController
 	
 	
 	def destroy
-		
+		@unit = Unit.find(params[:id])
+		@unit.delete
+		redirect_to root_url
 	end
 	
 	

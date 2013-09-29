@@ -2,7 +2,8 @@ module UnitsHelper
 	
 	                                                                     
 	def movement                                             
-		set_unmovable()                                                  
+		set_unmovable()
+		legalize_support()                                                  
 		Unit.all.each do |unit|                                          
 			if unit.destination                                          
 				unless unit.location == unit.destination                 
@@ -11,13 +12,49 @@ module UnitsHelper
 				                                                         
 				unit.location = unit.destination                         
 				                                                         
-				unit.save!                                               
-				                                                         
-			end                                                          
-		end                                                              
-		set_centers()                                                    
-		Year.first.advance()                                             
-		reset_support()                                                  
+				unit.save!                                     
+				                                               
+			end                                                
+		end                                                    
+		set_centers()                                          
+		balance_units()                                      
+		Year.first.advance()                                   
+		reset_support()
+	end
+
+
+	def balance_units
+
+		User.all.each do |user|
+
+			if user.centers.count > user.units.count
+				user.obscure_centers.each do |center|
+					other = User.find_by_nation(center.latest)
+					unless Year.first.fall?
+						other.remove_unit if other
+					end
+				end
+				user.add_unit if Year.first.fall?
+			end
+
+		end
+
+	end                                                                 
+	                                                                    
+	def legalize_support                                                
+		                                                                
+		Unit.all.each do |unit|                                         
+			other = Unit.find_by_location(unit.supporting)
+			if other
+				unless unit.adjacent?(other.destination) 
+					other.support -= 1
+					other.save!
+					unit.supporting = 'false'
+					unit.save!
+				end
+			end
+		end
+		
 	end
 	
 	def set_centers
@@ -25,8 +62,11 @@ module UnitsHelper
 		Center.all.each do |center|
 
 			if unit = Unit.find_by_location(center.location)
-				center.nation = unit.user.nation
-				center.save!
+				if unit.user.nation != center.nation
+					center.latest = center.nation
+					center.nation = unit.user.nation
+					center.save!
+				end
 			end
 				
 		end
@@ -52,6 +92,7 @@ module UnitsHelper
 	
 	
 	def set_unmovable
+		prevent_switching()
 		regions.keys.each do |region|
 			
 			@specifics = Unit.all.select { |unit| unit.destination == region }
@@ -59,30 +100,43 @@ module UnitsHelper
 			
 			@max_support = 0
 			@top_units = []
-                                                              # IT WORKS!!
-			@specifics.each do |unit|                         # IT WORKS!!
-				if unit.support > @max_support                # IT WORKS!!
-					@max_support = unit.support               # IT WORKS!!
-				end                                           # IT WORKS!!
-			end                                               # IT WORKS!!
-                                                              # IT WORKS!!
-			@specifics.each do |unit|                         # IT WORKS!!
-				if unit.support == @max_support               # IT WORKS!!
-					@top_units << unit                        # IT WORKS!!
-				else                                          # IT WORKS!!
-					unit.dont_move                            # IT WORKS!!
-				end                                           # IT WORKS!!
-			end                                               # IT WORKS!!
-                                                              # IT WORKS!!
-			if @top_units.count > 1                           # IT WORKS!!
-				@top_units.each do |unit|                     # IT WORKS!!
-					unit.dont_move                            # IT WORKS!!
+                                                         
+			@specifics.each do |unit|                    
+				if unit.support > @max_support           
+					@max_support = unit.support          
+				end                                      
+			end                                          
+                                                         
+			@specifics.each do |unit|                    
+				if unit.support == @max_support          
+					@top_units << unit                   
+				else                                     
+					unit.dont_move                       
+				end                                      
+			end                                          
+                                                         
+			if @top_units.count > 1                      
+				@top_units.each do |unit|                
+					unit.dont_move                       
 				end 
 			end
 		end
-		
+
 	end
-	
+
+
+	def prevent_switching
+		Unit.all.each do |unit1|
+			Unit.all.each do |unit2|
+				unless unit1 == unit2
+					if unit1.destination == unit2.location && unit2.destination == unit1.location
+						unit1.dont_move
+						unit2.dont_move
+					end
+				end
+			end
+		end
+	end
 	
 	
 	def timed? # This works now
@@ -143,7 +197,7 @@ module UnitsHelper
 	def selectify(list)
 		finish = []
 		list.each do |item|
-			finish += [[ item.split.map(&:capitalize).join(' '), item]]
+			finish += [[ item.split.map{|item|item.capitalize}.join(' '), item]]
 		end
 		return finish
 	end

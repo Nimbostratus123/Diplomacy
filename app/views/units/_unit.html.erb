@@ -1,30 +1,48 @@
 
 	<% if params[:controller] == 'pages' && params[:action] == 'home' %>
-	<li class = 'unit_list_item'>
-		<%= link_to({:controller => 'units', :action => 'edit', :id => unit.id}, :class => 'no_format') do %>
-		
-			<div class = 'image_div'>
-				<%= image_tag("#{unit.kind}.png") %>
-			</div>
-			
-			<div class = 'non_image_div'>
-				<h1><%= unit.location.capitalize %></h1>
-				<p>This unit is a(n) <%= unit.kind %>.<p>
-			</div>
-			
-		<% end %>
-	</li>
+    
+    
+    
+        <% if unit.location %>
+            <li class = 'unit_list_item'>
+	           	<%= link_to({:controller => 'units', :action => 'edit', :id => unit.id}, :class => 'no_format') do %>
+	           	
+	           		<div class = 'image_div'>
+	           			<%= image_tag("#{unit.kind}.png") %>
+	           		</div>
+	           		
+	           		<div class = 'non_image_div'>
+	           			<h1><%= unit.location.capitalize %></h1>
+	           			<p>This unit is a(n) <%= unit.kind %>.<p>
+	           		</div>
+	           		
+	           	<% end %>
+                <% if too_many_units? %>
+                <%= button_to "Destroy", unit_path(unit), :confirm => "Are you certain you want to destroy this unit?", :method => :delete %>
+                <% end %>
+            
+	            </li>
+        <% end %>
+        
+        
+        
 	<% elsif params[:controller] == 'pages' && params[:action] == 'map' %>
 	
+    
+    
 		
-		<div class = "unit" title = "<%= tooltip(unit) %>" style = "<%= coordinates(unit.location) %> <%= delays(unit) %> " >
+	<div class = "unit" title = "<%= tooltip(unit) %>" style = "<%= coordinates(unit.location) %> <%= delays(unit) %> " >
 			
 			<div class = 'unit-1' style = "<%= unit_styles(unit) %>"></div>
 			<div class = 'unit-2' style = "<%= unit_styles(unit) %>"></div>
 			
-		</div>
+	</div>
 	
+    
+    
 	<% else %>
+    
+    
 	</li>
 	<div>
 		<hr />
@@ -32,4 +50,6 @@
 		<p><%= @user.name %> has 1 <%= unit.kind %> in <%= unit.location.capitalize %>.<p>
 	</div>
 	</li>
+    
+    
 	<% end %>

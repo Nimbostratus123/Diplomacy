@@ -1,5 +1,5 @@
 class Unit < ActiveRecord::Base
-  attr_accessible :delay, :location, :kind, :destination, :support
+  attr_accessible :delay, :location, :kind, :destination, :support, :supporting
 	attr_accessor  :user_name
 	validates :user_id, :presence => true
 	belongs_to :user

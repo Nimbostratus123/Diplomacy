@@ -24,6 +24,45 @@ class User < ActiveRecord::Base
 		self.encrypted_password == encrypt(submitted_password)
 	end
 	
+	def centers
+		output = []
+		Center.all.each do |center|
+			if center.nation == self.nation
+				output << center
+			end
+		end
+		output
+	end
+	
+	def new_units_count
+		count = 0
+		self.units.each do |unit|
+			unless unit.location
+				count += 1
+			end
+		end
+		count
+	end
+	
+	def obscure_centers
+		output = []
+		self.centers.each do |center|	
+			if center.latest != center.nation
+				output << center
+			end	
+		end
+		output
+	end
+	
+	def remove_unit
+		self.units.all.shuffle.first.delete
+	end
+	
+	def add_unit
+		self.units.create!(:delay => (rand*(-1.5)), :support => 0, :supporting => "false")
+	end
+	
+	
 	def self.authenticate(email, submitted_password)
 		user = find_by_email(email)
 		return nil if user.nil?

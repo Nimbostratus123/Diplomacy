@@ -3,7 +3,9 @@ unless Rails.env.production?
 	path = '/desktop/developer/rails/diplomacy'
 end
 require "~#{path}/app/helpers/application_helper.rb"
+require "~#{path}/app/helpers/units_helper.rb"
 include ApplicationHelper
+include UnitsHelper
 
 namespace :units do
 	desc "Reset Units"
@@ -139,6 +141,10 @@ namespace :centers do
 		Center.create!(:location => 'serbia')
 		Center.create!(:location => 'rumania')
 		
+		Center.all.each do |center|
+			center.latest = center.nation
+		end
+		
 	end
 	
 	
@@ -161,6 +167,13 @@ end
 
 
 desc 'Reset the Game'
-task :restart => ["nations:shuffle", "units:reset", "year:reset"] do
+task :restart => ["nations:shuffle", "units:reset", "year:reset", "centers:reset"] do
 	puts 'There is now a new game.'
+end
+
+desc 'Movement'
+
+task :movement => :environment do
+	movement
+	puts 'Movement has occured.'
 end

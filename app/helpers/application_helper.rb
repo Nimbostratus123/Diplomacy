@@ -30,13 +30,21 @@ module ApplicationHelper
 	def unit_locations_for_select
 		output = []
 		Unit.all.each do |unit|
-			output << unit.location
+			output << unit.location if unit.location
 		end
 		output << 'no support'
 	end
 	
 	def unit_styles(unit)
 		return "background-color: #{nation_colors[unit.user.nation]}; #{delays(unit)} #{borders(unit)}"
+	end
+	
+	def too_many_units?
+		if current_user.units.count > current_user.centers.count
+			return true
+		else
+			return false
+		end
 	end
 	
 	def borders(unit)
