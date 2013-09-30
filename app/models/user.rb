@@ -54,6 +54,7 @@ class User < ActiveRecord::Base
 		output
 	end
 	
+	
 	def remove_unit
 		self.units.all.shuffle.first.delete
 	end

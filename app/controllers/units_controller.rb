@@ -1,9 +1,6 @@
 class UnitsController < ApplicationController
 	before_filter :signed_in_user   #    , :only => [:create, :destroy]
-	
-  def index
-		
-  end
+
 	
   def new
 		@unit = current_user.units.build if signed_in?
@@ -91,8 +88,6 @@ class UnitsController < ApplicationController
 		end
 	end
 	
-	
-	
 	def update
 		@unit = Unit.find(params[:id])
 		@unit.destination = (params[:unit][:destination])
@@ -109,6 +104,23 @@ class UnitsController < ApplicationController
 		
 	end
 
+	
+	
+	
+    def unplaced
+  	  @new_units = current_user.units.select { |unit| unit.location.nil? }
+  	  @heading = @title = 'New Units'
+    end
+	
+	def place
+		@unit = Unit.find(params[:id])
+		@unit.location = params[:unit][:location]
+		@unit.kind = params[:unit][:kind]
+		@unit.save!
+		redirect_to root_url
+	end
+	
+	
 	
 	
 	

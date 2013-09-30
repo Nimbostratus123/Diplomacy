@@ -36,7 +36,7 @@ module ApplicationHelper
 	end
 	
 	def unit_styles(unit)
-		return "background-color: #{nation_colors[unit.user.nation]}; #{delays(unit)} #{borders(unit)}"
+		return "background-color: #{nation_colors[unit.user.nation]}; #{delays(unit)} #{borders(unit)}" 
 	end
 	
 	def too_many_units?
@@ -46,6 +46,11 @@ module ApplicationHelper
 			return false
 		end
 	end
+	
+    def color_change
+      set_color(params[:my_param])
+  	redirect_to join_path
+    end
 	
 	def borders(unit)
 		if unit.fleet?
@@ -110,11 +115,26 @@ module ApplicationHelper
 		
 	end
 	
-	
+	def home_supply_centers
+		main_centers = {
+			'austria' => ['vienna', 'budapest', 'trieste'],
+			'turkey' => ['ankara', 'smyrna', 'constantinople'],
+			'germany' => ['munich', 'kiel', 'berlin'],
+			'england' => ['liverpool', 'edinburgh', 'london'],
+			'france' => ['paris', 'brest', 'marseilles'],
+			'italy' => ['napoli', 'venezia', 'roma'],
+			'russia' => ['moscow', 'warsaw', 'saint petersburg', 'stevastopol'],
+		}
+	end
 	
 	def coordinates(region = 'middle of nowhere')
 		location = regions[region]
-		return "left: #{location[0]}px; top: #{location[1]}px;" unless location.nil?
+		unless location.nil?
+			return "left: #{location[0]}px; top: #{location[1]}px;"
+		else
+			return "left:-50px;top-50px;"
+		end
+		
 	end
 
 	

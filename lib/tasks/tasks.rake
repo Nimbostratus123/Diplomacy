@@ -118,7 +118,7 @@ namespace :centers do
 				Center.create!(:nation => nation, :location => 'budapest')
 				Center.create!(:nation => nation, :location => 'trieste')
 			when 'turkey'
-				Center.create!(:nation => nation, :location => 'constantanople')
+				Center.create!(:nation => nation, :location => 'constantinople')
 				Center.create!(:nation => nation, :location => 'smyrna')
 				Center.create!(:nation => nation, :location => 'ankara')
 			else

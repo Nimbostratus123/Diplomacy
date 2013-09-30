@@ -26,16 +26,16 @@ module UnitsHelper
 	def balance_units
 
 		User.all.each do |user|
-
-			if user.centers.count > user.units.count
-				user.obscure_centers.each do |center|
-					other = User.find_by_nation(center.latest)
-					unless Year.first.fall?
-						other.remove_unit if other
-					end
-				end
-				user.add_unit if Year.first.fall?
-			end
+                                                                          #Might delete too early?
+			if user.centers.count > user.units.count                      #Might delete too early?
+				user.obscure_centers.each do |center|                     #Might delete too early?
+					other = User.find_by_nation(center.latest)            #Might delete too early?
+					unless Year.first.fall?                               #Might delete too early?
+						other.remove_unit if other                        #Might delete too early?
+					end                                                   #Might delete too early?
+				end                                                       #Might delete too early?
+				user.add_unit if Year.first.fall?                         #Might delete too early?
+			end                                                           #Might delete too early?
 
 		end
 
@@ -182,7 +182,31 @@ module UnitsHelper
 		end
 	end
 	
-	
+	def surroundings(place, kind = nil)
+		output = []
+		case kind
+		when 'fleet'
+			regions.keys.each do |region|
+				if adjacency(place, region) && water_adjacent?(region)
+					output << region
+				end
+			end
+		when 'army'
+			regions.keys.each do |region|
+				if adjacency(place, region) && land?(region)
+					output << region
+				end
+			end
+		else
+			regions.keys.each do |region|
+				if adjacency(place, region)
+					output << region
+				end
+			end
+		end
+		output << place
+		output
+	end
 	
 	
 	

@@ -20,11 +20,12 @@ class PagesController < ApplicationController
 		movement() if timed?()
 		@units = Unit.all
   end
+
 		
-  def color_change
-    set_color(params[:my_param])
-	redirect_to join_path
-  end
+  #def color_change
+  #  set_color(params[:my_param])
+  #	redirect_to join_path
+  #end
 	
 	
 end
