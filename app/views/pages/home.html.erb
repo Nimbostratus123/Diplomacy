@@ -16,9 +16,8 @@
 		  	<p>You have no units, and therefore you have <strong>lost</strong>.<p>
 		  </div>
 	<% end %>
-    
-    
-    
+	
+	
     <% if current_user.new_units_count > 0 %>
         <a href="/new_units">
             <div class = 'new_units'>
@@ -28,7 +27,8 @@
             </div>
         </a>
     <% end %>
-
+	
+	
 <% else %>
 
 	<a href="/join" class="join_button">Join!</a>

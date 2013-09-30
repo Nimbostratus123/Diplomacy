@@ -1,0 +1,46 @@
+<h1 class = 'new_units_title'>
+<% case @new_units.count %>
+<% when 0 %>
+	You have no new units.
+<% when 1 %>
+	You have a new unit!
+<% else %>
+	You have <%= @new_units.count %> new units!
+<% end %></h1>
+
+
+<% @new_units.each do |unit| %>
+
+<div class = 'main_form new_units_form'>
+	
+<%= form_for unit, :url => place_unit_path(unit) do |f| %>
+<%= render 'shared/error_messages', :object => f.object %> 
+
+
+<div>
+	<%= f.label :location, 'Location:' %>
+	<%= f.select :location, options_for_select( selectify(home_supply_centers[current_user.nation] ) ) %>
+</div>
+<br />
+<div>
+	<p>Kind:</p>
+	<%# f.label :kind, 'Kind:' %>
+	<%# f.select :kind, options_for_select( selectify( ['fleet', 'army'] ) ) %>
+	<div class = 'indent'>
+	<%= f.radio_button(:kind, "fleet") %>
+	<%= f.label(:kind_fleet, "Fleet") %><br />
+	<%= f.radio_button(:kind, "army") %>
+	<%= f.label(:kind_army, "Army") %>
+	</div>
+</div>
+
+<br />
+<div>
+	<span><%= f.submit "Place Unit"%></span>
+</div>
+
+<% end %>
+
+</div>
+
+<% end %>

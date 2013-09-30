@@ -114,10 +114,25 @@ class UnitsController < ApplicationController
 	
 	def place
 		@unit = Unit.find(params[:id])
-		@unit.location = params[:unit][:location]
-		@unit.kind = params[:unit][:kind]
-		@unit.save!
-		redirect_to root_url
+		if u = Unit.find_by_location(params[:unit][:location])
+			flash[:error] = "There is already a unit in that location."
+			redirect_to :back
+		elsif params[:unit][:kind].nil?
+			flash[:error] = "Please choose which kind of unit to place." 
+			redirect_to :back                                            
+		elsif wrong_kind?(params[:unit][:kind], params[:unit][:location])
+			flash[:error] = "You cannot build fleets in that location."  
+			redirect_to :back
+		else                                                             
+			@unit.location = params[:unit][:location]                    
+			@unit.kind = params[:unit][:kind]
+			if @unit.save!
+				flash[:success] = 'Your unit has been placed!'
+			else
+				flash[:error] = 'Something went wrong. Please contact system administrator.'
+			end
+			redirect_to root_url
+		end
 	end
 	
 	

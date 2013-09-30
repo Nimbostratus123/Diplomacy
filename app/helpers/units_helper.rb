@@ -172,6 +172,28 @@ module UnitsHelper
 		end
 	end
 	
+	def water_centers
+		water_centers = [
+			"napoli",
+			"saint petersburg",
+			"stevastopol",
+			"brest",
+			"london",
+			"edinburgh",
+			"trieste",
+			"ankara",
+		]
+	end
+	
+	def wrong_kind?(kind, location)
+		if kind == 'army'
+			return false
+		end
+		unless water_centers.include?(location)
+			return true
+		end
+	end
+	
 	def adjacency(place1, place2)
 		one = relations().select { |pair| pair[0] == place2 && pair[1] == place1 }
 		two = relations().select { |pair| pair[0] == place1 && pair[1] == place2 }
