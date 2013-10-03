@@ -2,20 +2,25 @@
 	
 <%= form_for @user do |f| %>
 <%= render 'shared/error_messages', :object => f.object %> 
-
+<div>
 
 <div>
-	<span>Full Name:</span>
-	<span class = 'form_naming'><%= f.text_field :name %></span>
+	<span><%= f.label :name, "Name:" %></span>
+	<span style = 'position:relative;left:28px'><%= f.text_field :name %></span>
 </div>
 
 <div>
-	<span>Password:&nbsp;&nbsp;</span>
-	<span><%= f.password_field :email %></span>
+	<span><%= f.label :email, "E-mail:" %></span>
+	<span style = 'position:relative;left:25px'><%= f.text_field :email %></span>
 </div>
 
 <div>
-	<%= f.hidden_field :password %>
+	<span><%= f.label :password, "Password:" %></span>
+	<span><%= f.password_field :password %></span>
+</div>
+<div>
+	<span><%= f.label :password_confirmation, "Confirmation:" %></span>
+	<%= f.password_field :password_confirmation %>
 </div>
 
 <div class = 'nation_selector' >
@@ -26,7 +31,7 @@
 <div>
 	<span><%= f.submit "Join"%></span>
 </div>
-
+</div>
 <% end %>
 
 </div>

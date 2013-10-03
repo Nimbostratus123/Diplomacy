@@ -11,16 +11,22 @@ class SessionsController < ApplicationController
 		
 		@user = User.find_by_email(params[:session][:email])
 		
-		if @user.nil? #has_password?(params[:session][:password])
-			flash.now[:error] = "Invalid password"
+		if @user.nil?
+			flash[:error] = "Invalid username/password combination"
 			@title = "Sign In"
 			@heading = "Sign In"
 			render 'new'
 		else
-			sign_in @user
-			redirect_to @user
+			unless @user.has_password?(params[:session][:password])
+				flash[:error] = "Invalid e-mail/password combination"
+				@title = "Sign In"
+				@heading = "Sign In"
+				render 'new'
+			else
+				sign_in @user
+				redirect_to @user
+			end
 		end
-		
 	end
 	
 	
