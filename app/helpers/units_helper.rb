@@ -3,7 +3,16 @@ module UnitsHelper
 	                                                                     
 	def movement                                             
 		set_unmovable()
-		legalize_support()                                                  
+		legalize_support()   
+		check_coasts()                                               
+		moves()                                                
+		set_centers()                                          
+		balance_units()                                      
+		Year.first.advance()                                   
+		reset_support()
+	end
+
+	def moves
 		Unit.all.each do |unit|                                          
 			if unit.destination                                          
 				unless unit.location == unit.destination                 
@@ -15,27 +24,37 @@ module UnitsHelper
 				unit.save!                                     
 				                                               
 			end                                                
-		end                                                    
-		set_centers()                                          
-		balance_units()                                      
-		Year.first.advance()                                   
-		reset_support()
+		end    
 	end
-
+	
+	def check_coasts # Still needs checking
+		Unit.all.each do |unit|
+			list = stop_coast[unit.location]
+			if list
+				list.each do |item| 
+					if unit.destination != unit.latest
+						if item.include?(unit.latest) && item.include?(unit.destination)
+							unit.dont_move
+						end
+					end
+				end
+			end
+		end
+	end
 
 	def balance_units
 
 		User.all.each do |user|
-                                                                          #Might delete too early?
-			if user.centers.count > user.units.count                      #Might delete too early?
-				user.obscure_centers.each do |center|                     #Might delete too early?
-					other = User.find_by_nation(center.latest)            #Might delete too early?
-					unless Year.first.fall?                               #Might delete too early?
-						other.remove_unit if other                        #Might delete too early?
-					end                                                   #Might delete too early?
-				end                                                       #Might delete too early?
-				user.add_unit if Year.first.fall?                         #Might delete too early?
-			end                                                           #Might delete too early?
+
+			if user.centers.count > user.units.count
+				user.obscure_centers.each do |center|
+					other = User.find_by_nation(center.latest)
+					unless Year.first.fall?
+						other.remove_unit if other
+					end
+				end
+				user.add_unit if Year.first.fall?
+			end
 
 		end
 
@@ -254,6 +273,14 @@ module UnitsHelper
 		else
 			return unit.location
 		end
+	end
+	
+	
+	def stop_coast	# Add more combinations
+		stop_coast = {
+			'bulgaria' => [['aegean sea','black sea'], ['aegean sea','rumania'], ['greece','black sea'], ['greece','rumania']],
+			'spain' => [['gascony','west mediterranean'], ['gascony','marseilles'], ['portugal','marseilles'], ['mid atlantic','marseilles'], ['portugal','gulf of lyon'], ['mid atlantic','gulf of lyon']],
+		}
 	end
 	
 	def regions
@@ -577,6 +604,7 @@ module UnitsHelper
 		["skagerrak", "norway"],
 		["skagerrak", "sweden"],
 		["baltic sea", "sweden"],
+		['denmark','sweden'],
 		["baltic sea", "gulf of bothnia"],
 		["baltic sea", "berlin"],
 		["baltic sea", "kiel"],
