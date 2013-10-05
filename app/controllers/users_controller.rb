@@ -31,8 +31,7 @@ class UsersController < ApplicationController
 		@heading = @user.name.split(' ')[0]
 		@units = @user.units
 		if params[:bio]
-			@user.bio = params[:bio]
-			@user.save!
+			@user.update_attribute(:bio, params[:bio])
 		end
 		render 'show'
 	end
