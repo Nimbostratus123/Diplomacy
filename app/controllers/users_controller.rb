@@ -30,13 +30,14 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@heading = @user.name.split(' ')[0]
 		@units = @user.units
-		if params[:bio]
-			@user.update_attribute(:bio, params[:bio])
-		end
 		render 'show'
 	end
 	
-	
+	def update_bio
+		@user = User.find(params[:id])
+		@user.update_column(:bio, params[:user][:bio])
+		redirect_to show_path(@user)
+	end
 	
 	def create
 		@user = User.new(params[:user])

@@ -42,12 +42,16 @@
     
 	<% else %>
     
-    
 	</li>
 	<div>
 		<hr />
-		<h1><%= unit.location.capitalize %> -</h1>
-		<p><%= @user.name %> has 1 <%= unit.kind %> in <%= unit.location.capitalize %>.<p>
+		<% if unit.location %>
+			<h1><%= unit.location.capitalize %> -</h1>
+			<p><%= @user.name %> has 1 <%= unit.kind %> in <%= unit.location.capitalize %>.<p>
+		<% else %>
+			<h1>Unplaced Unit</h1>
+			<p><%= @user.name %> has 1 unplaced unit.</p>
+		<% end %>
 	</div>
 	</li>
     

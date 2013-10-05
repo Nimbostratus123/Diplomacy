@@ -1,5 +1,4 @@
 Diplomacy::Application.routes.draw do
-	resources :users
 	resources :sessions, :only => [:new, :create, :destroy]
 	
   # get "sessions/new"
@@ -8,6 +7,10 @@ Diplomacy::Application.routes.draw do
   # 
   # get "pages/home"
   # 
+  
+  get 'users/:id', to: 'users#show', as: 'show'
+  
+  get 'users/:id/update_bio', to: 'users#update_bio', as: 'bio'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -39,6 +42,28 @@ Diplomacy::Application.routes.draw do
 		   get 'unplaced'
 	   end
      end
+	 
+	 resources :users do
+		 member do
+			 
+			 get 'show'
+			 delete 'destroy'
+			 
+			 get 'new'
+			 post 'create'
+			 
+			 get 'edit'
+			 put 'update'
+			 
+			 put 'update_bio'
+			 
+			 
+		 end
+		 
+		 collection do
+			 get 'index'
+		 end
+	 end
 
   # Sample resource route with sub-resources:
   #   resources :products do
@@ -74,7 +99,7 @@ Diplomacy::Application.routes.draw do
 	match '/players', :to => 'users#index'
 	
 	match '/new_units', :to => 'units#unplaced'
-	
+
 	
 	
   root :to => 'pages#home'

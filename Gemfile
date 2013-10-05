@@ -9,7 +9,8 @@ gem 'hirb'
 
 
 gem 'webrat'
-gem 'devise', '1.1.rc0 '
+#gem 'devise', '1.1.rc0 '
+
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
