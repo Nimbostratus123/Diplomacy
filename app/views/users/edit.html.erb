@@ -4,7 +4,7 @@
 	
 <%= form_for @user do |f| %>
 <%= render 'shared/error_messages', :object => f.object %> 
-
+<div>
 
 	<div>
 		<span>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		</span>
@@ -12,17 +12,22 @@
 	</div>
 	
 	<div>
-			<span>Password:&nbsp;&nbsp;</span>
-			<span><%= f.password_field :email %></span>
+			<span>E-mail:</span>
+			<span style = 'position:relative;left:33px'><%= f.text_field :email %></span>
 	</div>
 	
 	<div>
-		<%= f.hidden_field :password %>
+		<span>Password:&nbsp;&nbsp;</span>
+		<span><%= f.password_field :password %></span>
+	</div>
+	<div>
+		<span>Confirmation:</span>
+		<span style = "position:relative;left:-12px;"><%= f.password_field :password_confirmation %></span>
 	</div>
 
 	<div class = 'nation_selector' >
 		<span>Nation: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		<%= f.select :nation, options_for_select( selectify(nations), @user.nation) %>
+		<%= f.select :nation, options_for_select( selectify( nations_left(@user.nation)), @user.nation) %>
 	</div>
 
 	<div>

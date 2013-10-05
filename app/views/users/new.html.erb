@@ -1,8 +1,16 @@
-<div class = 'main_form'>
+
 	
+	
+<% unless nations_left.empty? %>
+
+
+
+<div class = 'main_form'>
+
 <%= form_for @user do |f| %>
 <%= render 'shared/error_messages', :object => f.object %> 
-<div>
+
+<div style = 'width:100%'>
 
 <div>
 	<span><%= f.label :name, "Name:" %></span>
@@ -25,7 +33,7 @@
 
 <div class = 'nation_selector' >
 	<span>Nation: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-	<%= f.select :nation, options_for_select([["England", 'england'], ['France', 'france'], ['Germany', 'germany'], ['Italy', 'italy'], ['Russia', 'russia'], ['Austria', 'austria'], ['Turkey', 'turkey']], @user.nation) %>
+	<%= f.select :nation, options_for_select(selectify( nations_left() ), @user.nation) %>
 </div>
 
 <div>
@@ -34,4 +42,16 @@
 </div>
 <% end %>
 
+
+
+<% else %>
+
+
+
+<h1 style = 'position:relative;left:20px;'>All the nations are taken!</h1>
+<p style = 'padding:0'>Please contact the web administrator if this is in error.</p>
+
 </div>
+
+
+<% end %>
