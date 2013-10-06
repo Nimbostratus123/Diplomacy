@@ -80,6 +80,7 @@ nav a:hover {
 }
 
 #bottomlist {
+	display:block;
 	border-top:darkorange 3px solid;
 	border-radius:0px 0px 10px 10px;
 }
@@ -103,6 +104,13 @@ nav a:hover {
 	padding-left: 20px;
 	background: #ddd;
 	cursor:pointer;
+	display:inline;
+	padding:0 10%;
+}
+
+.letter h2 span {
+	float:right;
+	font-weight:normal;
 }
 
 div {
