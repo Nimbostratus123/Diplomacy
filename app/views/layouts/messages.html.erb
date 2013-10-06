@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <%= csrf_meta_tag %>
+  <%= stylesheet_link_tag "/style/messages.css" %><%= javascript_include_tag "messages" %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../../../assets/messages.js"></script>
+  <style type = 'text/css'>
+  li a {
+	  color:<%= inverse(title_color, 0.5) %>;
+  }
+  
+  li a:hover {
+	  color:<%= inverse(inverse(title_color, 0.5)) %>;
+  }
+  </style>
+</head>
+<body class = 'messages' style = "background:<%= lighten(title_color) %>">
+	
+	
+	<div class = 'heading'>
+		<h1><%= @heading %></h1>
+	</div>
+	
+	<nav>
+		<ul>
+			<li id = 'toplist'><%= link_to "New Message", "/", class: 'back_link' %></li>
+			<li><%= link_to "Inbox", "/", class: 'back_link' %></li>
+			<li><%= link_to "Read", "/", class: 'back_link' %></li>
+			<li><%= link_to "Sent", "/", class: 'back_link' %></li>
+			<li><%= link_to "Archive", "/", class: 'back_link' %></li>
+			<li id = 'bottomlist'><%= link_to "Back to Board", "/", class: 'back_link' %></li>
+			<li style = 'opacity:0;background:transparent;' >This should not be visable</li>
+			<li style = 'opacity:0;background:transparent;' >This should not be visable</li>
+		</ul>
+	</nav>
+	
+	
+	
+	<div class = 'primary' >
+			
+			
+		
+		<% flash.each do |key, value| %>
+		<div class = "flash_<% key %>"><p><%= value %></p></div>
+		<% end %>
+		
+		
+		
+		<%= yield %>
+        
+		
+		
+		
+	</div>
+    
+	
+	
+	   
+	<div id="footer" style = "color:<%= lighten(title_color) %>">
+		<p>Copywrite 2013, Charles Chamberlain, All Rights Reserved</p>
+	</div>
+	
+	
+</body>
+</html>
