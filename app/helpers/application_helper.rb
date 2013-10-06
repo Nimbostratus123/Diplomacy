@@ -10,7 +10,7 @@ module ApplicationHelper
 	end
 	
 	def set_color(color)
-		cookies.permanent[:remember_color] = color
+		cookies.permanent[:remember_color] = color.downcase
 	end
 	
 	def default_color
@@ -75,6 +75,54 @@ module ApplicationHelper
 
 	def delays(unit)
 		return "animation-delay: #{unit.delay}s; -webkit-animation-delay: #{unit.delay}s;"
+	end
+	
+	def lighten(color, degree = 0.5)
+		output = '#'
+		reference = '0 1 2 3 4 5 6 7 8 9 a b c d e f'
+		reference_a = reference.split(' ')
+		reference = reference_a.join('')
+		
+		color.each_char do |char|
+			unless char == '#'
+				number = reference.index(char)
+				number += (16 - number) * degree
+				output << reference_a[number]
+			end
+		end
+		output
+	end
+	
+	def inverse(color, degree = 0.5)
+		output = ''
+		reference = '0 1 2 3 4 5 6 7 8 9 a b c d e f'
+		reference_a = reference.split(' ')
+		reference = reference_a.join('')
+		
+		color.each_char do |char|
+			unless char == '#'
+				number = reference.index(char)
+				number -= (16 - number) * degree
+				output << reference_a[number]
+			end
+		end
+		'#' + output.reverse
+	end
+	
+	def darken(color, degree = 0.5)
+		output = '#'
+		reference = '0 1 2 3 4 5 6 7 8 9 a b c d e f'
+		reference_a = reference.split(' ')
+		reference = reference_a.join('')
+		
+		color.each_char do |char|
+			unless char == '#'
+				number = reference.index(char)
+				number *= degree
+				output << reference_a[number.to_i]
+			end
+		end
+		output
 	end
 	
 	def nation_colors

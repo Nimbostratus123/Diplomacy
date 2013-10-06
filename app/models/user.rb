@@ -54,6 +54,26 @@ class User < ActiveRecord::Base
 		output
 	end
 	
+	def messages_from
+		output = []
+		Message.all.each do |message|
+			if message.from == self.id
+				output << message
+			end
+		end
+		output
+	end
+	
+	def messages_to
+		output = []
+		Message.all.each do |message|
+			if message.to == self.id
+				output << message
+			end
+		end
+		output
+	end
+	
 	
 	def remove_unit
 		self.units.all.shuffle.first.delete
