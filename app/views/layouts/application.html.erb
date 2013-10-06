@@ -40,7 +40,7 @@
 			<li><%= link_to "Map", "/map" %></li>
 			<li><%= link_to "Players", "/players" %></li>
 			<% if signed_in? %>
-			<li><%= link_to "Messages", "/messages"%></li>
+			<li><%= link_to "DiploMail", "/messages"%></li>
 			<li><%= link_to "Settings", "/users/#{current_user.id}/edit"%></li>
 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
 			<% else %>
@@ -63,7 +63,7 @@
 				<li><%= link_to "Map", "/map" %></li>
 				<li><%= link_to "Players", "/players" %></li>
 				<% if signed_in? %>
-				<li><%= link_to "Messages", "/messages"%></li>
+				<li><%= link_to "DiploMail", "/messages"%></li>
 				<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
 				<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
 				<% else %>
