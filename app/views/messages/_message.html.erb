@@ -15,7 +15,7 @@
 		<h2><%= message.subject %><span>
 			From: <%= message.from_whom.name.split(' ')[0] %></span></h2>
 		<div>
-			<hr /><p><%= message.content.gsub(/\n/, "<br />").html_safe %></p>
+			<hr /><p><%= message.content.gsub(/\n/, '<br />').gsub(/<.*script.*>/, 'DONT HACK.').html_safe %></p>
 		</div>
 	</div>
 	
