@@ -3,19 +3,19 @@ class MessagesController < ApplicationController
 
 	def index
 		@title = @heading = 'DiploMail'
-		@messages = not_read(current_user.messages_to)
+		@messages = not_read(current_user.messages_to.reverse)
 		@message = Message.new
 	end
 	
 	def sent
 		@title = @heading = 'DiploMail'
-		@messages = current_user.messages_from
+		@messages = current_user.messages_from.reverse
 		@message = Message.new
 	end
 	
 	def read
 		@title = @heading = 'DiploMail'
-		@messages = not_archived(only_read(current_user.messages_to))
+		@messages = not_archived(only_read(current_user.messages_to.reverse))
 		@message = Message.new
 	end
 	

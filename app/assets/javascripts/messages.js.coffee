@@ -12,7 +12,7 @@ jQuery ->
     $(this).siblings('.letter').children('div').slideUp()
     $(this).children('div').slideToggle()
     if window.location.pathname == '/messages'
-      $.get("/messages/#{$(this).data('id')}/seen")
+      $.post("/messages/#{$(this).data('id')}/seen")
  
     
   $('.form').hide()
@@ -26,9 +26,15 @@ jQuery ->
     $('#fade').animate({opacity: 0.7})
     
   $('#submit').click ->
-    $('.form').hide()
-    $('#fade').css('display', 'none')
-    $('.form form').submit()
+    unless $('.field').val()
+      tell = confirm "There is no subject. Do you still want to send the message?"
+      if tell
+        $('.form form').submit()
+      else
+        $('#fade').animate({opacity: 0.5})
+        $('#fade').animate({opacity: 0.7})
+    else
+      $('.form form').submit()
   
   $('#fade').click ->
     $('.form').hide()
@@ -42,3 +48,6 @@ jQuery ->
     
   $('#read').click ->
     window.location.href = '/messages/read'
+    
+  $('#bottomlist').click ->
+    window.location.href = '/'

@@ -49,7 +49,7 @@ Diplomacy::Application.routes.draw do
 		 member do
 			post 'create'
 			
-			get 'seen'
+			post 'seen'
 			
 		 end
 		 

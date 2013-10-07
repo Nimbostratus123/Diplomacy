@@ -68,9 +68,9 @@
 		<%= f.select :to, options_for_select( select_user ) %>
 		<br />
 		<%= f.label :subject, 'Subject:' %>
-		<%= f.text_field :subject %>
+		<%= f.text_field :subject, class: 'field' %>
 	
-		<%= f.text_area :content, size: "60x12" %>
+		<%= f.text_area :content, class: 'field', size: "60x12" %>
 	
 		<div id = 'submit'>Send</div>
 	

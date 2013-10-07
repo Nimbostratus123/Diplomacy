@@ -74,6 +74,13 @@ class User < ActiveRecord::Base
 		output
 	end
 	
+	def new_messages
+		output = []
+		self.messages_to.each do |message|
+			output << message unless message.read
+		end
+		output
+	end
 	
 	def remove_unit
 		self.units.all.shuffle.first.delete

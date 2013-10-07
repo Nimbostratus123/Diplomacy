@@ -41,7 +41,11 @@
 			<% else %>
 			<li><%= link_to "Sign in", signin_path, :method => :delete %></li>
 			<% end %>
-		</ul></span>
+		</ul>
+		<% if current_user.new_messages.count > 0 %>
+		<div class ='new_messages' style = "background:<%= inverse(title_color) %>"><%= current_user.new_messages.count %></div>
+		<% end %></span>
+		
 	</div>
 	<div class = 'primary' >
         

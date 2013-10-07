@@ -15,7 +15,17 @@
 	font-size: 16px;
 }
 
-
+.maintitle .new_messages {
+	border-radius:100px;
+	font-size:12px;
+	width:15px;
+	z-index:21;
+	position:absolute;
+	top:-80px;
+	left:40px;
+	color:black;
+	text-shadow: 1px 1px 2px black;
+}
 
 .maintitle span {
 	position: relative;
@@ -30,6 +40,7 @@
 .maintitle ul  {
 	top: -44px;
 	text-shadow: none;
+	z-index:22;
 }
 
 .green_title ul {
