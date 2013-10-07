@@ -11,7 +11,7 @@ jQuery ->
   $('.letter').click ->
     $(this).siblings('.letter').children('div').slideUp()
     $(this).children('div').slideToggle()
-    if window.location.href == '/messages'
+    if window.location.pathname == '/messages'
       $.get("/messages/#{$(this).data('id')}/seen")
  
     
