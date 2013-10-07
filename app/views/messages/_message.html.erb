@@ -1,0 +1,22 @@
+
+<% if params[:action] == "sent" %>
+
+	<div class = 'letter' data-id = "<%= message.id %>">
+		<h2><%= message.subject %><span>
+			To: <%= message.to_whom.name.split(' ')[0] %></span></h2>
+		<div>
+			<hr /><p><%= message.content %></p>
+		</div>
+	</div>
+
+<% else %>
+
+	<div class = 'letter' data-id = "<%= message.id %>">
+		<h2><%= message.subject %><span>
+			From: <%= message.from_whom.name.split(' ')[0] %></span></h2>
+		<div>
+			<hr /><p><%= message.content %></p>
+		</div>
+	</div>
+	
+<% end %>

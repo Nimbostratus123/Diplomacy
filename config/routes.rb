@@ -1,5 +1,4 @@
 Diplomacy::Application.routes.draw do
-	resources :messages, :only => [:new, :index]
 	resources :sessions, :only => [:new, :create, :destroy]
 	
   # get "sessions/new"
@@ -9,6 +8,7 @@ Diplomacy::Application.routes.draw do
   # get "pages/home"
   # 
   get 'messages/index'
+  get 'messages/sent'
   
   get 'users/:id', to: 'users#show', as: 'show'
   
@@ -44,6 +44,21 @@ Diplomacy::Application.routes.draw do
 		   get 'unplaced'
 	   end
      end
+	 
+	 resources :messages do
+		 member do
+			post 'create'
+			
+			get 'seen'
+			
+		 end
+		 
+		 collection do
+			 get 'index'
+			 get 'sent'
+			 get 'read'
+		 end
+	 end
 	 
 	 resources :users do
 		 member do

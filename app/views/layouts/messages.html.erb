@@ -5,6 +5,8 @@
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag "/style/messages.css" %><%= javascript_include_tag "messages" %>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="../../../jquery-ui/js/jquery-1.9.1.js"></script>
+  <script src="../../../jquery-ui/js/jquery-ui-1.10.3.custom.js"></script>
   <script type="text/javascript" src="../../../assets/messages.js"></script>
   <style type = 'text/css'>
   li a {
@@ -25,11 +27,11 @@
 	
 	<nav>
 		<ul>
-			<li id = 'toplist'><%= link_to "New Message", "/", class: 'back_link' %></li>
-			<li><%= link_to "Inbox", "/", class: 'back_link' %></li>
-			<li><%= link_to "Read", "/", class: 'back_link' %></li>
-			<li><%= link_to "Sent", "/", class: 'back_link' %></li>
-			<li><%= link_to "Archive", "/", class: 'back_link' %></li>
+			<li id = 'toplist'><%= link_to "New Message", '#', class: 'back_link' %></li>
+			<li id = 'inbox'><%= link_to "Inbox", "/messages", class: 'back_link' %></li>
+			<li id = 'read'><%= link_to "Read", "/messages/read", class: 'back_link' %></li>
+			<li id = 'sent'><%= link_to "Sent", "/messages/sent", class: 'back_link' %></li>
+			<li><%= link_to "Archive", "#", class: 'back_link' %></li>
 			<li id = 'bottomlist'><%= link_to "Back to Board", "/", class: 'back_link' %></li>
 			<li style = 'opacity:0;background:transparent;' >This should not be visable</li>
 			<li style = 'opacity:0;background:transparent;' >This should not be visable</li>
@@ -57,11 +59,31 @@
     
 	
 	
+	
+
+	<div class = 'form'>
+		<%= form_for @message do |f| %>
+	
+		<%= f.label :to, 'To:' %>
+		<%= f.select :to, options_for_select( select_user ) %>
+		<br />
+		<%= f.label :subject, 'Subject:' %>
+		<%= f.text_field :subject %>
+	
+		<%= f.text_area :content, size: "60x12" %>
+	
+		<div id = 'submit'>Send</div>
+	
+		<% end %>
+	</div>
+
+	<div id = 'fade'></div>
+	
+	
 	   
 	<div id="footer" style = "color:<%= lighten(title_color) %>">
 		<p>Copywrite 2013, Charles Chamberlain, All Rights Reserved</p>
 	</div>
-	
 	
 </body>
 </html>

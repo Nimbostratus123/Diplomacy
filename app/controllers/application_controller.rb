@@ -5,4 +5,5 @@ class ApplicationController < ActionController::Base
 	include UsersHelper
 	include PagesHelper
 	include UnitsHelper
+	include MessagesHelper
 end

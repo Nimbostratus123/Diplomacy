@@ -3,17 +3,31 @@ class MessagesController < ApplicationController
 
 	def index
 		@title = @heading = 'DiploMail'
-		@messages =current_user.messages_to
-	end
-
-	def new
-		@title = @heading = 'New Message'
+		@messages = not_read(current_user.messages_to)
 		@message = Message.new
 	end
 	
+	def sent
+		@title = @heading = 'DiploMail'
+		@messages = current_user.messages_from
+		@message = Message.new
+	end
+	
+	def read
+		@title = @heading = 'DiploMail'
+		@messages = not_archived(only_read(current_user.messages_to))
+		@message = Message.new
+	end
+	
+	def seen
+		@message = Message.find(params[:id])
+		@message.read = true
+		@message.save!
+	end
+	
 	def create
-		if Message.create(from: current_user.id, to: User.find_by_name(params[:message][:to]).id, 
-			subject: params[:message][:subject], content: params[:message][:subject],
+		if Message.create(from: current_user.id, to: params[:message][:to], 
+			subject: params[:message][:subject], content: params[:message][:content],
 			read: false, archived: false)
 			flash[:success] = 'Message sent.'
 			redirect_to :back

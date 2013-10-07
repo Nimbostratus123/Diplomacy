@@ -1,77 +1,19 @@
 
 <h1>Inbox</h1>
 
+<% if @messages.empty? %>
 
-<div class = 'letter'>
-	<h2>How's it goin'?<span>From: Micheal</span></h2>
-	<div>
-		<hr />
-		<p>
-			I understand that it's been a long time, but I'm just writing this to let you 
-			know that there are no hard feelings. Even though I took over Galicia, I'm 
-			not trying to take Russia, so don't worry. 'Kay?
-		</p>
-	</div>
-</div>
-<div class = 'letter'>
-	<h2>How's it goin'?<span>From: Micheal</span></h2>
-	<div>
-		<hr />
-		<p>
-			I understand that it's been a long time, but I'm just writing this to let you 
-			know that there are no hard feelings. Even though I took over Galicia, I'm 
-			not trying to take Russia, so don't worry. 'Kay?
-		</p>
-	</div>
-</div>
-<div class = 'letter'>
-	<h2>How's it goin'?<span>From: Micheal</span></h2>
-	<div>
-		<hr />
-		<p>
-			I understand that it's been a long time, but I'm just writing this to let you 
-			know that there are no hard feelings. Even though I took over Galicia, I'm 
-			not trying to take Russia, so don't worry. 'Kay?
-		</p>
-	</div>
-</div>
-<div class = 'letter'>
-	<h2>How's it goin'?<span>From: Micheal</span></h2>
-	<div>
-		<hr />
-		<p>
-			I understand that it's been a long time, but I'm just writing this to let you 
-			know that there are no hard feelings. Even though I took over Galicia, I'm 
-			not trying to take Russia, so don't worry. 'Kay?
-		</p>
-	</div>
-</div>
-<div class = 'letter'>
-	<h2>How's it goin'?<span>From: Micheal</span></h2>
-	<div>
-		<hr />
-		<p>
-			I understand that it's been a long time, but I'm just writing this to let you 
-			know that there are no hard feelings. Even though I took over Galicia, I'm 
-			not trying to take Russia, so don't worry. 'Kay?
-		</p>
-	</div>
-</div>
-<div class = 'letter'>
-	<h2>How's it goin'?<span>From: Micheal</span></h2>
-	<div>
-		<hr />
-		<p>
-			I understand that it's been a long time, but I'm just writing this to let you 
-			know that there are no hard feelings. Even though I took over Galicia, I'm 
-			not trying to take Russia, so don't worry. 'Kay?
-		</p>
-	</div>
-</div>
+<h2>You have no new messages</h2>
 
+<% end %>
+
+<%= render @messages %>
 
 <div class = '' style = 'opacity:0'>
 	<h2>Subject: How's it goin'?</h2>
 	<h2>From: Micheal</h2>
 	<p></p><p></p><p></p><br />
 </div>
+
+
+
