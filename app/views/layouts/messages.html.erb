@@ -3,11 +3,7 @@
 <head>
   <title><%= title %></title>
   <%= csrf_meta_tag %>
-  <%= stylesheet_link_tag "/style/messages.css" %><%= javascript_include_tag "messages" %>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="../../../jquery-ui/js/jquery-1.9.1.js"></script>
-  <script src="../../../jquery-ui/js/jquery-ui-1.10.3.custom.js"></script>
-  <script type="text/javascript" src="../../../assets/messages.js"></script>
+  <%= stylesheet_link_tag "/style/messages.css" %>
   <style type = 'text/css'>
   li a {
 	  color:<%= inverse(title_color, 0.5) %>;
@@ -84,6 +80,13 @@
 	<div id="footer" style = "color:<%= lighten(title_color) %>">
 		<p>Copywrite 2013, Charles Chamberlain, All Rights Reserved</p>
 	</div>
+	
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../../../jquery-ui/js/jquery-1.9.1.js"></script>
+    <script src="../../../jquery-ui/js/jquery-ui-1.10.3.custom.js"></script>
+	
+    <script type="text/javascript" src="../../../assets/messages.js"></script>
 	
 </body>
 </html>

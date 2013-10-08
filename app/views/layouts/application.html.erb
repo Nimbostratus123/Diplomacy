@@ -6,23 +6,17 @@
   <%= stylesheet_link_tag "/style/master.css" %>
   <link rel="stylesheet" href="../../../jquery-ui/css/sparkle/ui.css" />
   <link rel="stylesheet" href="../../../jquery-ui/css/sparkle/jquery-ui-1.10.3.custom.css" />
-  <style> .maintitle {background-color: <%= title_color %>;}</style>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="../../../jquery-ui/js/jquery-1.9.1.js"></script>
-  <script src="../../../jquery-ui/js/jquery-ui-1.10.3.custom.js"></script>
-  <script src="../../../burn.js"></script>
-
-  <script type="text/javascript" src="../../../assets/pages.js"></script>
+  <style> 
   
-  <script>
-   $(function() {
-     $('.unit').tooltip()
-     $( "#dialog" ).dialog();
-	 $( ".unit" ).draggable();
-	 $(".pop").smallipop();
-     $('.map_div img').on('dragstart', function(event) { event.preventDefault(); });
-   });
-  </script>
+  .maintitle {
+	  background-color: <%= title_color %>;
+  }
+  
+  .maintitle a:hover {
+	  color: <%= lighten(inverse(title_color, 0.8)) %>;
+  }
+  
+  </style>
 </head>
 
 <% if @title == 'Map' %><body class = 'map_body'><% else %><body class = 'mainbody'><% end %>
@@ -101,5 +95,24 @@
     </div>
     
 	</div>
+	
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../../../jquery-ui/js/jquery-1.9.1.js"></script>
+    <script src="../../../jquery-ui/js/jquery-ui-1.10.3.custom.js"></script>
+    <script src="../../../burn.js"></script>
+
+    <script type="text/javascript" src="../../../assets/pages.js"></script>
+	
+    <script>
+     $(function() {
+       $('.unit').tooltip()
+       $( "#dialog" ).dialog();
+  	 $( ".unit" ).draggable();
+  	 $(".pop").smallipop();
+       $('.map_div img').on('dragstart', function(event) { event.preventDefault(); });
+     });
+    </script>
+	
 </body>
 </html>
