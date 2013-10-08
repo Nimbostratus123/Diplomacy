@@ -4,6 +4,7 @@
   <title><%= title %></title>
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag "/style/messages.css" %>
+  
   <style type = 'text/css'>
   li a {
 	  color:<%= inverse(title_color, 0.5) %>;
@@ -13,6 +14,10 @@
 	  color:<%= inverse(inverse(title_color, 0.5)) %>;
   }
   </style>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../../../assets/messages.js"></script>
+	
 </head>
 <body class = 'messages' style = "background:<%= lighten(title_color, 0.5) %>">
 	
@@ -82,11 +87,9 @@
 	</div>
 	
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
     <script src="../../../jquery-ui/js/jquery-1.9.1.js"></script>
     <script src="../../../jquery-ui/js/jquery-ui-1.10.3.custom.js"></script>
-	
-    <script type="text/javascript" src="../../../assets/messages.js"></script>
 	
 </body>
 </html>
