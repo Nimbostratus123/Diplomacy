@@ -95,6 +95,7 @@ nav a {
 	padding: 10px 10px;
 	margin: 10px 0px;
 	box-shadow:0px 0px 3px black;
+	cursor:pointer;
 }
 
 .letter h2 {
@@ -103,9 +104,12 @@ nav a {
 	font-size: 20px;
 	padding-left: 20px;
 	background: #ddd;
-	cursor:pointer;
 	display:inline;
 	padding:0 10%;
+}
+
+.letter div {
+	cursor:auto;
 }
 
 .letter h2 span {
@@ -176,8 +180,3 @@ div {
 #submit:active {
 	top: 23px;
 }
-
-
-
-
-

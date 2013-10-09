@@ -4,7 +4,18 @@
     
     
         <% if unit.location %>
-            <li class = 'unit_list_item'>
+            <li class = 'unit_list_item' style = "
+			background-image: linear-gradient(top, #bbb 0%, 
+			<%= darken(inverse(darken(inverse(title_color)))) %> 20%);
+			background-image: -o-linear-gradient(top, #bbb 0%, 
+			<%= darken(inverse(darken(inverse(title_color))))  %> 20%);
+			background-image: -moz-linear-gradient(top, #bbb 0%, 
+			<%= darken(inverse(darken(inverse(title_color)))) %> 20%);
+			background-image: -webkit-linear-gradient(top, #bbb 0%, 
+			<%= darken(inverse(darken(inverse(title_color))))  %> 20%);
+			background-image: -ms-linear-gradient(top, #bbb 0%,
+			 <%= darken(inverse(darken(inverse(title_color))))  %> 20%);
+			background-image: -webkit-gradient( radius, left top, left bottom, color-stop(0, #bbb), 			color-stop(0.20, <%= darken(inverse(title_color)) %>));">
 	           	<%= link_to({:controller => 'units', :action => 'edit', :id => unit.id}, :class => 'no_format') do %>
 	           	
 	           		<div class = 'image_div'>
