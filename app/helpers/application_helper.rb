@@ -21,7 +21,7 @@ module ApplicationHelper
 		
 	def title_color 
 		unless cookies[:remember_color]
-			return '#45B8FF'
+			return '#45B8FF'.downcase
 		else
 			return cookies[:remember_color]
 		end
