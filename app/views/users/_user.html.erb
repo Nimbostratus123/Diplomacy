@@ -1,6 +1,6 @@
 <li>
 	<%= image_tag("../images/flags/little/#{user.nation}.jpeg") %>
 	<span class = 'bar'> | </span>
-	<span class = 'user_name'><%= link_to user.name, user %></span>
+	<span class = 'user_name'><%= link_to user.name, user %></span>      <span class = 'user_nation'>- <%= user.nation.capitalize %></span>
 	<!-- <%= button_to "delete", user, :method => :delete %> -->
 </li>

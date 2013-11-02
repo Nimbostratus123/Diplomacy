@@ -352,6 +352,17 @@ div.image_display img {
 	left: 2px;
 }
 
+.all_users span.user_nation {
+	position: relative;
+	top: -11px;
+	left: 10px;
+	color: #555;
+}
+
+.all_users li:hover span.user_nation {
+	color: black;
+}
+
 .home_h2 {
 	position: relative;
 	left: 120px;
