@@ -24,7 +24,7 @@
 	           		
 	           		<div class = 'non_image_div'>
 	           			<h1><%= unit.location.capitalize %></h1>
-	           			<p>This unit is a(n) <%= unit.kind %>.<p>
+	           			<p>This unit is <%= army_format(unit.army?) << ' ' << unit.kind %> .<p>
 	           		</div>
 	           		
 	           	<% end %>

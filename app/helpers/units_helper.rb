@@ -168,8 +168,13 @@ module UnitsHelper
 		move
 	end
 	
-	
-	
+	def army_format(boolean)
+    if boolean
+      return 'an'
+    else
+      return 'a'
+    end
+  end
 	
 	def water_adjacent?(location)
 		tell = false
@@ -359,7 +364,7 @@ module UnitsHelper
 			'north sea' => [420, 350],
 			'norwegian sea' => [450, 190], 
 			'skagerrak' => [520, 350], 
-			'tyrrhenian sea' => [475, 810],
+			'tyrhennian sea' => [475, 810],
 			'switzerland' => [440, 640],
 			'snake island' => [950, 640],
 			'middle of nowhere' => [-50, -50]
@@ -544,7 +549,7 @@ module UnitsHelper
 			["gulf of lyon", "tyrhennian sea"],
 			["tyrhennian sea", "roma"],
 			["tyrhennian sea", "napoli"],
-			["tyrhannian sea", "tunisia"],
+			["tyrhennian sea", "tunisia"],
 			["tyrhennian sea", "ionian sea"],
 			["tyrhennian sea", "tuscany"],
 			["ionian sea", "tunisia"],
