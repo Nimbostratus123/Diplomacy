@@ -6,6 +6,32 @@ tell = true
   
 jQuery ->
 
+  
+ ##------------------------------------------------
+ #
+ #$('#mform').hide()
+ #$('#fade').css('display', 'none')
+ #
+ #$('#fade').click ->
+ #  $('#mform').hide()
+ #  $('#fade').css('display', 'none')
+ #
+ #$('#moveb').click ->
+ #  $('#mform').show()
+ #  $('#fade').css('display', 'block')
+ #  $('#fade').css('opacity', '0')
+ #  $('#fade').animate({opacity: 0.7})
+ #  
+ #$('#submit').click ->
+ #  unless $('.value').val()
+ #    alert "Please fill in the form to make a move. (My best pickup line yet.)"
+ #  else
+ #    $('#mform form').submit()
+ #
+ #
+ ##------------------------------------------------
+
+
   color = $('.maintitle').css('background-color')
   
   $('html').click ->

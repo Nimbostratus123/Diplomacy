@@ -30,6 +30,7 @@
 			<li><%= link_to "Players", "/players" %></li>
 			<% if signed_in? %>
 			<li><%= link_to "DiploMail", "/messages"%></li>
+             <!--<li id = 'moveb'><%= link_to "Move", "#" %></li>-->
 			<li><%= link_to "Settings", "/users/#{current_user.id}/edit"%></li>
 			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
 			<% else %>
@@ -57,6 +58,7 @@
 				<li><%= link_to "Players", "/players" %></li>
 				<% if signed_in? %>
 				<li><%= link_to "DiploMail", "/messages"%></li>
+                 <!--<li id = 'moveb'><%= link_to "Move", "#" %></li>-->
 				<li><%= link_to "Settings", "/users/#{@current_user.id}/edit"%></li>
 				<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
 				<% else %>
@@ -93,6 +95,7 @@
 	<div id="footer">
 		<p>Copywrite 2013, Charles Chamberlain, All Rights Reserved</p>
     </div>
+    
     
 	</div>
 	
