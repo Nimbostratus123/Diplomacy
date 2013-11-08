@@ -41,6 +41,7 @@ class UsersController < ApplicationController
 	
 	def create
 		@user = User.new(params[:user])
+    @user.email = params[:user][:email].downcase
 		if @user.save
 			sign_in @user
 			flash[:success] = 'Welcome to the sample app!'
