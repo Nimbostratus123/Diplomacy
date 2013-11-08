@@ -160,8 +160,11 @@ module UnitsHelper
 	
 	def timed? # This works now
 		move = true
+    period = 2
+    limit = Time.now.beginning_of_day\
+    limit -= (86400 * period)
 		Unit.all.each do |unit|
-			if unit.updated_at > Time.now.beginning_of_day
+			if unit.updated_at > limit
 				move = false
 			end
 		end
